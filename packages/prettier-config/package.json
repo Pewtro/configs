@@ -1,0 +1,25 @@
+{
+  "name": "@putro/prettier-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Putro",
+  "description": "Prettier config by Putro",
+  "repository": "https://github.com/Pewtro/putro",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "type": "module",
+  "keywords": [
+    "prettier",
+    "config",
+    "putro"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "3.0.2"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  }
+}
