@@ -28,7 +28,8 @@
     "lint": "eslint --format stylish --max-warnings 0",
     "lint:fix": "yarn lint --fix",
     "stylecheck": "prettier --check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "changeset publish"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,md,mdx,yml}": [
