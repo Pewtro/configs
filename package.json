@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Putro",
   "description": "Root package for @putstack/* packages",
-  "repository": "https://github.com/Pewtro/putro",
+  "repository": "https://github.com/Pewtro/configs",
   "private": true,
   "workspaces": [
     "packages/*"

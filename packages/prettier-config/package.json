@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Putro",
   "description": "Prettier config by Putro",
-  "repository": "https://github.com/Pewtro/putro",
+  "repository": "https://github.com/Pewtro/configs",
   "main": "index.js",
   "files": [
     "index.js"
