@@ -1,6 +1,6 @@
 {
   "name": "@putstack/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": "Putro",
   "description": "ESLint config for TypeScript",
@@ -9,6 +9,13 @@
   "files": [
     "/base",
     "index.js"
+  ],
+  "keywords": [
+    "typescript",
+    "eslint",
+    "config",
+    "putro",
+    "putstack"
   ],
   "dependencies": {},
   "devDependencies": {

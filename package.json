@@ -11,6 +11,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "@changesets/cli": "2.26.2",
     "@putstack/eslint-config-typescript": "*",
     "@putstack/prettier-config": "*",
     "@types/node": "20.5.9",
