@@ -8,13 +8,13 @@ The default version is quite strict, so an existing project might opt for using 
 To install this package run the following command in the terminal in the root directory of your application.
 
 ```
-npm install --save-dev @putro/eslint-config-typescript
+npm install --save-dev @putstack/eslint-config-typescript
 ```
 
 **OR**
 
 ```
-yarn add -D @putro/eslint-config-typescript
+yarn add -D @putstack/eslint-config-typescript
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Add this to your config by editing your .eslintrc.cjs or equivalent.
 
 ```
 {
-    extends: ['@putro/typescript'],
+    extends: ['@putstack/typescript'],
 }
 ```
 
@@ -34,7 +34,7 @@ To see what is dincluded in which package, please view [this section](#eslint-pl
 
 ```
 {
-    extends: ['@putro/typescript/base']
+    extends: ['@putstack/typescript/base']
 }
 ```
 

@@ -4,9 +4,9 @@ A repository where I can upload various libraries or configurations that I often
 
 ## Configurations
 
-- `@putro/eslint-config-typescript` - A strict configuration for ESLint to be used in TypeScript projects.
-  - It also comes with a `@putro/eslint-config-typescript/base` option that is less strict, and thus might be easier to integrate into existing projects.
-- `@putro/prettier-config` - A prettier configuration that has sensible defaults, that should never require adjustment.
+- `@putstack/eslint-config-typescript` - A strict configuration for ESLint to be used in TypeScript projects.
+  - It also comes with a `@putstack/eslint-config-typescript/base` option that is less strict, and thus might be easier to integrate into existing projects.
+- `@putstack/prettier-config` - A prettier configuration that has sensible defaults, that should never require adjustment.
 
 ## Libraries
 

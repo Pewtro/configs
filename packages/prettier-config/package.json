@@ -1,5 +1,5 @@
 {
-  "name": "@putro/prettier-config",
+  "name": "@putstack/prettier-config",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Putro",
@@ -17,9 +17,9 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "prettier": "3.0.2"
+    "prettier": "3.0.3"
   },
   "peerDependencies": {
-    "prettier": ">=3"
+    "prettier": ">=3.0.3"
   }
 }

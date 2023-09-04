@@ -1,5 +1,5 @@
 {
-  "name": "@putro/eslint-config-typescript",
+  "name": "@putstack/eslint-config-typescript",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Putro",
@@ -12,8 +12,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1",
+    "@typescript-eslint/eslint-plugin": "6.5.0",
+    "@typescript-eslint/parser": "6.5.0",
     "eslint-plugin-progress": "0.0.1",
     "eslint-plugin-sonarjs": "0.21.0",
     "eslint-plugin-unicorn": "48.0.1"

@@ -1,9 +1,9 @@
 {
-  "name": "@putro/root",
+  "name": "@putstack/root",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Putro",
-  "description": "Root package for @putro/* packages",
+  "description": "Root package for @putstack/* packages",
   "repository": "https://github.com/Pewtro/putro",
   "private": true,
   "workspaces": [
@@ -11,17 +11,16 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@putro/eslint-config-typescript": "*",
-    "@putro/prettier-config": "*",
-    "@types/node": "20.5.6",
-    "@vitest/coverage-v8": "0.34.3",
+    "@putstack/eslint-config-typescript": "*",
+    "@putstack/prettier-config": "*",
+    "@types/node": "20.5.9",
+    "@typescript-eslint/rule-tester": "6.6.0",
     "eslint": "8.48.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
     "postinstall-postinstall": "2.1.0",
-    "prettier": "3.0.2",
-    "typescript": "5.1.6",
-    "vitest": "0.34.3"
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
   },
   "peerDependencies": {},
   "scripts": {
@@ -38,5 +37,5 @@
       "yarn --silent lint:fix"
     ]
   },
-  "prettier": "@putro/prettier-config"
+  "prettier": "@putstack/prettier-config"
 }
