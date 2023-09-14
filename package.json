@@ -6,6 +6,7 @@
   "description": "Root package for @putstack/* packages",
   "repository": "https://github.com/Pewtro/configs",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
