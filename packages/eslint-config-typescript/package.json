@@ -17,16 +17,18 @@
     "putro",
     "putstack"
   ],
-  "dependencies": {},
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.5.0",
-    "@typescript-eslint/parser": "6.5.0",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "6.7.0",
+    "@typescript-eslint/parser": "6.7.0",
     "eslint-plugin-progress": "0.0.1",
     "eslint-plugin-sonarjs": "0.21.0",
     "eslint-plugin-unicorn": "48.0.1"
   },
+  "devDependencies": {
+    "eslint": "8.49.0"
+  },
   "peerDependencies": {
     "eslint": ">=8",
-    "typescript": ">=4"
+    "typescript": ">=4.3.5"
   }
 }
