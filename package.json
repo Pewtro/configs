@@ -39,6 +39,5 @@
     "*.{ts,tsx,js,jsx}": [
       "pnpm --silent lint:fix"
     ]
-  },
-  "prettier": "@putstack/prettier-config"
+  }
 }
