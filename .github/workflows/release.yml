@@ -21,10 +21,10 @@ jobs:
           node-version: 20.x
 
       - name: Install Dependencies
-        run: yarn
+        run: pnpm install
 
       - name: Lint, Prettier, and Typecheck
-        run: yarn test:ci
+        run: pnpm test:ci
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
