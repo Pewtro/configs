@@ -27,11 +27,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Lint, Prettier, and Typecheck
-        run: pnpm test:ci
-
       - name: Build packages
         run: pnpm -r build
+
+      - name: Lint, Prettier, and Typecheck
+        run: pnpm test:ci
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
