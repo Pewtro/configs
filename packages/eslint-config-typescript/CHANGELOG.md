@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- 93273ef: Default prefer-module from unicorn to be turned on as it's easy for consumers to turn it off - but we should transition towards ESM in general
+
+### Patch Changes
+
+- 4f28190: Bump `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to `6.7.0`.
+
 ## 1.0.0
 
 ### Major Changes
