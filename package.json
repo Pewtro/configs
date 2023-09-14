@@ -9,22 +9,20 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@changesets/cli": "2.26.2",
     "@putstack/eslint-config-typescript": "*",
     "@putstack/prettier-config": "*",
     "@types/node": "20.6.0",
-    "@typescript-eslint/rule-tester": "6.7.0",
     "concurrently": "8.2.1",
     "eslint": "8.49.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
     "postinstall-postinstall": "2.1.0",
     "prettier": "3.0.3",
+    "tsup": "7.2.0",
     "typescript": "5.2.2"
   },
-  "peerDependencies": {},
   "scripts": {
     "lint": "eslint --format stylish --max-warnings 0 .",
     "lint:fix": "pnpm lint --fix",

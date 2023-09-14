@@ -7,8 +7,15 @@
   "repository": "https://github.com/Pewtro/configs",
   "main": "index.js",
   "files": [
-    "index.js"
+    "./dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "type": "module",
   "keywords": [
     "prettier",
@@ -22,5 +29,8 @@
   "devDependencies": {},
   "peerDependencies": {
     "prettier": ">=3.0.3"
+  },
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts-resolve"
   }
 }
