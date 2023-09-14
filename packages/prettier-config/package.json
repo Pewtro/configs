@@ -16,10 +16,10 @@
     "putro",
     "putstack"
   ],
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "prettier": "3.0.3"
   },
+  "devDependencies": {},
   "peerDependencies": {
     "prettier": ">=3.0.3"
   }
