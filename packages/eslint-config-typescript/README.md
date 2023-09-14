@@ -19,7 +19,7 @@ yarn add -D @putstack/eslint-config-typescript
 
 ## Usage
 
-Ensure that your ESLint configuration is setup to utilize TypeScript's type checking API by following this [guide]().
+Ensure that your ESLint configuration is setup to utilize TypeScript's type checking API by following this [guide](https://typescript-eslint.io/linting/typed-linting). Note that if you're using this in a monorepo, you _SHOULD_ keep `"project":"true"` despite that the guide says otherwise.
 
 Add this to your config by editing your .eslintrc.cjs or equivalent.
 
