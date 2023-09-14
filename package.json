@@ -16,6 +16,7 @@
     "@putstack/prettier-config": "*",
     "@types/node": "20.6.0",
     "@typescript-eslint/rule-tester": "6.7.0",
+    "concurrently": "8.2.1",
     "eslint": "8.49.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
@@ -25,11 +26,13 @@
   },
   "peerDependencies": {},
   "scripts": {
-    "lint": "eslint --format stylish --max-warnings 0",
+    "lint": "eslint --format stylish --max-warnings 0 .",
     "lint:fix": "yarn lint --fix",
-    "stylecheck": "prettier --check",
     "prepare": "husky install",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "stylecheck": "prettier --check .",
+    "test:ci": "concurrently \"yarn:lint\" \"yarn:typecheck\" \"yarn:stylecheck\" ",
+    "typecheck": "tsc"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,md,mdx,yml}": [
