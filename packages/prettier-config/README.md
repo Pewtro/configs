@@ -18,19 +18,24 @@ yarn add -D @putstack/prettier-config
 
 ## Usage
 
-Add a key in your **package.json** file.
-
-```
-"prettier": "@putstack/prettier-config"
-```
-
-**OR**
-
 Create a **.prettierrc**, **.prettierrc.yaml**, **.prettierrc.yml** or **.prettierrc.json** file and export a string.
 
 **OR**
 
 Create a **prettier.config.js** or **.prettierrc.js** file and export an object.
+
+```
+import putstackConfig from '@putstack/prettier-config';
+
+/** @type {import("prettier").Config} */
+const config = {
+  ...putstackConfig,
+};
+
+export default config;
+```
+
+**OR WITH CJS**
 
 ```
 module.exports = {
