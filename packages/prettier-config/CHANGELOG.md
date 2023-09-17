@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.2.0
+
+### Minor Changes
+
+- 9ff92f9: Remove the type information as it disallows it to be consumed in a package.json
+
 ## 1.1.0
 
 ### Minor Changes
