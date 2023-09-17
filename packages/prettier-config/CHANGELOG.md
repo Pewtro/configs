@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.2.2
+
+### Patch Changes
+
+- 1c00f4d: Add type information to prettier config by passing in --cjsInterop to tsup
+
 ## 1.2.1
 
 ### Patch Changes
