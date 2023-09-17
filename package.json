@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Putro",
-  "description": "Root package for @putstack/* packages",
+  "description": "Root package for @putstack/* configuration packages that are also generally released standalone",
   "repository": "https://github.com/Pewtro/configs",
   "private": true,
   "type": "module",
@@ -21,7 +21,6 @@
     "lint-staged": "14.0.1",
     "postinstall-postinstall": "2.1.0",
     "prettier": "3.0.3",
-    "tsup": "7.2.0",
     "typescript": "5.2.2"
   },
   "scripts": {
@@ -40,5 +39,6 @@
     "*.{ts,tsx,js,jsx}": [
       "pnpm --silent lint:fix"
     ]
-  }
+  },
+  "prettier": "@putstack/prettier-config"
 }
