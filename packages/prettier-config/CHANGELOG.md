@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.2.1
+
+### Patch Changes
+
+- 6a91610: Add in JSDoc typings
+
 ## 1.2.0
 
 ### Minor Changes
