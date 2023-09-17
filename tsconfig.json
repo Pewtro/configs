@@ -8,7 +8,7 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "allowJs": true,
+    "allowJs": true
   },
   "include": ["*.*ts", "*.*js", "packages/**/*"]
 }

@@ -33,7 +33,7 @@
     "typecheck": "tsc"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,md,mdx,yml}": [
+    "*.{ts,tsx,js,jsx,md,mdx,yml,json,html,css}": [
       "prettier --write"
     ],
     "*.{ts,tsx,js,jsx}": [
