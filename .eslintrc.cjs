@@ -3,7 +3,7 @@ module.exports = {
   extends: ['@putstack/typescript'],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.eslint.json'],
+    project: ['./tsconfig.json'],
   },
   rules: {
     'unicorn/prefer-module': 'off',
