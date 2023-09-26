@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 1.1.1
+
+### Patch Changes
+
+- 5b885b9: [Chore] Bump dependencies
+
 ## 1.1.0
 
 ### Minor Changes
