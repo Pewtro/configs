@@ -14,9 +14,9 @@
     "@changesets/cli": "2.26.2",
     "@putstack/eslint-config-typescript": "*",
     "@putstack/prettier-config": "*",
-    "@types/node": "20.6.3",
+    "@types/node": "20.7.0",
     "concurrently": "8.2.1",
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
     "postinstall-postinstall": "2.1.0",
@@ -34,7 +34,7 @@
     "typecheck": "tsc"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,md,mdx,yml,json,html,css,md}": [
+    "*.{ts,tsx,js,jsx,md,mdx,yaml,yml,json,html,css,md}": [
       "prettier --write"
     ],
     "*.{ts,tsx,js,jsx}": [
