@@ -8,6 +8,12 @@ The default version is quite strict, so an existing project might opt for using 
 To install this package run the following command in the terminal in the root directory of your application.
 
 ```
+pnpm install -D @putstack/eslint-config-typescript
+```
+
+**OR**
+
+```
 npm install --save-dev @putstack/eslint-config-typescript
 ```
 

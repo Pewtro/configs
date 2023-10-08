@@ -7,6 +7,12 @@ This is a simple configuration for Prettier that I use across projects.
 To install this package run the following command in the terminal in the root directory of your application.
 
 ```
+pnpm install -D @putstack/prettier-config
+```
+
+**OR**
+
+```
 npm install --save-dev @putstack/prettier-config
 ```
 

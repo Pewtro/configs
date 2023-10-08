@@ -14,7 +14,7 @@ None yet, but they're in progress.
 
 # Getting Started
 
-Clone the repository, and run `yarn` to install the dependencies - then you're good to go!
+Clone the repository, and run `pnpm i` to install the dependencies - then you're good to go!
 The project will lint and prettier itself as a pre-commit hook, so you will automatically adhere to all our style conventions!
 
 # Contribute
