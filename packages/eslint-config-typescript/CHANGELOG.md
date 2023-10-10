@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 1.1.2
+
+### Patch Changes
+
+- 13ad8c5: Update @typescript-eslint/\* dependencies from 6.7.4 to 6.7.5
+- 6d36924: Update @typescript-eslint/\* dependencies from 6.7.3 to 6.7.4
+
 ## 1.1.1
 
 ### Patch Changes
