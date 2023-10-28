@@ -17,7 +17,7 @@
     "@changesets/cli": "2.26.2",
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
-    "@types/node": "20.8.8",
+    "@types/node": "20.8.9",
     "concurrently": "8.2.2",
     "eslint": "8.52.0",
     "husky": "8.0.3",
