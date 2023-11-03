@@ -1,5 +1,14 @@
 # ESLint config for typescript changelog
 
+## 1.1.3
+
+### Patch Changes
+
+- 796c52c: [Chore] Update dependencies for Node.js LTS moving to v20
+- e90e48f: Updated @typescript-eslint/\* to `6.9.1`.
+  Updated eslint-plugin-unicorn to `49.0.0`.
+  Updated eslint-plugin-sonarjs to `0.23.0`.
+
 ## 1.1.2
 
 ### Patch Changes
