@@ -31,9 +31,6 @@ importers:
       lint-staged:
         specifier: 15.0.2
         version: 15.0.2
-      postinstall-postinstall:
-        specifier: 2.1.0
-        version: 2.1.0
       prettier:
         specifier: 3.0.3
         version: 3.0.3
@@ -2885,12 +2882,6 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.1
-    dev: true
-
-  /postinstall-postinstall@2.1.0:
-    resolution:
-      { integrity: sha512-7hQX6ZlZXIoRiWNrbMQaLzUUfH+sSx39u8EJ9HYuDc1kLo9IXKWjM5RSquZN1ad5GnH8CGFM78fsAAQi3OKEEQ== }
-    requiresBuild: true
     dev: true
 
   /preferred-pm@3.1.2:
