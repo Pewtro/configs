@@ -19,7 +19,7 @@
     "@putstack/prettier-config": "workspace:*",
     "@types/node": "20.8.10",
     "concurrently": "8.2.2",
-    "eslint": "8.52.0",
+    "eslint": "8.53.0",
     "husky": "8.0.3",
     "lint-staged": "15.0.2",
     "prettier": "3.0.3",
