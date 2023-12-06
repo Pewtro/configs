@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.3.0
+
+### Minor Changes
+
+- 67aca57: Update to prettier 3.1.0
+
 ## 1.2.2
 
 ### Patch Changes
