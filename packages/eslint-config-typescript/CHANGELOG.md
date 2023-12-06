@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 1.2.0
+
+### Minor Changes
+
+- cd4af02: Update @typescript-eslint/\* packages to 6.13.2
+
 ## 1.1.3
 
 ### Patch Changes
