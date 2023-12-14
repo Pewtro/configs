@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.3.1
+
+### Patch Changes
+
+- 0d8db6c: Bump prettier to 3.1.1
+
 ## 1.3.0
 
 ### Minor Changes
