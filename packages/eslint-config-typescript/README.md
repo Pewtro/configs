@@ -61,6 +61,8 @@ This is a list of the plugins and configurations that are extended from.
 - [@typescript-eslint/plugin](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin) - A large amount of TypeScript related ESLint rules, using the [recommended](https://typescript-eslint.io/linting/configs#projects-with-type-checking) type checking rules.
 - [eslint-plugin-progress](https://github.com/taskworld/eslint-plugin-progress) - Report progress when running ESLint. Useful for large projects with thousands of files, so it's obvious that something is running!
 - [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) - Code smell, bug detection, cognitive complexity and more.
+- [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) - ESLint plugin with rules that help validate proper imports.
+- [eslint-import-resolver-typescript](https://github.com/import-js/eslint-import-resolver-typescript) - This plugin adds `TypeScript` support to `eslint-plugin-import`.
 
 #### Configurations
 
@@ -68,6 +70,8 @@ This is a list of the plugins and configurations that are extended from.
 - [plugin:@typescript-eslint/recommended-type-checked](https://typescript-eslint.io/linting/configs#recommended-type-checked) - To see a full list of the rules, click [here](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-type-checked.ts).
 - [plugin:@typescript-eslint/stylistic-type-checked](https://typescript-eslint.io/linting/configs#stylistic-type-checked) - To see a full list of the rules, click [here](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts).
 - [plugin:sonarjs/recommended](https://github.com/SonarSource/eslint-plugin-sonarjs#usage) - Using sonarjs recommended setup to catch general code smells.
+- [plugin:import/recommended](https://github.com/import-js/eslint-plugin-import/blob/main/config/recommended.js) - The set of import rules recommended by eslint-plugin-import.
+- [plugin:import/typescript](https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js) - The set of import rules recommended by eslint-plugin-import for TypeScript.
 
 ### Recommended
 
