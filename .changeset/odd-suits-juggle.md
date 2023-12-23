@@ -2,4 +2,4 @@
 '@putstack/eslint-config-typescript': patch
 ---
 
-Update @typescript-eslint/\* to 6.15.0
+Update eslint-plugin-unicorn to 50.0.1
