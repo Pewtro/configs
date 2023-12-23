@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- 962ec5f: Update eslint-plugin-unicorn to 50.0.1
+- 0eb0c46: Update @typescript-eslint/\* to 6.15.0
+
 ## 2.0.0
 
 ### Major Changes
