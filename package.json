@@ -20,6 +20,8 @@
     "@types/node": "20.10.6",
     "concurrently": "8.2.2",
     "eslint": "8.56.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
     "prettier": "3.1.1",
     "tsup": "8.0.1",
     "typescript": "5.3.3"
@@ -27,9 +29,18 @@
   "scripts": {
     "lint": "eslint --format stylish --max-warnings 0 .",
     "lint:fix": "pnpm lint --fix",
+    "prepare": "husky install",
     "release": "changeset publish",
     "stylecheck": "prettier --check .",
     "test:ci": "concurrently \"pnpm:lint\" \"pnpm:typecheck\" \"pnpm:stylecheck\" ",
     "typecheck": "tsc"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,md,mdx,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx,js,jsx}": [
+      "pnpm --silent lint:fix"
+    ]
   }
 }
