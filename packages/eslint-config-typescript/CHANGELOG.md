@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 2.0.3
+
+### Patch Changes
+
+- 22eadb7: Bump @typescript-eslint/\* to 6.18.0
+
 ## 2.0.2
 
 ### Patch Changes
