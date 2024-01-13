@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- 1aa627c: BREAKING: No longer ships with @typescript-eslint/_ or @typescript-eslint/_ but instead marks them as peerDependencies
+- 1b2e1fb: Drop support for typescript 4.X
+
 ## 2.0.3
 
 ### Patch Changes
