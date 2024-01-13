@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 2.2.0
+
+### Minor Changes
+
+- d45165b: Revert changes in 2.1.0 about not shipping @typescript-eslint/\* packages, as this config is opioniated enough to always ship them.
+
 ## 2.1.0
 
 ### Minor Changes
