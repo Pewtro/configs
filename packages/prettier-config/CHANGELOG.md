@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.4.0
+
+### Minor Changes
+
+- 1aa627c: BREAKING: No longer ships with Prettier, but instead relies on it marked as a peer dependency
+
 ## 1.3.1
 
 ### Patch Changes
