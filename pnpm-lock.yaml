@@ -17,8 +17,8 @@ importers:
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
-        specifier: 20.11.7
-        version: 20.11.7
+        specifier: 20.11.10
+        version: 20.11.10
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
@@ -26,8 +26,8 @@ importers:
         specifier: 8.56.0
         version: 8.56.0
       husky:
-        specifier: 9.0.6
-        version: 9.0.6
+        specifier: 9.0.7
+        version: 9.0.7
       lint-staged:
         specifier: 15.2.0
         version: 15.2.0
@@ -797,9 +797,9 @@ packages:
       { integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ== }
     dev: true
 
-  /@types/node@20.11.7:
+  /@types/node@20.11.10:
     resolution:
-      { integrity: sha512-GPmeN1C3XAyV5uybAf4cMLWT9fDWcmQhZVtMFu7OR32WjrqGG+Wnk2V1d0bmtUyE/Zy1QJ9BxyiTih9z8Oks8A== }
+      { integrity: sha512-rZEfe/hJSGYmdfX9tvcPMYeYPW2sNl50nsw4jZmRcaG0HIAb0WYEpsB05GOb53vjqpyE9GUhlDQ4jLSoB5q9kg== }
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2360,9 +2360,9 @@ packages:
     engines: { node: '>=16.17.0' }
     dev: true
 
-  /husky@9.0.6:
+  /husky@9.0.7:
     resolution:
-      { integrity: sha512-EEuw/rfTiMjOfuL7pGO/i9otg1u36TXxqjIA6D9qxVjd/UXoDOsLor/BSFf5hTK50shwzCU3aVVwdXDp/lp7RA== }
+      { integrity: sha512-vWdusw+y12DUEeoZqW1kplOFqk3tedGV8qlga8/SF6a3lOiWLqGZZQvfWvY0fQYdfiRi/u1DFNpudTSV9l1aCg== }
     engines: { node: '>=18' }
     hasBin: true
     dev: true
