@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 2.4.0
+
+### Minor Changes
+
+- 50b527c: Replace eslint-plugin-import with eslint-plugin-import-x in preparation to move away from it fully over time
+
 ## 2.3.0
 
 ### Minor Changes
