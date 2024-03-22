@@ -1,5 +1,18 @@
 # ESLint config for typescript changelog
 
+## 2.3.0
+
+### Minor Changes
+
+- d645787: Add eslint-plugin-sonar to base and recommended configuration
+
+### Patch Changes
+
+- 46c5299: Update eslint-plugin-sonarjs to 0.24.0
+- 27ce461: [ESLint] Update @typescript-eslint/\* from 6.20.0 to 6.21.0 and eslint-plugin-unicorn from 50.0.1 to 51.0.1
+- 6682e0a: Begin requiring eslint >8.57.0 in preparation for @typescript-eslint/\* v7
+- b8c8e4e: Update @typescript-eslint/\* to 6.20.0
+
 ## 2.2.0
 
 ### Minor Changes
