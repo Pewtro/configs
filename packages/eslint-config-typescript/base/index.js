@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'progress', 'sonarjs', 'import'],
+  plugins: ['@typescript-eslint', 'progress', 'sonar', 'sonarjs', 'import'],
   extends: [
     //General eslint recommended rules
     'eslint:recommended',
@@ -8,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     //General code quality rules
+    'plugin:sonar/recommended',
     'plugin:sonarjs/recommended',
     //General import rules
     'plugin:import/recommended',
