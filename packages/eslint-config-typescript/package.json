@@ -27,8 +27,8 @@
     "eslint-plugin-unicorn": "51.0.1"
   },
   "devDependencies": {
-    "eslint": "8.56.0",
-    "typescript": "5.3.3"
+    "eslint": "8.57.0",
+    "typescript": "5.4.3"
   },
   "peerDependencies": {
     "eslint": ">=8",

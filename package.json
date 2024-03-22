@@ -17,14 +17,14 @@
     "@changesets/cli": "2.27.1",
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.30",
     "concurrently": "8.2.2",
-    "eslint": "8.56.0",
-    "husky": "9.0.10",
+    "eslint": "8.57.0",
+    "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.3"
   },
   "scripts": {
     "lint": "eslint --format stylish --max-warnings 0 .",
