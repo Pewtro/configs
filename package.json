@@ -18,21 +18,26 @@
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
     "@types/node": "20.11.30",
+    "@vitest/coverage-v8": "1.4.0",
     "eslint": "8.57.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "npm-run-all2": "6.1.2",
     "prettier": "3.2.5",
     "tsup": "8.0.2",
-    "typescript": "5.4.3"
+    "typescript": "5.4.3",
+    "vitest": "1.4.0"
   },
   "scripts": {
-    "lint": "eslint --format stylish --max-warnings 0 .",
+    "lint": "eslint --format stylish --max-warnings 0 --cache .",
     "lint:fix": "pnpm lint --fix",
     "prepare": "husky",
     "release": "changeset publish",
     "stylecheck": "prettier --check .",
-    "test:ci": "npm-run-all -p -l lint typecheck stylecheck",
+    "test": "vitest run",
+    "test:ci": "npm-run-all -p -l lint typecheck stylecheck test",
+    "test:coverage": "pnpm run test --coverage",
+    "test:watch": "vitest watch",
     "typecheck": "tsc"
   },
   "lint-staged": {

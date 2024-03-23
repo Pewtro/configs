@@ -1,0 +1,42 @@
+{
+  "name": "@putstack/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Putro",
+  "description": "Various utility functions I find myself recreating over and over again.",
+  "repository": "https://github.com/Pewtro/configs/tree/main/packages/utils",
+  "type": "module",
+  "engines": {
+    "node": ">=18 <19 || >=20"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "putro",
+    "putstack",
+    "utility",
+    "utils"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "scripts": {
+    "build": "tsup",
+    "debv": "tsup --watch",
+    "test": "vitest run",
+    "test:coverage": "pnpm test -- --coverage",
+    "test:watch": "vitest watch"
+  }
+}
