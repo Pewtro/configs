@@ -56,6 +56,20 @@ module.exports = {
     //Disallow variable redeclaration
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'warn',
+
+    //Emulate the TypeScript style of exempting names starting with _
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        args: 'all',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
   env: {
     browser: true,
