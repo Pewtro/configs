@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 2.4.1
+
+### Patch Changes
+
+- 087f742: Update eslint-plugin-import-x and eslint-plugin-sonarjs
+- 9c00d90: Set @typescript-eslint/no-unused-vars in the base config to allow unused variable names if they're prefixed with \_
+
 ## 2.4.0
 
 ### Minor Changes
