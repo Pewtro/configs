@@ -10,7 +10,7 @@ A repository where I can upload various libraries or configurations that I often
 
 ## Libraries
 
-None yet, but they're in progress.
+- `@putstack/utils` - A collection of utility functions that I often find myself needing in various projects.
 
 # Getting Started
 
@@ -27,3 +27,7 @@ Remember to add a changelog entry in the package you are adjusting, it should in
 ```
 - Turn on `@typescript-eslint/default-param-last` to better match expectations from certain SonarQube setups. Rule documentation can be found [here](https://typescript-eslint.io/rules/default-param-last). This also turns off the standard `default-param-last` as described in the documentation.
 ```
+
+# Roadmap
+
+- Update `@putstack/eslint-config-typescript` to use flat eslint configuration.
