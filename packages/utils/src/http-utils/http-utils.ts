@@ -15,7 +15,7 @@ export const generatePath = <Path extends string>(
   baseUrl?: string,
 ) => {
   //Ensure the "/" prefix is present if the path starts with a "/" and the baseUrl does not end with a "/"
-  const shouldPrefixDueToPath = path.startsWith('/') && (!baseUrl || !baseUrl.endsWith('/'));
+  const shouldPrefixDueToPath = path.startsWith('/') && !baseUrl?.endsWith('/');
   //Ensure the "/" prefix is present if the baseUrl does not end with a "/"
   const shouldPrefixDueToBaseUrl = !!baseUrl && !baseUrl.endsWith('/');
   const shouldPrefix = shouldPrefixDueToPath || shouldPrefixDueToBaseUrl;
