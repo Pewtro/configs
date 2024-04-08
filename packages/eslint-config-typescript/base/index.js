@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import-x', 'progress', 'sonarjs'],
+  plugins: ['@typescript-eslint', 'import', 'progress', 'sonarjs'],
   extends: [
     //General eslint recommended rules
     'eslint:recommended',
@@ -10,8 +10,8 @@ module.exports = {
     //General code quality rules
     'plugin:sonarjs/recommended',
     //General import rules
-    'plugin:import-x/recommended',
-    'plugin:import-x/typescript',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   rules: {
     /** ESLint plugin configuration */
@@ -28,9 +28,9 @@ module.exports = {
     //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
     '@typescript-eslint/no-import-type-side-effects': 'warn',
     //We want to encourage the import type specifiers to be consistent
-    'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+    'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
     //Set up a specificer import that we generally want to adhere to to make it easier recognizing where an import is coming from
-    'import-x/order': [
+    'import/order': [
       'warn',
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'unknown'],
@@ -77,9 +77,13 @@ module.exports = {
   },
   //Default settings to fit simple projects, but should be overridden by users who want/need more control
   settings: {
-    'import-x/resolver': {
-      typescript: true,
-      node: true,
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
     },
   },
 };
