@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 2.5.0
+
+### Minor Changes
+
+- b4457ef: Update @typescript-eslint/\* to 7.4 and remove eslint-plugin-sonar as it's mostly covered by eslint-plugin-sonarjs and other rulesets
+
+### Patch Changes
+
+- 7e14f5f: Update required node versions to be `^18.18 || ^20.9 || ^21.1`
+
 ## 2.4.1
 
 ### Patch Changes
