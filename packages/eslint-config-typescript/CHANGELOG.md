@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 2.6.0
+
+### Minor Changes
+
+- 79abb71: Update @typescript-eslint/ to 7.7.1
+
+### Patch Changes
+
+- 41eabac: Update @typescript-eslint/\* to 7.6
+
 ## 2.5.0
 
 ### Minor Changes
