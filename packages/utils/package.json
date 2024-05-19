@@ -7,7 +7,7 @@
   "repository": "https://github.com/Pewtro/configs/tree/main/packages/utils",
   "type": "module",
   "engines": {
-    "node": ">=18 <19 || >=20"
+    "node": "^18.18 || ^20.9 || ^21.1 || ^22"
   },
   "main": "./dist/index.js",
   "exports": {
