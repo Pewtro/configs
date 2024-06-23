@@ -27,7 +27,7 @@ export const generatePath = <Path extends string>(
   const segments = path
     .split(/\/+/)
     .map((segment) => {
-      const keyMatch = segment.match(/^:(\w+)(\??)$/) ?? segment.match(/^{(\w+)}(\??)$/);
+      const keyMatch = /^:(\w+)(\??)$/.exec(segment) ?? /^{(\w+)}(\??)$/.exec(segment);
       if (keyMatch) {
         const [, key] = keyMatch;
         if (isPathParameter(key)) {
