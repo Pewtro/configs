@@ -19,7 +19,7 @@
     "@putstack/prettier-config": "workspace:*",
     "@types/node": "20.14.8",
     "@vitest/coverage-v8": "1.6.0",
-    "eslint": "8.57.0",
+    "eslint": "9.5.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
     "npm-run-all2": "6.2.0",
@@ -29,6 +29,7 @@
     "vitest": "1.6.0"
   },
   "scripts": {
+    "build": "pnpm -r --if-present build",
     "lint": "eslint --format stylish --max-warnings 0 --cache .",
     "lint:fix": "pnpm lint --fix",
     "prepare": "husky",
