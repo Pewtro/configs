@@ -55,7 +55,9 @@ export default tseslint.config(
       '@typescript-eslint/consistent-type-exports': 'warn',
       //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
       '@typescript-eslint/no-import-type-side-effects': 'warn',
-      //Set up a specificer import that we generally want to adhere to to make it easier recognizing where an import is coming from
+
+      //Set up a specific import order that we generally want to adhere to.
+      //This makes it easier to recognize where an import is coming from.
       'perfectionist/sort-imports': [
         'warn',
         {
@@ -66,12 +68,17 @@ export default tseslint.config(
           type: 'alphabetical',
         },
       ],
+      //If we have a list of objects, we want to sort them alphabetically, but we want to partition them by comments
       'perfectionist/sort-objects': [
         'error',
         {
           'partition-by-comment': true,
         },
       ],
+      //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
+      //sort-interfaces: https://eslint-plugin-perfectionist.azat.io/rules/sort-interfaces
+      //sort-objects: https://eslint-plugin-perfectionist.azat.io/rules/sort-object-types
+      '@typescript-eslint/adjacent-overload-signatures': 'off',
     },
   },
   {
