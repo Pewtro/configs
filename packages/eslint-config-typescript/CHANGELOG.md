@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 2.6.1
+
+### Patch Changes
+
+- 2bd97c6: Add support for Node 22
+
 ## 2.6.0
 
 ### Minor Changes
