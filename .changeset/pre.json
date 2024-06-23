@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@putstack/eslint-config-typescript": "2.6.1",
+    "@putstack/prettier-config": "1.4.1",
+    "@putstack/utils": "0.1.1"
+  },
+  "changesets": []
+}
