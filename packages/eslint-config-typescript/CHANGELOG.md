@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.2
+
+### Patch Changes
+
+- bfd5f0d: Turn @typescript-eslint/adjacent-overload-signatures off as recommended in perfectionist documentation
+
 ## 3.0.0-next.1
 
 ### Patch Changes
