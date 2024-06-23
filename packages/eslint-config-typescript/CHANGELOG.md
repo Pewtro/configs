@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.1
+
+### Patch Changes
+
+- f4dbb71: Automatically turn off type checking on any .js file
+
 ## 3.0.0-next.0
 
 ### Major Changes
