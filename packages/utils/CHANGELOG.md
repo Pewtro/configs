@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.1.2-next.0
+
+### Patch Changes
+
+- 1b0eb83: Using regex.exec(string) over string.match(regex)
+
 ## 0.1.1
 
 ### Patch Changes

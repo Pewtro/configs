@@ -6,5 +6,5 @@
     "@putstack/prettier-config": "1.4.1",
     "@putstack/utils": "0.1.1"
   },
-  "changesets": []
+  "changesets": ["friendly-icons-hide", "slow-peaches-move", "twelve-turtles-clap"]
 }
