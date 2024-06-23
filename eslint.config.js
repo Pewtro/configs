@@ -5,7 +5,6 @@ export default tseslint.config(
   {
     ignores: ['**/coverage/**', '**/dist/**', '**/node_modules/**', '**/build/**', '!.prettierrc.js'],
   },
-  ...putstack.configs.recommended,
   {
     languageOptions: {
       parserOptions: {
@@ -14,8 +13,5 @@ export default tseslint.config(
       },
     },
   },
-  {
-    extends: [tseslint.configs.disableTypeChecked],
-    files: ['**/*.js', '**/*.[cm]js'],
-  },
+  ...putstack.configs.recommended,
 );

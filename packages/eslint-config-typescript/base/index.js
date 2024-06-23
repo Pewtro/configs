@@ -74,4 +74,8 @@ export default tseslint.config(
       ],
     },
   },
+  {
+    extends: [tseslint.configs.disableTypeChecked],
+    files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
+  },
 );
