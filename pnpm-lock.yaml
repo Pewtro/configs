@@ -52,9 +52,15 @@ importers:
       '@eslint/js':
         specifier: 9.5.0
         version: 9.5.0
+      eslint-plugin-depend:
+        specifier: 0.7.0
+        version: 0.7.0
       eslint-plugin-perfectionist:
         specifier: 2.11.0
         version: 2.11.0(eslint@9.5.0)(typescript@5.4.5)
+      eslint-plugin-progress:
+        specifier: 0.0.1
+        version: 0.0.1
       eslint-plugin-sonarjs:
         specifier: 1.0.3
         version: 1.0.3(eslint@9.5.0)
@@ -1371,6 +1377,10 @@ packages:
       { integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA== }
     engines: { node: '>=10' }
 
+  eslint-plugin-depend@0.7.0:
+    resolution:
+      { integrity: sha512-lY6MYCjgV86i7gFx1zfGwu1AD2/hOIwXs0TC/bRdlBfEtAQbjilpkmjIXr7M51mcqFmNdf5dojGlGog4jXk2sA== }
+
   eslint-plugin-perfectionist@2.11.0:
     resolution:
       { integrity: sha512-XrtBtiu5rbQv88gl+1e2RQud9te9luYNvKIgM9emttQ2zutHPzY/AQUucwxscDKV4qlTkvLTxjOFvxqeDpPorw== }
@@ -1389,6 +1399,10 @@ packages:
         optional: true
       vue-eslint-parser:
         optional: true
+
+  eslint-plugin-progress@0.0.1:
+    resolution:
+      { integrity: sha512-MAa+Nbw3uAHYKrt5ML2asiXCHdJ4ticANZC/KlfGO5Rck9oB+KhAXc+Zj4bLohci+EAE/3LbbcWyYm3kQuwJiQ== }
 
   eslint-plugin-sonarjs@1.0.3:
     resolution:
@@ -1503,6 +1517,10 @@ packages:
   fastq@1.15.0:
     resolution:
       { integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw== }
+
+  fd-package-json@1.2.0:
+    resolution:
+      { integrity: sha512-45LSPmWf+gC5tdCQMNH4s9Sr00bIkiD9aN7dc5hqkrEw1geRYyDQS1v1oMHAW3ysfxfndqGsrDREHHjNNbKUfA== }
 
   file-entry-cache@8.0.0:
     resolution:
@@ -3104,6 +3122,10 @@ packages:
       jsdom:
         optional: true
 
+  walk-up-path@3.0.1:
+    resolution:
+      { integrity: sha512-9YlCL/ynK3CTlrSRrDxZvUauLzAswPCrsaCgilqFevUYpeEW0/3ScEjaa3kbW/T0ghhkEr7mv+fpjqn1Y1YuTA== }
+
   wcwidth@1.0.1:
     resolution:
       { integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg== }
@@ -4361,6 +4383,11 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
+  eslint-plugin-depend@0.7.0:
+    dependencies:
+      fd-package-json: 1.2.0
+      semver: 7.6.2
+
   eslint-plugin-perfectionist@2.11.0(eslint@9.5.0)(typescript@5.4.5):
     dependencies:
       '@typescript-eslint/utils': 7.13.1(eslint@9.5.0)(typescript@5.4.5)
@@ -4370,6 +4397,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  eslint-plugin-progress@0.0.1: {}
 
   eslint-plugin-sonarjs@1.0.3(eslint@9.5.0):
     dependencies:
@@ -4520,6 +4549,10 @@ snapshots:
   fastq@1.15.0:
     dependencies:
       reusify: 1.0.4
+
+  fd-package-json@1.2.0:
+    dependencies:
+      walk-up-path: 3.0.1
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -5782,6 +5815,8 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+
+  walk-up-path@3.0.1: {}
 
   wcwidth@1.0.1:
     dependencies:

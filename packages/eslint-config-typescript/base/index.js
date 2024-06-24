@@ -1,5 +1,7 @@
 import eslint from '@eslint/js';
+import depend from 'eslint-plugin-depend';
 import perfectionistAlphabetical from 'eslint-plugin-perfectionist/configs/recommended-alphabetical';
+import progress from 'eslint-plugin-progress';
 import sonar from 'eslint-plugin-sonarjs';
 import tseslint from 'typescript-eslint';
 
@@ -13,6 +15,17 @@ export default tseslint.config(
   sonar.configs.recommended,
   //General sorting and import rules
   perfectionistAlphabetical,
+  //Dependency guidance to migrate off other dependencies
+  depend.configs['flat/recommended'],
+  //Turn on progress write out
+  {
+    plugins: {
+      progress,
+    },
+    rules: {
+      'progress/activate': 1,
+    },
+  },
   {
     rules: {
       /** Code quality rules */
