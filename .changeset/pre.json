@@ -7,10 +7,13 @@
     "@putstack/utils": "0.1.1"
   },
   "changesets": [
+    "big-experts-give",
     "friendly-icons-hide",
+    "large-dolls-brake",
     "loud-geckos-fix",
     "slow-peaches-move",
     "twelve-turtles-clap",
-    "warm-dolls-draw"
+    "warm-dolls-draw",
+    "wise-dolphins-breathe"
   ]
 }

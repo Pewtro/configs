@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.3
+
+### Minor Changes
+
+- 1e81358: Bump eslint to 9.6, eslint-plugin-depend to 0.8.0, typescript-eslint to 8.0.0-alpha.34
+- 83091ea: Add eslint-plugin-progress and eslint-plugin-depend to the base config
+
 ## 3.0.0-next.2
 
 ### Patch Changes
