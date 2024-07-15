@@ -1,13 +1,12 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import baseConfig from './base';
-import recommendedConfig from './recommended';
+import { base } from './base';
+import { recommended } from './recommended';
 
 type ConfigTypes = 'base' | 'recommended';
 
 const configs: Record<ConfigTypes, TSESLint.FlatConfig.ConfigArray> = {
-  base: baseConfig,
-  recommended: recommendedConfig,
+  base,
+  recommended,
 };
 
 export { configs };
-export default { configs };

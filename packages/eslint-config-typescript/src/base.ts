@@ -97,7 +97,7 @@ const disableTypeCheckedOnJS = config({
   files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
 });
 
-const combinedConfig = config(
+export const base = config(
   ...eslintConfig,
   ...typescriptEslintConfig,
   ...sonarConfig,
@@ -105,5 +105,3 @@ const combinedConfig = config(
   ...dependConfig,
   ...disableTypeCheckedOnJS,
 );
-
-export default combinedConfig;
