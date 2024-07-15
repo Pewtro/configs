@@ -10,3 +10,4 @@ const configs: Record<ConfigTypes, TSESLint.FlatConfig.ConfigArray> = {
 };
 
 export { configs };
+export default { configs };
