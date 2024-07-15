@@ -1,9 +1,7 @@
 import unicorn from 'eslint-plugin-unicorn';
 import { config } from 'typescript-eslint';
-import baseConfig from './base';
+import { base } from './base';
 
 const unicornConfig = config(unicorn.configs['flat/recommended']);
 
-const combinedFlatConfig = config(...baseConfig, ...unicornConfig);
-
-export default combinedFlatConfig;
+export const recommended = config(...base, ...unicornConfig);
