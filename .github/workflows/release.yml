@@ -1,9 +1,11 @@
 name: Release
 
 on:
+  pull_request:
   push:
     branches:
       - main
+      - next
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -34,7 +36,9 @@ jobs:
       - name: Lint, Prettier, and Typecheck
         run: pnpm test:ci
 
+      # Only run the release step if the push is to the main or next branch
       - name: Create Release Pull Request or Publish to npm
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
         id: changesets
         uses: changesets/action@v1
         with:
