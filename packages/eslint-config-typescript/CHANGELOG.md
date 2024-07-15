@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.4
+
+### Minor Changes
+
+- 05f80ca: Migrate the eslint config to typescript for better ergonomics when developing the config
+- 0be2380: Bump `@eslint/js` to 9.7.0 and `typescript-eslint` to 8.0.0-alpha.44
+
 ## 3.0.0-next.3
 
 ### Minor Changes
