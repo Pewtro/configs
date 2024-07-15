@@ -34,19 +34,19 @@
     "putstack"
   ],
   "dependencies": {
-    "@eslint/js": "9.6.0",
-    "@typescript-eslint/utils": "8.0.0-alpha.34",
+    "@eslint/js": "9.7.0",
+    "@typescript-eslint/utils": "8.0.0-alpha.44",
     "eslint-plugin-depend": "0.8.0",
     "eslint-plugin-perfectionist": "2.11.0",
     "eslint-plugin-sonarjs": "1.0.3",
     "eslint-plugin-unicorn": "54.0.0",
-    "typescript-eslint": "8.0.0-alpha.34"
+    "typescript-eslint": "8.0.0-alpha.44"
   },
   "devDependencies": {
     "@types/eslint__js": "8.42.3"
   },
   "peerDependencies": {
-    "eslint": ">=9.6.0",
+    "eslint": ">=9.7.0",
     "typescript": ">=5"
   },
   "scripts": {
