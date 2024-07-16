@@ -5,7 +5,17 @@ import sonar from 'eslint-plugin-sonarjs';
 import tseslint, { config } from 'typescript-eslint';
 
 //General eslint recommended rules
-const eslintConfig = config(eslint.configs.recommended);
+const eslintConfig = config(eslint.configs.recommended, {
+  rules: {
+    /** Code quality rules */
+    //Enforce default clauses in switch statements to be last
+    'default-case-last': 'warn',
+    //Disallow nested ternary expressions
+    'no-nested-ternary': 'warn',
+    //Prefer the arrow callback of ES6 where possible
+    'prefer-arrow-callback': 'warn',
+  },
+});
 
 //General typescript-eslint rules that have type knowledge
 const typescriptEslintConfig = config(
@@ -13,12 +23,6 @@ const typescriptEslintConfig = config(
   ...tseslint.configs.stylisticTypeChecked,
   {
     rules: {
-      /** Code quality rules */
-      //Enforce default clauses in switch statements to be last
-      'default-case-last': 'warn',
-      //Disallow nested ternary expressions
-      'no-nested-ternary': 'warn',
-
       /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
       //Enforce default parameters to be last
       '@typescript-eslint/default-param-last': 'warn',
