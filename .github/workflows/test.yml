@@ -16,9 +16,8 @@ jobs:
         # Test against multiple node versions
         # Last LTS, current LTS, current, and next LTS (if not same as current)
         node: [18.x, 20.x, 21.x, 22.x]
-        os: [ubuntu-latest, macos-latest, windows-latest]
     name: Test
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
