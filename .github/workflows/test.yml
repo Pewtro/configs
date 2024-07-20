@@ -1,0 +1,43 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - next
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        # Test against multiple node versions
+        # Last LTS, current LTS, current, and next LTS (if not same as current)
+        node: [18.x, 20.x, 21.x, 22.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    name: Test
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Lint, Prettier, and Typecheck
+        run: pnpm test:ci
