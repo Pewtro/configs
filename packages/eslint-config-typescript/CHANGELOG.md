@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.5
+
+### Minor Changes
+
+- 9daf3e7: Enable prefer-arrow-callback in the base configuration
+
 ## 3.0.0-next.4
 
 ### Minor Changes
