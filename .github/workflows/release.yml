@@ -20,8 +20,9 @@ jobs:
         # Test against multiple node versions
         # Last LTS, current LTS, current, and next LTS (if not same as current)
         node: [18.x, 20.x, 21.x, 22.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -46,7 +47,7 @@ jobs:
         run: pnpm test:ci
 
       # Only run the release step if the push is to the main or next branch
-      - if: ${{ matrix.node == env.release_node && github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next') }}
+      - if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == env.release_node && github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next') }}
         name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
