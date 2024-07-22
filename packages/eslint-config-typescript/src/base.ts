@@ -1,6 +1,6 @@
 import eslint from '@eslint/js';
 import depend from 'eslint-plugin-depend';
-import perfectionistAlphabetical from 'eslint-plugin-perfectionist/configs/recommended-alphabetical';
+import perfectionist from 'eslint-plugin-perfectionist';
 import sonar from 'eslint-plugin-sonarjs';
 import tseslint, { config } from 'typescript-eslint';
 
@@ -65,7 +65,7 @@ const typescriptEslintConfig = config(
 const sonarConfig = config(sonar.configs.recommended);
 
 //General sorting and import rules
-const perfectionistConfig = config(perfectionistAlphabetical, {
+const perfectionistConfig = config(perfectionist.configs['recommended-alphabetical'], {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
@@ -73,8 +73,8 @@ const perfectionistConfig = config(perfectionistAlphabetical, {
       'warn',
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'unknown'],
-        'ignore-case': true,
-        'newlines-between': 'never',
+        ignoreCase: true,
+        newlinesBetween: 'never',
         order: 'asc',
         type: 'alphabetical',
       },
@@ -83,7 +83,7 @@ const perfectionistConfig = config(perfectionistAlphabetical, {
     'perfectionist/sort-objects': [
       'error',
       {
-        'partition-by-comment': true,
+        partitionByComment: true,
       },
     ],
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
