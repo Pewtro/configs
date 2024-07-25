@@ -46,7 +46,7 @@
     "@types/eslint__js": "8.42.3"
   },
   "peerDependencies": {
-    "eslint": "^9.7.0",
+    "eslint": "^8.57.0 || ^9.7.0",
     "typescript": "^5"
   },
   "scripts": {
