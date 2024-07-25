@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.7
+
+### Minor Changes
+
+- 017e428: Bump typescript-eslint to 8.0.0-alpha.54, eslint-plugin-unicorn to 55.0.0 and eslint-plugin-sonarjs to 1.0.4
+
+  eslint-plugin-unicorn now ships with types letting us remove the last entry in packages.d.ts.
+
 ## 3.0.0-next.6
 
 ### Minor Changes
