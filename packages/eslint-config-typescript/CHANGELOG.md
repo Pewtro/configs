@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.8
+
+### Minor Changes
+
+- 46aa6f8: Add a legacy version of the configs for users who are not yet ready to move to eslint v9
+
 ## 3.0.0-next.7
 
 ### Minor Changes
