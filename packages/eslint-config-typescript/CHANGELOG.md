@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.10
+
+### Minor Changes
+
+- f94c06f: Remove the experimental legeacy configs as it didn't work out nicely
+
 ## 3.0.0-next.9
 
 ### Minor Changes
