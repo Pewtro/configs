@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.9
+
+### Minor Changes
+
+- c4bc96a: Rename legacy/_ to legacy-_
+
 ## 3.0.0-next.8
 
 ### Minor Changes
