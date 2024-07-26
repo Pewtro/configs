@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.11
+
+### Minor Changes
+
+- 3002ce9: Turn off perfectionist/sort-switch-case for now
+
 ## 3.0.0-next.10
 
 ### Minor Changes
