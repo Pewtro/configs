@@ -65,7 +65,7 @@ const typescriptEslintConfig = config(
 const sonarConfig = config(sonar.configs.recommended);
 
 //General sorting and import rules
-const perfectionistConfig = config(perfectionist.configs['recommended-alphabetical'], {
+const perfectionistConfig = config(perfectionist.configs['recommended-natural'], {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
