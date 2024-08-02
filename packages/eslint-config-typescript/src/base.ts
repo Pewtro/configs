@@ -86,8 +86,6 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
         partitionByComment: true,
       },
     ],
-    //Sort switch case rule has some issues so for now we turn it off awaiting fixes in perfectionist
-    'perfectionist/sort-switch-case': 'off',
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
     //sort-interfaces: https://eslint-plugin-perfectionist.azat.io/rules/sort-interfaces
     //sort-objects: https://eslint-plugin-perfectionist.azat.io/rules/sort-object-types
