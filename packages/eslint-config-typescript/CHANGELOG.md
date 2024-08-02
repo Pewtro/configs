@@ -1,5 +1,47 @@
 # ESLint config for typescript changelog
 
+## 3.0.0
+
+### Major Changes
+
+- 673b4a6: Upgrade typescript-eslint package to 8.0.0
+- c0212b7: Drop support for node v18 and v21
+- 5902af6: Migrate to eslint v9 and flat config
+
+  Replaced eslint-plugin-import with eslint-plugin-perfectionist
+  Upgraded typescript-eslint to v8
+  Only export a flat config since that is the future of eslint with a planned complete removal in v10
+  Remove eslint-plugin-progress
+
+  In order to migrate please check the [eslint configuration documentation](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), as well as the [typescript-eslint documentation](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta) for the new rules and configuration options.
+
+### Minor Changes
+
+- 1e81358: Bump eslint to 9.6, eslint-plugin-depend to 0.8.0, typescript-eslint to 8.0.0-alpha.34
+- 9daf3e7: Enable prefer-arrow-callback in the base configuration
+- 021b2e9: Move to perfectionist 3.1.0 to add typescript-eslint v8 support
+- aec4963: Update eslint-plugin-perfectionist to 3.0.0
+- 3002ce9: Turn off perfectionist/sort-switch-case for now
+- 83091ea: Add eslint-plugin-progress and eslint-plugin-depend to the base config
+- f94c06f: Remove the experimental legeacy configs as it didn't work out nicely
+- 46aa6f8: Add a legacy version of the configs for users who are not yet ready to move to eslint v9
+- 05f80ca: Migrate the eslint config to typescript for better ergonomics when developing the config
+- 48d81a1: Update @eslint/js to 9.8.0 and set peer dependency to ^9.8.0
+- 0be2380: Bump `@eslint/js` to 9.7.0 and `typescript-eslint` to 8.0.0-alpha.44
+- c4bc96a: Rename legacy/_ to legacy-_
+- 017e428: Bump typescript-eslint to 8.0.0-alpha.54, eslint-plugin-unicorn to 55.0.0 and eslint-plugin-sonarjs to 1.0.4
+
+  eslint-plugin-unicorn now ships with types letting us remove the last entry in packages.d.ts.
+
+- 87e218b: Swap to recommended-natural over recommended-alphabetical in perfectionist
+
+### Patch Changes
+
+- 7a32c74: Bump eslint-plugin-depend to 0.9.0
+- b17e44c: Bump @typescript-eslint/utils and typescript-eslint to latest pre-release
+- f4dbb71: Automatically turn off type checking on any .js file
+- bfd5f0d: Turn @typescript-eslint/adjacent-overload-signatures off as recommended in perfectionist documentation
+
 ## 3.0.0-next.13
 
 ### Minor Changes
