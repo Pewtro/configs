@@ -30,7 +30,8 @@
     "vitest": "2.0.5"
   },
   "scripts": {
-    "build": "pnpm -r --if-present build",
+    "build": "pnpm -r --if-present --workspace-concurrency 1 build",
+    "build:ci": "pnpm -r --if-present build",
     "lint": "eslint --format stylish --max-warnings 0 --cache .",
     "lint:fix": "pnpm lint --fix",
     "prepare": "husky",

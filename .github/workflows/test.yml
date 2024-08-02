@@ -36,7 +36,7 @@ jobs:
         run: pnpm install
 
       - name: Build packages
-        run: pnpm build
+        run: pnpm build:ci
 
       - name: Lint, Prettier, and Typecheck
         run: pnpm test:ci
