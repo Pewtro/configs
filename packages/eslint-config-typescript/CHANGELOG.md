@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.13
+
+### Minor Changes
+
+- 021b2e9: Move to perfectionist 3.1.0 to add typescript-eslint v8 support
+
 ## 3.0.0-next.12
 
 ### Major Changes
