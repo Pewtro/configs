@@ -1,6 +1,6 @@
 {
   "name": "@putstack/prettier-config",
-  "version": "1.4.2-next.0",
+  "version": "1.4.2",
   "license": "MIT",
   "author": "Putro",
   "description": "Prettier config by Putro",

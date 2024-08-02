@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.4.2
+
+### Patch Changes
+
+- a939883: Alphabetically sort the configuration
+
 ## 1.4.2-next.0
 
 ### Patch Changes
