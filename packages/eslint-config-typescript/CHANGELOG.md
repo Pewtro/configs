@@ -1,5 +1,17 @@
 # ESLint config for typescript changelog
 
+## 3.0.0-next.12
+
+### Major Changes
+
+- 673b4a6: Upgrade typescript-eslint package to 8.0.0
+- c0212b7: Drop support for node v18 and v21
+
+### Minor Changes
+
+- 48d81a1: Update @eslint/js to 9.8.0 and set peer dependency to ^9.8.0
+- 87e218b: Swap to recommended-natural over recommended-alphabetical in perfectionist
+
 ## 3.0.0-next.11
 
 ### Minor Changes
