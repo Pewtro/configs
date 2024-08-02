@@ -72,8 +72,8 @@ This is a list of the plugins and configurations that are extended from.
   - [recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js) - The set of rules which are recommended for all projects by the ESLint team, indicated by the ✅ on the [rule list](https://eslint.org/docs/latest/rules/).
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend/tree/main/src/configs)
   - [recommended](https://github.com/es-tooling/eslint-plugin-depend/blob/main/src/configs/recommended.ts) - Using the recommended setup to catch dependency issues.
-- [eslint-plugin-perfectionist](https://eslint-plugin-perfectionist.azat.io/configs/recommended-alphabetical)
-  - [recommended-alphabetical](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/configs/recommended-alphabetical.ts) - Using the recommended setup to sort imports and other data alphabetically.
+- [eslint-plugin-perfectionist](https://perfectionist.dev/configs/recommended-natural)
+  - [recommended-natural](https://perfectionist.dev/configs/recommended-natural) - Using the recommended setup to sort imports and other data naturally. Natural sort compares strings containing a mixture of letters and numbers, just as a human would do when sorting. For example: `item-1`, `item-2`, `item-10`.
 - [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs#usage)
   - [recommended](https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/src/index.ts) - Using sonarjs recommended setup to catch general code smells.
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main)
