@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 3.0.1
+
+### Patch Changes
+
+- ee5552b: Bump typescript-eslint to 8.0.1
+- 02a04cf: Bump eslint-plugin-perfectionist to 3.1.2
+
 ## 3.0.0
 
 ### Major Changes
