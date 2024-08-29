@@ -34,7 +34,7 @@
     "putstack"
   ],
   "dependencies": {
-    "@eslint/js": "9.9.0",
+    "@eslint/js": "9.9.1",
     "@typescript-eslint/utils": "8.3.0",
     "eslint-plugin-depend": "0.10.0",
     "eslint-plugin-perfectionist": "3.1.3",
