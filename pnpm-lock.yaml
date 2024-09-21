@@ -66,8 +66,8 @@ importers:
         specifier: 0.11.0
         version: 0.11.0
       eslint-plugin-perfectionist:
-        specifier: 3.5.0
-        version: 3.5.0(eslint@9.9.0)(typescript@5.5.4)
+        specifier: 3.6.0
+        version: 3.6.0(eslint@9.9.0)(typescript@5.5.4)
       eslint-plugin-sonarjs:
         specifier: 1.0.4
         version: 1.0.4(eslint@9.9.0)
@@ -1053,14 +1053,14 @@ packages:
   eslint-plugin-depend@0.11.0:
     resolution: {integrity: sha512-IwF06BrcdYoELuFd18sdVHhvDfF23xbr8pG/ONqrwB4gXjJ7281mEDEmACKWyvMY63afph8+2aOLbeuvr9mbdg==}
 
-  eslint-plugin-perfectionist@3.5.0:
-    resolution: {integrity: sha512-vwDNuxlAlbZJ3DjHo6GnfZrmMlJBLFrkOLBV/rYvVnLFD+x54u9VyJcGOfJ2DK9d1cd3a/C/vtBrbBNgAC6Mrg==}
+  eslint-plugin-perfectionist@3.6.0:
+    resolution: {integrity: sha512-sA6ljy6dL/9cM5ruZ/pMqRVt0FQ4Z7mbQWlBYpyX9941LVfm65d2jl2k1ZbWD3ud9Wm+/NKgOvRnAatsKhMJbA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       astro-eslint-parser: ^1.0.2
       eslint: '>=8.0.0'
       svelte: '>=3.0.0'
-      svelte-eslint-parser: ^0.41.0
+      svelte-eslint-parser: ^0.41.1
       vue-eslint-parser: '>=9.0.0'
     peerDependenciesMeta:
       astro-eslint-parser:
@@ -3219,7 +3219,7 @@ snapshots:
       module-replacements: 2.1.0
       semver: 7.6.3
 
-  eslint-plugin-perfectionist@3.5.0(eslint@9.9.0)(typescript@5.5.4):
+  eslint-plugin-perfectionist@3.6.0(eslint@9.9.0)(typescript@5.5.4):
     dependencies:
       '@typescript-eslint/types': 8.5.0
       '@typescript-eslint/utils': 8.5.0(eslint@9.9.0)(typescript@5.5.4)
