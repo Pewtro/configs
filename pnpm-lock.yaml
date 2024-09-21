@@ -54,8 +54,8 @@ importers:
   packages/eslint-config-typescript:
     dependencies:
       '@eslint/js':
-        specifier: 9.10.0
-        version: 9.10.0
+        specifier: 9.11.0
+        version: 9.11.0
       '@typescript-eslint/utils':
         specifier: 8.5.0
         version: 8.5.0(eslint@9.9.0)(typescript@5.5.4)
@@ -496,6 +496,10 @@ packages:
 
   '@eslint/js@9.10.0':
     resolution: {integrity: sha512-fuXtbiP5GWIn8Fz+LWoOMVf/Jxm+aajZYkhi6CuEm4SxymFM+eUWzbO9qXT+L0iCkL5+KGYMCSGxo686H19S1g==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/js@9.11.0':
+    resolution: {integrity: sha512-LPkkenkDqyzTFauZLLAPhIb48fj6drrfMvRGSL9tS3AcZBSVTllemLSNyCvHNNL2t797S/6DJNSIwRwXgMO/eQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/js@9.9.0':
@@ -2633,6 +2637,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@9.10.0': {}
+
+  '@eslint/js@9.11.0': {}
 
   '@eslint/js@9.9.0': {}
 
