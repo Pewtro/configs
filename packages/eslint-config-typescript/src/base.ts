@@ -79,7 +79,78 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
         type: 'natural',
       },
     ],
-    //If we have a list of objects, we want to sort them alphabetically, but we want to partition them by comments
+    //Extend the default recommended rules to include comment partioning to allow for comments being used for explanatory purposes.
+    'perfectionist/sort-array-includes': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-classes': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-enums': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-exports': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+
+    'perfectionist/sort-interfaces': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-intersection-types': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-maps': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-named-exports': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-named-imports': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-object-types': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
     'perfectionist/sort-objects': [
       'error',
       {
@@ -87,10 +158,34 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
         type: 'natural',
       },
     ],
+    'perfectionist/sort-sets': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-union-types': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
+    'perfectionist/sort-variable-declarations': [
+      'error',
+      {
+        partitionByComment: true,
+        type: 'natural',
+      },
+    ],
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
-    //sort-interfaces: https://eslint-plugin-perfectionist.azat.io/rules/sort-interfaces
-    //sort-objects: https://eslint-plugin-perfectionist.azat.io/rules/sort-object-types
+    //sort-interfaces:  https://perfectionist.dev/rules/sort-interfaces
+    //sort-objects:  https://perfectionist.dev/rules/sort-object-types
     '@typescript-eslint/adjacent-overload-signatures': 'off',
+    //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
+    //sort-intersection-types: https://perfectionist.dev/rules/sort-intersection-types
+    '@typescript-eslint/sort-type-constituents': 'off',
   },
 });
 
