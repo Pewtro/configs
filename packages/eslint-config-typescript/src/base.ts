@@ -84,6 +84,7 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
       'error',
       {
         partitionByComment: true,
+        type: 'natural',
       },
     ],
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
