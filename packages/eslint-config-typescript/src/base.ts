@@ -76,7 +76,7 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
         ignoreCase: true,
         newlinesBetween: 'never',
         order: 'asc',
-        type: 'alphabetical',
+        type: 'natural',
       },
     ],
     //If we have a list of objects, we want to sort them alphabetically, but we want to partition them by comments
