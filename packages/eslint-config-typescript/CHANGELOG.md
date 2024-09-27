@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 3.5.0
+
+### Minor Changes
+
+- 3bed0b7: Update perfectionist/sort-objects to sort naturally instead of alphabetically
+- 5ba7fa5: Update perfectionist/sort-imports to sort naturally instead of alphabetical
+- 0dc9df3: Add partitionByComment to applicable perfectionist rules to allow users more easily to add comments for readability
+
 ## 3.4.0
 
 ### Minor Changes
