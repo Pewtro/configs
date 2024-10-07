@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 3.7.0
+
+### Minor Changes
+
+- 753e6c8: Update eslint-plugin-unicorn to 56.0.0
+- 63cc965: Update @eslint/js to 9.12.0
+
+### Patch Changes
+
+- 4bb96ab: Update @typescript-eslint/utils and typescript-eslint to 8.8.1
+
 ## 3.6.0
 
 ### Minor Changes
