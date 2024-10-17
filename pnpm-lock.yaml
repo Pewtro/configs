@@ -66,8 +66,8 @@ importers:
         specifier: 0.11.0
         version: 0.11.0
       eslint-plugin-perfectionist:
-        specifier: 3.8.0
-        version: 3.8.0(eslint@9.12.0)(typescript@5.6.2)
+        specifier: 3.9.1
+        version: 3.9.1(eslint@9.12.0)(typescript@5.6.2)
       eslint-plugin-sonarjs:
         specifier: 1.0.4
         version: 1.0.4(eslint@9.12.0)
@@ -715,10 +715,6 @@ packages:
     resolution: {integrity: sha512-k/E48uzsfJCRRbGLapdZgrX52csmWJ2rcowwPvOZ8lwPUv3xW6CcFeJAXgx4uJm+Ge4+a4tFOkdYvSpxhRhg1w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@typescript-eslint/types@8.8.0':
-    resolution: {integrity: sha512-QJwc50hRCgBd/k12sTykOJbESe1RrzmX6COk8Y525C9l7oweZ+1lw9JiU56im7Amm8swlz00DRIlxMYLizr2Vw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/typescript-estree@8.10.0':
     resolution: {integrity: sha512-3OE0nlcOHaMvQ8Xu5gAfME3/tWVDpb/HxtpUZ1WeOAksZ/h/gwrBzCklaGzwZT97/lBbbxJ16dMA98JMEngW4w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1054,8 +1050,8 @@ packages:
   eslint-plugin-depend@0.11.0:
     resolution: {integrity: sha512-IwF06BrcdYoELuFd18sdVHhvDfF23xbr8pG/ONqrwB4gXjJ7281mEDEmACKWyvMY63afph8+2aOLbeuvr9mbdg==}
 
-  eslint-plugin-perfectionist@3.8.0:
-    resolution: {integrity: sha512-BYJWbQVOjvIGK9V1xUfn790HuvkePjxti8epOi1H6sdzo0N4RehBmQ8coHPbgA/f12BUG1NIoDtQhI9mUm+o2A==}
+  eslint-plugin-perfectionist@3.9.1:
+    resolution: {integrity: sha512-9WRzf6XaAxF4Oi5t/3TqKP5zUjERhasHmLFHin2Yw6ZAp/EP/EVA2dr3BhQrrHWCm5SzTMZf0FcjDnBkO2xFkA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       astro-eslint-parser: ^1.0.2
@@ -2799,8 +2795,6 @@ snapshots:
 
   '@typescript-eslint/types@8.10.0': {}
 
-  '@typescript-eslint/types@8.8.0': {}
-
   '@typescript-eslint/typescript-estree@8.10.0(typescript@5.6.2)':
     dependencies:
       '@typescript-eslint/types': 8.10.0
@@ -3184,9 +3178,9 @@ snapshots:
       module-replacements: 2.1.0
       semver: 7.6.3
 
-  eslint-plugin-perfectionist@3.8.0(eslint@9.12.0)(typescript@5.6.2):
+  eslint-plugin-perfectionist@3.9.1(eslint@9.12.0)(typescript@5.6.2):
     dependencies:
-      '@typescript-eslint/types': 8.8.0
+      '@typescript-eslint/types': 8.10.0
       '@typescript-eslint/utils': 8.10.0(eslint@9.12.0)(typescript@5.6.2)
       eslint: 9.12.0
       minimatch: 9.0.5
