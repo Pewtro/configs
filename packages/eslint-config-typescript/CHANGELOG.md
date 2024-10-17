@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 3.8.0
+
+### Minor Changes
+
+- 48a2100: Update @typescript-eslint/utils and typescript-eslint to 8.10.0 to support typescript 5.6
+- 6ca6426: Update eslint-plugin-perfectionist to 3.9.1
+
 ## 3.7.0
 
 ### Minor Changes
