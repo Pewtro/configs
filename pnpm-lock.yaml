@@ -18,8 +18,8 @@ importers:
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
-        specifier: 22.8.1
-        version: 22.8.1
+        specifier: 22.8.4
+        version: 22.8.4
       '@vitest/coverage-v8':
         specifier: 2.1.4
         version: 2.1.4(vitest@2.1.4)
@@ -49,7 +49,7 @@ importers:
         version: 5.6.3
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@22.8.1)(@vitest/ui@2.1.4)
+        version: 2.1.4(@types/node@22.8.4)(@vitest/ui@2.1.4)
 
   packages/eslint-config-typescript:
     dependencies:
@@ -668,8 +668,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@22.8.1':
-    resolution: {integrity: sha512-k6Gi8Yyo8EtrNtkHXutUu2corfDf9su95VYVP10aGYMMROM6SAItZi0w1XszA6RtWTHSVp5OeFof37w0IEqCQg==}
+  '@types/node@22.8.4':
+    resolution: {integrity: sha512-SpNNxkftTJOPk0oN+y2bIqurEXHTA2AOZ3EJDDKeJ5VzkvvORSvmQXGQarcOzWV1ac7DCaPBEdMDxBsM+d8jWw==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2685,7 +2685,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@22.8.1':
+  '@types/node@22.8.4':
     dependencies:
       undici-types: 6.19.8
 
@@ -2788,7 +2788,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.8.1)(@vitest/ui@2.1.4)
+      vitest: 2.1.4(@types/node@22.8.4)(@vitest/ui@2.1.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -2799,13 +2799,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.4(vite@5.2.4(@types/node@22.8.1))':
+  '@vitest/mocker@2.1.4(vite@5.2.4(@types/node@22.8.4))':
     dependencies:
       '@vitest/spy': 2.1.4
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
-      vite: 5.2.4(@types/node@22.8.1)
+      vite: 5.2.4(@types/node@22.8.4)
 
   '@vitest/pretty-format@2.1.4':
     dependencies:
@@ -2835,7 +2835,7 @@ snapshots:
       sirv: 3.0.0
       tinyglobby: 0.2.10
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.8.1)(@vitest/ui@2.1.4)
+      vitest: 2.1.4(@types/node@22.8.4)(@vitest/ui@2.1.4)
 
   '@vitest/utils@2.1.4':
     dependencies:
@@ -4097,12 +4097,12 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@2.1.4(@types/node@22.8.1):
+  vite-node@2.1.4(@types/node@22.8.4):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       pathe: 1.1.2
-      vite: 5.2.4(@types/node@22.8.1)
+      vite: 5.2.4(@types/node@22.8.4)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4113,19 +4113,19 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.4(@types/node@22.8.1):
+  vite@5.2.4(@types/node@22.8.4):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.24.0
     optionalDependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.4
       fsevents: 2.3.3
 
-  vitest@2.1.4(@types/node@22.8.1)(@vitest/ui@2.1.4):
+  vitest@2.1.4(@types/node@22.8.4)(@vitest/ui@2.1.4):
     dependencies:
       '@vitest/expect': 2.1.4
-      '@vitest/mocker': 2.1.4(vite@5.2.4(@types/node@22.8.1))
+      '@vitest/mocker': 2.1.4(vite@5.2.4(@types/node@22.8.4))
       '@vitest/pretty-format': 2.1.4
       '@vitest/runner': 2.1.4
       '@vitest/snapshot': 2.1.4
@@ -4141,11 +4141,11 @@ snapshots:
       tinyexec: 0.3.1
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
-      vite: 5.2.4(@types/node@22.8.1)
-      vite-node: 2.1.4(@types/node@22.8.1)
+      vite: 5.2.4(@types/node@22.8.4)
+      vite-node: 2.1.4(@types/node@22.8.4)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.4
       '@vitest/ui': 2.1.4(vitest@2.1.4)
     transitivePeerDependencies:
       - less
