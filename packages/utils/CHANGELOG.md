@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.2.1
+
+### Patch Changes
+
+- f2df0be: Update type of parameters in generatePath function
+
 ## 0.2.0
 
 ### Minor Changes
