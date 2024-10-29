@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 1.4.3
+
+### Patch Changes
+
+- a03b4c4: Correct package.json exports of types
+
 ## 1.4.2
 
 ### Patch Changes
