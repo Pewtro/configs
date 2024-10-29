@@ -11,7 +11,7 @@ type PathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
 
 export const generatePath = <Path extends string>(
   path: Path,
-  parameters: { [key in PathParameter<Path>]: string },
+  parameters: Record<PathParameter<Path>, string>,
   baseUrl?: string,
 ) => {
   //Ensure the "/" prefix is present if the path starts with a "/" and the baseUrl does not end with a "/"
