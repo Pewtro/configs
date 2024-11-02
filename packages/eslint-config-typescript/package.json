@@ -34,16 +34,13 @@
     "putstack"
   ],
   "dependencies": {
-    "@eslint/js": "9.13.0",
+    "@eslint/js": "9.14.0",
     "@typescript-eslint/utils": "8.12.2",
     "eslint-plugin-depend": "0.11.0",
     "eslint-plugin-perfectionist": "3.9.1",
     "eslint-plugin-sonarjs": "1.0.4",
     "eslint-plugin-unicorn": "56.0.0",
     "typescript-eslint": "8.12.2"
-  },
-  "devDependencies": {
-    "@types/eslint__js": "8.42.3"
   },
   "peerDependencies": {
     "eslint": "^9.9.0",
