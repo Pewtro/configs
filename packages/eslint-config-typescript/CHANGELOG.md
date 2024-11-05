@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 3.10.0
+
+### Minor Changes
+
+- fc3dcd4: Update @eslint/js to 9.14.0, which includes built-in types
+- 8ec3d4e: Update @typescript-eslint/utils and typescript-eslint to 8.13.0
+- 8c69328: Update eslint-plugin-depend to 0.12.0
+
 ## 3.9.1
 
 ### Patch Changes
