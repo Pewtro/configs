@@ -1,15 +1,5 @@
 export type NullToUndefined<T> = T extends null ? undefined : T;
 
-type ConvertInterfaceToDict<T> = {
-  [K in keyof T]: T[K];
-};
-
-type OmitNullProperties<ObjectType extends Record<string, unknown>> = {
-  [K in keyof ObjectType]: NullToUndefinedRecursive<ObjectType[K]>;
-};
-
-type SwapNullItemsForUndefined<ArrayType extends Array<unknown>> = Array<NullToUndefinedRecursive<ArrayType[number]>>;
-
 /**
  * Takes an unknown type and gives you a type with any `null` values swapped to `undefined`. Works for scalar types, arrays, and objects. It is recursive, so it will work for nested objects and arrays.
  *
@@ -26,3 +16,13 @@ export type NullToUndefinedRecursive<T> = T extends null
     : ConvertInterfaceToDict<T> extends Record<string, unknown>
       ? OmitNullProperties<ConvertInterfaceToDict<T>>
       : T;
+
+type ConvertInterfaceToDict<T> = {
+  [K in keyof T]: T[K];
+};
+
+type OmitNullProperties<ObjectType extends Record<string, unknown>> = {
+  [K in keyof ObjectType]: NullToUndefinedRecursive<ObjectType[K]>;
+};
+
+type SwapNullItemsForUndefined<ArrayType extends Array<unknown>> = Array<NullToUndefinedRecursive<ArrayType[number]>>;
