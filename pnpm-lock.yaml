@@ -69,8 +69,8 @@ importers:
         specifier: 0.12.0
         version: 0.12.0
       eslint-plugin-perfectionist:
-        specifier: 4.1.2
-        version: 4.1.2(eslint@9.15.0)(typescript@5.7.2)
+        specifier: 4.2.0
+        version: 4.2.0(eslint@9.15.0)(typescript@5.7.2)
       eslint-plugin-sonarjs:
         specifier: 1.0.4
         version: 1.0.4(eslint@9.15.0)
@@ -706,10 +706,6 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/types@8.16.0':
-    resolution: {integrity: sha512-NzrHj6thBAOSE4d9bsuRNMvk+BvaQvmY4dDglgkgGC0EW/tB3Kelnp3tAKH87GEwzoxgeQn9fNGRyFJM/xd+GQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/types@8.17.0':
     resolution: {integrity: sha512-gY2TVzeve3z6crqh2Ic7Cr+CAv6pfb0Egee7J5UAVWCpVvDI/F71wNfolIim4FE6hT15EbpZFVUj9j5i38jYXA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1044,8 +1040,8 @@ packages:
   eslint-plugin-depend@0.12.0:
     resolution: {integrity: sha512-bS5ESnC3eXDJPNv0RKkzRbLO45hRRLR/dleAUdbysXChWz1bAxa4MRh14EtDREn7fZieueqz4L7TfQQbzvdYHA==}
 
-  eslint-plugin-perfectionist@4.1.2:
-    resolution: {integrity: sha512-YjXPWB/rKe/gPUsyuxw75wTUrzN5MuJnRV0PH9NoonFvgcdVIXk551mkBKPr59nRZCbu7S3dFHwfo4gA42DB2w==}
+  eslint-plugin-perfectionist@4.2.0:
+    resolution: {integrity: sha512-hEMFx5xfSc/0OLZXJhSaLUKkFxATuRf4yL2iVfxEcxkkb17DfoLZY9eH960dPSw5uB7o+4avqP3rtkNp1Vwo7w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -2730,8 +2726,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/types@8.16.0': {}
-
   '@typescript-eslint/types@8.17.0': {}
 
   '@typescript-eslint/typescript-estree@8.17.0(typescript@5.7.2)':
@@ -3099,9 +3093,9 @@ snapshots:
       module-replacements: 2.1.0
       semver: 7.6.3
 
-  eslint-plugin-perfectionist@4.1.2(eslint@9.15.0)(typescript@5.7.2):
+  eslint-plugin-perfectionist@4.2.0(eslint@9.15.0)(typescript@5.7.2):
     dependencies:
-      '@typescript-eslint/types': 8.16.0
+      '@typescript-eslint/types': 8.17.0
       '@typescript-eslint/utils': 8.17.0(eslint@9.15.0)(typescript@5.7.2)
       eslint: 9.15.0
       natural-orderby: 5.0.0
