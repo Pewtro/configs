@@ -19,9 +19,9 @@
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
     "@types/node": "22.10.1",
-    "@vitest/coverage-v8": "2.1.6",
-    "@vitest/ui": "2.1.6",
-    "eslint": "9.15.0",
+    "@vitest/coverage-v8": "2.1.8",
+    "@vitest/ui": "2.1.8",
+    "eslint": "9.16.0",
     "husky": "9.1.7",
     "lint-staged": "15.2.10",
     "npm-run-all2": "7.0.1",
@@ -29,7 +29,7 @@
     "tsup": "8.3.5",
     "turbo": "2.3.3",
     "typescript": "5.7.2",
-    "vitest": "2.1.6"
+    "vitest": "2.1.8"
   },
   "scripts": {
     "build": "turbo build",
