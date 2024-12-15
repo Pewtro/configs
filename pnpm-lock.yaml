@@ -57,8 +57,8 @@ importers:
   packages/eslint-config-typescript:
     dependencies:
       '@eslint/js':
-        specifier: 9.16.0
-        version: 9.16.0
+        specifier: 9.17.0
+        version: 9.17.0
       '@typescript-eslint/utils':
         specifier: 8.18.0
         version: 8.18.0(eslint@9.16.0)(typescript@5.7.2)
