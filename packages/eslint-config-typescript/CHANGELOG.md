@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 3.18.0
+
+### Minor Changes
+
+- f97f89c: Update eslint-plugin-perfectionist to 4.7.0
+- fcf2c7b: Move @typescript-eslint/utils and typescript-eslint to peerDependencies to allow for users to upgrade faster
+- 1a2ba0c: Update @typescript-eslint/utils and typescript-eslint minimum versions to 8.21.0
+
 ## 3.17.0
 
 ### Minor Changes
