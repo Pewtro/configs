@@ -41,10 +41,10 @@
     "eslint-plugin-unicorn": "56.0.1"
   },
   "peerDependencies": {
-    "@typescript-eslint/utils": "^8.20.0",
+    "@typescript-eslint/utils": "^8.21.0",
     "eslint": "^9.9.0",
     "typescript": "^5",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.21.0"
   },
   "scripts": {
     "build": "tsup"
