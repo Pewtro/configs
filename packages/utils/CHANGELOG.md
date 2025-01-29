@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.3.0
+
+### Minor Changes
+
+- edd94b4: Drop support for node 21, and broaden support for >=22
+
 ## 0.2.1
 
 ### Patch Changes
