@@ -1,6 +1,6 @@
 {
   "name": "@putstack/utils",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "license": "MIT",
   "author": "Putro",
   "description": "Various utility functions I find myself recreating over and over again.",

@@ -1,5 +1,14 @@
 # ESLint config for typescript changelog
 
+## 3.19.0
+
+### Minor Changes
+
+- edd94b4: Drop support for node 21, and broaden support for >=22
+- 05fe31e: Move @eslint/js to a peer dependency to allow a broader range of versions
+- afb0d90: Update minimum version of @eslint/js and eslint to 9.19.0
+- 29dbb05: Update minimum version of @typescript-eslint/utils and typescript-eslint to 8.22.0
+
 ## 3.18.0
 
 ### Minor Changes
