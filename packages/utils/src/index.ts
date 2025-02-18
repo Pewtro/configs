@@ -1,5 +1,5 @@
-//http-utils
-export { generatePath } from './http-utils/http-utils.js';
+//http-utilities
+export { generatePath } from './http-utilities/http-utilities.js';
 
 //null-to-undefined
 export { nullToUndefined, recursiveNullToUndefined } from './null-to-undefined/null-to-undefined.js';
