@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.0
+
+### Minor Changes
+
+- 8674582: This package is now ESM only. You can read sindresorhus' snippet on pure ESM packages [here](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) for more information.
+
 ## 0.3.0
 
 ### Minor Changes
