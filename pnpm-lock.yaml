@@ -60,7 +60,7 @@ importers:
   packages/eslint-config-typescript:
     dependencies:
       '@eslint/js':
-        specifier: ^9.19.0
+        specifier: ^9.20.0
         version: 9.20.0
       '@typescript-eslint/utils':
         specifier: ^8.22.0
