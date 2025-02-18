@@ -5,16 +5,13 @@
   "author": "Putro",
   "description": "Prettier config by Putro",
   "repository": "https://github.com/Pewtro/configs",
-  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "./dist"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
   },
   "type": "module",
   "keywords": [
