@@ -1,5 +1,20 @@
 # ESLint config for typescript changelog
 
+## 4.0.0
+
+### Major Changes
+
+- 8674582: This package is now ESM only. You can read sindresorhus' snippet on pure ESM packages [here](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) for more information.
+- 6a20329: Update eslint-plugin-unicorn to 57.0.0 which changes it to ESM-only and adds a bunch of new rules, see more [here](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v57.0.0).
+
+### Minor Changes
+
+- 6c42c03: Update minimum version of eslint to 9.20.1
+- 3743fae: Update eslint-plugin-perfectionist to 4.9.0
+- ce77799: Update minimum version of @typescript-eslint/utils and typescript-eslint to 8.24.1
+- 39e77f5: Update eslint-plugin-perfectionist to 4.8.0
+- 11b3f66: Update minimum version of @eslint/js to 9.20.0
+
 ## 3.19.0
 
 ### Minor Changes
