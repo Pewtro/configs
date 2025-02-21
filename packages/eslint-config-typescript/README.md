@@ -64,6 +64,7 @@ This is a list of the plugins and configurations that are extended from.
 
 #### Plugins
 
+- [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan) - An ESLint plugin that enforces logical consistency by transforming negated boolean expressions according to De Morgan’s laws.
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) - An ESLint plugin for suggesting optimisations in choice of dependency, native equivalents, etc.
 - [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist) - ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.
 - [eslint-plugin-progress](https://github.com/taskworld/eslint-plugin-progress) - Report progress when running ESLint. Useful for large projects with thousands of files, so it's obvious that something is running!
@@ -74,6 +75,8 @@ This is a list of the plugins and configurations that are extended from.
 
 - [eslint](https://eslint.org/docs/latest/rules/)
   - [recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js) - The set of rules which are recommended for all projects by the ESLint team, indicated by the ✅ on the [rule list](https://eslint.org/docs/latest/rules/).
+- [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/index.ts)
+  - [recommended](https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/index.ts) - Using the recommended setup to improve logical consistency.
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend/tree/main/src/configs)
   - [recommended](https://github.com/es-tooling/eslint-plugin-depend/blob/main/src/configs/recommended.ts) - Using the recommended setup to catch dependency issues.
 - [eslint-plugin-perfectionist](https://perfectionist.dev/configs/recommended-natural)

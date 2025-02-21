@@ -1,4 +1,5 @@
 import eslint from '@eslint/js';
+import demorgan from 'eslint-plugin-de-morgan';
 import depend from 'eslint-plugin-depend';
 import perfectionist from 'eslint-plugin-perfectionist';
 import sonar from 'eslint-plugin-sonarjs';
@@ -185,6 +186,9 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
   },
 });
 
+//De Morgan's law rules for simplifying boolean expressions
+const demorganConfig = config(demorgan.configs.recommended);
+
 //Dependency guidance to migrate off other dependencies
 const dependConfig = config(depend.configs['flat/recommended']);
 
@@ -198,6 +202,7 @@ export const base = config(
   typescriptEslintConfig,
   sonarConfig,
   perfectionistConfig,
+  demorganConfig,
   dependConfig,
   disableTypeCheckedOnJS,
 );
