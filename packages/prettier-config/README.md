@@ -36,18 +36,10 @@ import putstackConfig from '@putstack/prettier-config';
 /** @type {import("prettier").Config} */
 const config = {
   ...putstackConfig,
+  //Other rules
 };
 
 export default config;
-```
-
-**OR WITH CJS**
-
-```
-module.exports = {
-    ...require("@putstack/prettier-config"),
-    endOfLine: 'lf', //to overwriter any configuration
-}
 ```
 
 ## Example

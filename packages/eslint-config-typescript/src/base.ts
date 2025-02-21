@@ -18,48 +18,44 @@ const eslintConfig = config(eslint.configs.recommended, {
 });
 
 //General typescript-eslint rules that have type knowledge
-const typescriptEslintConfig = config(
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-  {
-    rules: {
-      /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
-      //Enforce default parameters to be last
-      '@typescript-eslint/default-param-last': 'warn',
-      'default-param-last': 'off',
-      //Disallow variable declarations from shadowing variables declared in the outer scope
-      '@typescript-eslint/no-shadow': 'warn',
-      'no-shadow': 'off',
-      //Disallow variable redeclaration
-      '@typescript-eslint/no-redeclare': 'warn',
-      'no-redeclare': 'off',
+const typescriptEslintConfig = config(tseslint.configs.recommendedTypeChecked, tseslint.configs.stylisticTypeChecked, {
+  rules: {
+    /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
+    //Enforce default parameters to be last
+    '@typescript-eslint/default-param-last': 'warn',
+    'default-param-last': 'off',
+    //Disallow variable declarations from shadowing variables declared in the outer scope
+    '@typescript-eslint/no-shadow': 'warn',
+    'no-shadow': 'off',
+    //Disallow variable redeclaration
+    '@typescript-eslint/no-redeclare': 'warn',
+    'no-redeclare': 'off',
 
-      //Emulate the TypeScript style of exempting names starting with _
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          args: 'all',
-          argsIgnorePattern: '^_',
-          caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-          varsIgnorePattern: '^_',
-        },
-      ],
+    //Emulate the TypeScript style of exempting names starting with _
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        args: 'all',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+        varsIgnorePattern: '^_',
+      },
+    ],
 
-      /** Stylistic rules */
-      //Prefer using Array<T> over T[]
-      '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
-      //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
-      '@typescript-eslint/consistent-type-imports': 'warn',
-      //We want to encourage marking type exports explicitly
-      '@typescript-eslint/consistent-type-exports': 'warn',
-      //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
-      '@typescript-eslint/no-import-type-side-effects': 'warn',
-    },
+    /** Stylistic rules */
+    //Prefer using Array<T> over T[]
+    '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
+    //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
+    '@typescript-eslint/consistent-type-imports': 'warn',
+    //We want to encourage marking type exports explicitly
+    '@typescript-eslint/consistent-type-exports': 'warn',
+    //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
+    '@typescript-eslint/no-import-type-side-effects': 'warn',
   },
-);
+});
 
 //General code quality rules
 const sonarConfig = config(sonar.configs.recommended);
@@ -198,10 +194,10 @@ const disableTypeCheckedOnJS = config({
 });
 
 export const base = config(
-  ...eslintConfig,
-  ...typescriptEslintConfig,
-  ...sonarConfig,
-  ...perfectionistConfig,
-  ...dependConfig,
-  ...disableTypeCheckedOnJS,
+  eslintConfig,
+  typescriptEslintConfig,
+  sonarConfig,
+  perfectionistConfig,
+  dependConfig,
+  disableTypeCheckedOnJS,
 );

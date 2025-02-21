@@ -29,12 +29,14 @@ yarn add -D @putstack/eslint-config-typescript
 
 Ensure that your ESLint configuration is setup to utilize TypeScript's type checking API by following this [guide](https://typescript-eslint.io/linting/typed-linting). Note that if you're using this in a monorepo, you _SHOULD_ keep `"project":"true"` despite that the guide says otherwise in my experience.
 
-Add this to your config by editing your eslint.config.js file or equivalent.
+Add this to your config by editing your eslint.config.js file or equivalent. While it is not required, it is recommended to use the config helper from `typescript-eslint` to help type your eslint configuration.
 
 ```js
 import putstack from '@putstack/eslint-config-typescript';
+import { config } from 'typescript-eslint';
 
-export default [...putstack.configs.recommended];
+//export default [...putstack.configs.recommended];
+export default config(putstack.configs.recommended);
 ```
 
 If the default is too strict on an existing project, you can also use the `base` configuration to exclude some of the more strict rules.
@@ -42,8 +44,10 @@ To see what is dincluded in which package, please view [this section](#eslint-pl
 
 ```js
 import putstack from '@putstack/eslint-config-typescript';
+import { config } from 'typescript-eslint';
 
-export default [...putstack.configs.base];
+//export default [...putstack.configs.base];
+export default config(putstack.configs.base);
 ```
 
 ## Example

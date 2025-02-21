@@ -13,5 +13,5 @@ export default tseslint.config(
       },
     },
   },
-  ...putstack.configs.recommended,
+  putstack.configs.recommended,
 );
