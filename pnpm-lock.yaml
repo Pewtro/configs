@@ -69,8 +69,8 @@ importers:
         specifier: ^9.20.1
         version: 9.20.1
       eslint-plugin-de-morgan:
-        specifier: 1.1.0
-        version: 1.1.0(eslint@9.20.1)
+        specifier: 1.2.0
+        version: 1.2.0(eslint@9.20.1)
       eslint-plugin-depend:
         specifier: 0.12.0
         version: 0.12.0
@@ -1206,8 +1206,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-de-morgan@1.1.0:
-    resolution: {integrity: sha512-68nLDXi9EJtD/8q7JrTbzbpBp3CIePTLfLQFkDivj8OHzscQeT7g2RKkNqmy5sgMDZXN6saS6npfBXsnZkvWIA==}
+  eslint-plugin-de-morgan@1.2.0:
+    resolution: {integrity: sha512-XOZxiOMHchXn425a1DS/NOXVkGqKiTOCvVGIPru/l/bfF4Ant7u8d4+rXOqVFEN5Z8K+I/AO19U074gqnnBsJw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -3450,7 +3450,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-de-morgan@1.1.0(eslint@9.20.1):
+  eslint-plugin-de-morgan@1.2.0(eslint@9.20.1):
     dependencies:
       eslint: 9.20.1
 
