@@ -21,9 +21,7 @@
     "putstack"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "prettier": "3.5.2"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "prettier": ">=3.0.3"
   },
