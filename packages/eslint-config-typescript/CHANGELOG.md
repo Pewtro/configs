@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 4.1.0
+
+### Minor Changes
+
+- 57f10c3: Add eslint-plugin-de-morgan to the base configuration.
+
+  It is an ESLint plugin that enforces logical consistency by transforming negated boolean expressions according to De Morgan’s laws.
+
+- a943f15: Update eslint-plugin-de-morgan to 1.2.0
+
 ## 4.0.0
 
 ### Major Changes
