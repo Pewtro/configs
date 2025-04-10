@@ -1,6 +1,6 @@
 import eslint from '@eslint/js';
 import demorgan from 'eslint-plugin-de-morgan';
-import depend from 'eslint-plugin-depend';
+import { configs as eslintDependConfig } from 'eslint-plugin-depend';
 import perfectionist from 'eslint-plugin-perfectionist';
 import sonar from 'eslint-plugin-sonarjs';
 import tseslint, { config } from 'typescript-eslint';
@@ -190,7 +190,7 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
 const demorganConfig = config(demorgan.configs.recommended);
 
 //Dependency guidance to migrate off other dependencies
-const dependConfig = config(depend.configs['flat/recommended']);
+const dependConfig = config(eslintDependConfig['flat/recommended']);
 
 const disableTypeCheckedOnJS = config({
   extends: [tseslint.configs.disableTypeChecked],

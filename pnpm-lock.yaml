@@ -72,8 +72,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(eslint@9.24.0)
       eslint-plugin-depend:
-        specifier: 0.12.0
-        version: 0.12.0
+        specifier: 1.0.0
+        version: 1.0.0
       eslint-plugin-perfectionist:
         specifier: 4.11.0
         version: 4.11.0(eslint@9.24.0)(typescript@5.8.3)
@@ -1104,8 +1104,8 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-depend@0.12.0:
-    resolution: {integrity: sha512-bS5ESnC3eXDJPNv0RKkzRbLO45hRRLR/dleAUdbysXChWz1bAxa4MRh14EtDREn7fZieueqz4L7TfQQbzvdYHA==}
+  eslint-plugin-depend@1.0.0:
+    resolution: {integrity: sha512-w49fVwN3mhkqEfUXdguy6cTrPvj18PtsIq1tcqtGlHBWv7OPz2w8ogzQCiiKDRrN5VDb9B0K2zSw/P/Cm4GNkw==}
 
   eslint-plugin-perfectionist@4.11.0:
     resolution: {integrity: sha512-5s+ehXydnLPQpLDj5mJ0CnYj2fQe6v6gKA3tS+FZVBLzwMOh8skH+l+1Gni08rG0SdEcNhJyjQp/mEkDYK8czw==}
@@ -3232,7 +3232,7 @@ snapshots:
     dependencies:
       eslint: 9.24.0
 
-  eslint-plugin-depend@0.12.0:
+  eslint-plugin-depend@1.0.0:
     dependencies:
       fd-package-json: 1.2.0
       module-replacements: 2.1.0
