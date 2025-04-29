@@ -75,8 +75,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       eslint-plugin-perfectionist:
-        specifier: 4.11.0
-        version: 4.11.0(eslint@9.25.1)(typescript@5.8.3)
+        specifier: 4.12.3
+        version: 4.12.3(eslint@9.25.1)(typescript@5.8.3)
       eslint-plugin-sonarjs:
         specifier: 1.0.4
         version: 1.0.4(eslint@9.25.1)
@@ -1035,8 +1035,8 @@ packages:
   eslint-plugin-depend@1.0.0:
     resolution: {integrity: sha512-w49fVwN3mhkqEfUXdguy6cTrPvj18PtsIq1tcqtGlHBWv7OPz2w8ogzQCiiKDRrN5VDb9B0K2zSw/P/Cm4GNkw==}
 
-  eslint-plugin-perfectionist@4.11.0:
-    resolution: {integrity: sha512-5s+ehXydnLPQpLDj5mJ0CnYj2fQe6v6gKA3tS+FZVBLzwMOh8skH+l+1Gni08rG0SdEcNhJyjQp/mEkDYK8czw==}
+  eslint-plugin-perfectionist@4.12.3:
+    resolution: {integrity: sha512-V0dmpq6fBbn0BYofHsiRuuY9wgkKMDkdruM0mIRBIJ8XZ8vEaTAZqFsywm40RuWNVnduWBt5HO1ZZ+flE2yqjg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.45.0'
@@ -2994,7 +2994,7 @@ snapshots:
       module-replacements: 2.1.0
       semver: 7.7.1
 
-  eslint-plugin-perfectionist@4.11.0(eslint@9.25.1)(typescript@5.8.3):
+  eslint-plugin-perfectionist@4.12.3(eslint@9.25.1)(typescript@5.8.3):
     dependencies:
       '@typescript-eslint/types': 8.31.1
       '@typescript-eslint/utils': 8.31.1(eslint@9.25.1)(typescript@5.8.3)
