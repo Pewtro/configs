@@ -32,6 +32,15 @@
     "typescript-eslint": "8.31.1",
     "vitest": "3.1.2"
   },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "^0.25.0",
+      "vite": "^6.0.15"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
   "scripts": {
     "build": "turbo build",
     "lint": "eslint --format stylish --max-warnings 0 --cache",
@@ -52,11 +61,6 @@
     ],
     "*.{ts,tsx,js,jsx}": [
       "pnpm --silent lint:fix"
-    ]
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
     ]
   }
 }
