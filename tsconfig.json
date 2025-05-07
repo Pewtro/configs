@@ -16,7 +16,7 @@
     /* Default library settings */
     "lib": ["ES2022"],
 
-    /* We transpile with tsup */
+    /* We transpile with tsdown */
     "noEmit": true,
     "module": "Preserve",
     "moduleResolution": "Bundler"

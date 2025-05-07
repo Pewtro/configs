@@ -41,6 +41,6 @@
     "typescript-eslint": "^8.24.1"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsdown"
   }
 }
