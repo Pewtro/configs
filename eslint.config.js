@@ -14,4 +14,15 @@ export default tseslint.config(
     },
   },
   putstack.configs.recommended,
+  {
+    //TODO: Remove this if/when we move to eslint-plugin-unicorn-x in a future major version of @putstack/eslint-config-typescript
+    rules: {
+      'depend/ban-dependencies': [
+        'error',
+        {
+          allowed: ['eslint-plugin-unicorn'],
+        },
+      ],
+    },
+  },
 );
