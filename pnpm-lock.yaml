@@ -72,8 +72,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-depend:
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       eslint-plugin-perfectionist:
         specifier: 4.12.3
         version: 4.12.3(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
@@ -1121,8 +1121,8 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-depend@1.1.0:
-    resolution: {integrity: sha512-eDsFkKjo5KwZA8SP2E7Mm4XV7Wl2l48Jj36HtkCDTr/nJ2cpVXdleK/DFkM/uyefc9kU2ikD5zNx7Wn5ns+g2w==}
+  eslint-plugin-depend@1.2.0:
+    resolution: {integrity: sha512-nbG8AOTYk43kM/SLCFLNW8tvAssF3rrvE5W5dWLP9/joNdAvzJLMuTEx9GIahoRYVTFCQYLejg2tll0USSvFHg==}
 
   eslint-plugin-perfectionist@4.12.3:
     resolution: {integrity: sha512-V0dmpq6fBbn0BYofHsiRuuY9wgkKMDkdruM0mIRBIJ8XZ8vEaTAZqFsywm40RuWNVnduWBt5HO1ZZ+flE2yqjg==}
@@ -1663,8 +1663,8 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  module-replacements@2.7.0:
-    resolution: {integrity: sha512-iIGJ2QnWZPViTgf/Sd5ecmpT4Yn7oH50fut5egWb/xYujeyKCXqIngoMQtKO7nVQyKP78UdkEZJ5i0eZvuKqVQ==}
+  module-replacements@2.8.0:
+    resolution: {integrity: sha512-ecTdT19nf+jYxPhXNCUuopDwazNOfcEW/GVlRmVxFO/zWcFFedso+pV4GbJ0TKjI+su3htyghhCJJ99ZAkuUyg==}
 
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -3391,10 +3391,10 @@ snapshots:
     dependencies:
       eslint: 9.26.0(jiti@2.4.2)
 
-  eslint-plugin-depend@1.1.0:
+  eslint-plugin-depend@1.2.0:
     dependencies:
       fd-package-json: 1.2.0
-      module-replacements: 2.7.0
+      module-replacements: 2.8.0
       semver: 7.7.1
 
   eslint-plugin-perfectionist@4.12.3(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3):
@@ -3984,7 +3984,7 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  module-replacements@2.7.0: {}
+  module-replacements@2.8.0: {}
 
   mri@1.2.0: {}
 
