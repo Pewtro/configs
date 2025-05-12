@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 4.4.0
+
+### Minor Changes
+
+- 2f17032: Update eslint-plugin-depend to 1.2.0 to not flag eslint-plugin-unicorn
+- 0f9b7b7: Update eslint-plugin-depend to 1.1.0
+
+### Patch Changes
+
+- e0c11ba: Update eslint-plugin-unicorn to 59.0.1
+
 ## 4.3.0
 
 ### Minor Changes
