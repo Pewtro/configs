@@ -50,9 +50,9 @@ const typescriptEslintConfig = config(tseslint.configs.recommendedTypeChecked, t
     //Prefer using Array<T> over T[]
     '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
     //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
-    '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/consistent-type-imports': ['warn', { fixStyle: 'inline-type-imports', prefer: 'type-imports' }],
     //We want to encourage marking type exports explicitly
-    '@typescript-eslint/consistent-type-exports': 'warn',
+    '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
     //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
     '@typescript-eslint/no-import-type-side-effects': 'warn',
   },
