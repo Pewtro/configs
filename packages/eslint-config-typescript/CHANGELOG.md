@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.5.0
+
+### Minor Changes
+
+- d7b0cb5: Update usage of @typescript-eslint/consistent-type-imports and @typescript-eslint/consistent-type-exports to improve removal of type imports/exports during builds
+
 ## 4.4.0
 
 ### Minor Changes
