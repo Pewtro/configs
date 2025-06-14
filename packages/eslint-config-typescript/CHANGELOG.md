@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 4.5.0
+
+### Minor Changes
+
+- 82ce869: Update eslint-plugin-de-morgan to 1.3.0
+- b9aeb25: Update eslint-plugin-perfectionist to 4.14.0
+- d7b0cb5: Update usage of @typescript-eslint/consistent-type-imports and @typescript-eslint/consistent-type-exports to improve removal of type imports/exports during builds
+
 ## 4.4.0
 
 ### Minor Changes
