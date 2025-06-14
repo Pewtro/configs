@@ -62,6 +62,7 @@ const typescriptEslintConfig = config(tseslint.configs.recommendedTypeChecked, t
 const sonarConfig = config(sonar.configs.recommended);
 
 //General sorting and import rules
+//@ts-expect-error Temporary issue with typescript-eslint
 const perfectionistConfig = config(perfectionist.configs['recommended-natural'], {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
@@ -187,9 +188,11 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
 });
 
 //De Morgan's law rules for simplifying boolean expressions
+//@ts-expect-error Temporary issue with typescript-eslint
 const demorganConfig = config(demorgan.configs.recommended);
 
 //Dependency guidance to migrate off other dependencies
+//@ts-expect-error Temporary issue with typescript-eslint
 const dependConfig = config(eslintDependConfig['flat/recommended']);
 
 const disableTypeCheckedOnJS = config({
