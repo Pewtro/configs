@@ -1,9 +1,10 @@
 import eslint from '@eslint/js';
 import demorgan from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
+import { configs as importConfigs } from 'eslint-plugin-import-x';
 import perfectionist from 'eslint-plugin-perfectionist';
-import sonar from 'eslint-plugin-sonarjs';
-import tseslint, { config } from 'typescript-eslint';
+import { configs as sonarConfigs } from 'eslint-plugin-sonarjs';
+import { config, configs as tsEslintConfigs } from 'typescript-eslint';
 
 //General eslint recommended rules
 const eslintConfig = config(eslint.configs.recommended, {
@@ -19,7 +20,7 @@ const eslintConfig = config(eslint.configs.recommended, {
 });
 
 //General typescript-eslint rules that have type knowledge
-const typescriptEslintConfig = config(tseslint.configs.recommendedTypeChecked, tseslint.configs.stylisticTypeChecked, {
+const typescriptEslintConfig = config(tsEslintConfigs.recommendedTypeChecked, tsEslintConfigs.stylisticTypeChecked, {
   rules: {
     /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
     //Enforce default parameters to be last
@@ -59,7 +60,7 @@ const typescriptEslintConfig = config(tseslint.configs.recommendedTypeChecked, t
 });
 
 //General code quality rules
-const sonarConfig = config(sonar.configs.recommended);
+const sonarConfig = config(sonarConfigs.recommended);
 
 //General sorting and import rules
 const perfectionistConfig = config(perfectionist.configs['recommended-natural'], {
@@ -69,7 +70,7 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
     'perfectionist/sort-imports': [
       'warn',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'unknown'],
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'unknown'],
         ignoreCase: true,
         newlinesBetween: 'never',
         order: 'asc',
@@ -186,6 +187,13 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
   },
 });
 
+//Additional import rules to enforce beyond the sorting rules provided by perfectionist
+const importConfig = config(importConfigs['flat/recommended'], importConfigs['flat/typescript'], {
+  rules: {
+    'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+  },
+});
+
 //De Morgan's law rules for simplifying boolean expressions
 const demorganConfig = config(demorgan.configs.recommended);
 
@@ -193,7 +201,7 @@ const demorganConfig = config(demorgan.configs.recommended);
 const dependConfig = config(eslintDependConfig['flat/recommended']);
 
 const disableTypeCheckedOnJS = config({
-  extends: [tseslint.configs.disableTypeChecked],
+  extends: [tsEslintConfigs.disableTypeChecked],
   files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
 });
 
@@ -202,6 +210,7 @@ export const base = config(
   typescriptEslintConfig,
   sonarConfig,
   perfectionistConfig,
+  importConfig,
   demorganConfig,
   dependConfig,
   disableTypeCheckedOnJS,

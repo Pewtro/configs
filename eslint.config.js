@@ -1,4 +1,4 @@
-import putstack from '@putstack/eslint-config-typescript';
+import { configs as putstackConfigs } from '@putstack/eslint-config-typescript';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -13,5 +13,5 @@ export default tseslint.config(
       },
     },
   },
-  putstack.configs.recommended,
+  putstackConfigs.recommended,
 );
