@@ -1,5 +1,12 @@
 # ESLint config for typescript changelog
 
+## 4.6.0
+
+### Minor Changes
+
+- 938d1c1: Add eslint-plugin-import-x to improve import handling specifically around duplicates and types in addition to the existing sorting done by eslint-plugin-perfectionist
+- 6244f23: Update eslint-plugin-perfectionist to 4.15.0
+
 ## 4.5.0
 
 ### Minor Changes
