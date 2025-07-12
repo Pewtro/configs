@@ -5,8 +5,7 @@ export const nullToUndefined = <T>(value?: T): NullToUndefined<T> => (value ?? u
 
 export const recursiveNullToUndefined = <T>(nullable: T): NullToUndefinedRecursive<T> => {
   if (Array.isArray(nullable)) {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return nullable.map((element) => recursiveNullToUndefined(element)) as NullToUndefinedRecursive<T>;
+    return nullable.map((element: unknown) => recursiveNullToUndefined(element)) as NullToUndefinedRecursive<T>;
   } else if (typeof nullable === 'object' && nullable !== null) {
     const result: Record<string, unknown> = {};
 
