@@ -1,5 +1,18 @@
 # ESLint config for typescript changelog
 
+## 4.7.0
+
+### Minor Changes
+
+- 263a9f7: Update eslint-plugin-import-x to 4.16.0
+- 3fd9f98: Update eslint-plugin-unicorn to 60.0.0
+  - This means that minimum node version is also bumped to 20.10 from 20.9.
+
+### Patch Changes
+
+- cdbd590: Update eslint-plugin-import-x to 4.16.1
+- 9fcf53b: Update eslint-import-resolver-typescript to 4.4.4
+
 ## 4.6.0
 
 ### Minor Changes
