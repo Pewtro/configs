@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.7.1
+
+### Patch Changes
+
+- 16ae5fd: Update eslint-plugin-de-morgan to 1.3.1
+
 ## 4.7.0
 
 ### Minor Changes
