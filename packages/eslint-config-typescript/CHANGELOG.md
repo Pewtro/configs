@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 4.8.0
+
+### Minor Changes
+
+- e0f4705: Update eslint-plugin-unicorn to 61.0.1
+
+### Patch Changes
+
+- 16ae5fd: Update eslint-plugin-de-morgan to 1.3.1
+
 ## 4.7.0
 
 ### Minor Changes
