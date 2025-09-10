@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.8.1
+
+### Patch Changes
+
+- bbcd30a: Update eslint-plugin-unicorn to 61.0.2
+
 ## 4.8.0
 
 ### Minor Changes
