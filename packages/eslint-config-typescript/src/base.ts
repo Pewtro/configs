@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/deprecation */
 import eslint from '@eslint/js';
 import demorgan from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
@@ -60,7 +61,16 @@ const typescriptEslintConfig = config(tsEslintConfigs.recommendedTypeChecked, ts
 });
 
 //General code quality rules
-const sonarConfig = config(sonarConfigs.recommended);
+const sonarConfig = config(sonarConfigs.recommended, {
+  rules: {
+    //Turning this rule off as it is handled by @typescript-eslint/no-unused-vars
+    'sonarjs/no-unused-vars': 'off',
+    //Turning this off as it is rather noisy and not that useful in practice
+    'sonarjs/prefer-read-only-props': 'off',
+    //Turning this rule off as developers should be allowed to tag things as TODO
+    'sonarjs/todo-tag': 'off',
+  },
+});
 
 //General sorting and import rules
 const perfectionistConfig = config(perfectionist.configs['recommended-natural'], {
