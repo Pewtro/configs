@@ -1,6 +1,6 @@
 {
   "name": "@putstack/eslint-config-typescript",
-  "version": "4.8.1",
+  "version": "4.9.0",
   "license": "MIT",
   "author": "Putro",
   "description": "ESLint config for TypeScript",

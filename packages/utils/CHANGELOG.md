@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.1
+
+### Patch Changes
+
+- dc4127b: Minor tweaks to avoid unreachable code
+
 ## 0.4.0
 
 ### Minor Changes
