@@ -12,6 +12,7 @@ describe('nullToUndefined', () => {
   });
 
   it('returns `undefined` when passed `undefined`', () => {
+    // eslint-disable-next-line sonarjs/no-undefined-argument
     const result = nullToUndefined(undefined);
     assertType<NullToUndefined<undefined>>(result);
     expect(result).toBeUndefined();

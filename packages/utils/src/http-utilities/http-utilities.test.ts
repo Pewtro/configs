@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it } from 'vitest';
 import { generatePath } from './http-utilities.js';
 

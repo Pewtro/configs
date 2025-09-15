@@ -6,7 +6,7 @@ export const nullToUndefined = <T>(value?: T): NullToUndefined<T> => (value ?? u
 export const recursiveNullToUndefined = <T>(nullable: T): NullToUndefinedRecursive<T> => {
   if (Array.isArray(nullable)) {
     return nullable.map((element: unknown) => recursiveNullToUndefined(element)) as NullToUndefinedRecursive<T>;
-  } else if (typeof nullable === 'object' && nullable !== null) {
+  } else if (typeof nullable === 'object' && nullable != null) {
     const result: Record<string, unknown> = {};
 
     for (const key in nullable) {

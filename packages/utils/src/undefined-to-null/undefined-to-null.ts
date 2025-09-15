@@ -12,7 +12,7 @@ export const recursiveUndefinedToNull = <T>(nullable: T): UndefinedToNullRecursi
     for (const key in nullable) {
       if (Object.hasOwn(nullable, key)) {
         const value = nullable[key];
-        result[key] = value === undefined ? null : recursiveUndefinedToNull(value);
+        result[key] = recursiveUndefinedToNull(value);
       }
     }
     return result as UndefinedToNullRecursive<T>;
