@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.10.0
+
+### Minor Changes
+
+- 42387ad: Update eslint-plugin-depend to 1.3.1
+
 ## 4.9.0
 
 ### Minor Changes
