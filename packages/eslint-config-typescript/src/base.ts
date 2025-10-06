@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/deprecation */
 import eslint from '@eslint/js';
-import demorgan from 'eslint-plugin-de-morgan';
+import { configs as deMorganConfigs } from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
 import { configs as importConfigs } from 'eslint-plugin-import-x';
 import perfectionist from 'eslint-plugin-perfectionist';
@@ -205,7 +205,7 @@ const importConfig = config(importConfigs['flat/recommended'], importConfigs['fl
 });
 
 //De Morgan's law rules for simplifying boolean expressions
-const demorganConfig = config(demorgan.configs.recommended);
+const demorganConfig = config(deMorganConfigs.recommended);
 
 //Dependency guidance to migrate off other dependencies
 const dependConfig = config(eslintDependConfig['flat/recommended']);
