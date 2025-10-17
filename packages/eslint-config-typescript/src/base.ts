@@ -88,105 +88,24 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
       },
     ],
     //Extend the default recommended rules to include comment partioning to allow for comments being used for explanatory purposes.
-    'perfectionist/sort-array-includes': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-classes': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-enums': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-exports': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-
-    'perfectionist/sort-interfaces': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-intersection-types': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-maps': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-named-exports': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-named-imports': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-object-types': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-objects': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-sets': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-union-types': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
-    'perfectionist/sort-variable-declarations': [
-      'error',
-      {
-        partitionByComment: true,
-        type: 'natural',
-      },
-    ],
+    ...Object.fromEntries(
+      [
+        'perfectionist/sort-array-includes',
+        'perfectionist/sort-classes',
+        'perfectionist/sort-enums',
+        'perfectionist/sort-exports',
+        'perfectionist/sort-interfaces',
+        'perfectionist/sort-intersection-types',
+        'perfectionist/sort-maps',
+        'perfectionist/sort-named-exports',
+        'perfectionist/sort-named-imports',
+        'perfectionist/sort-object-types',
+        'perfectionist/sort-objects',
+        'perfectionist/sort-sets',
+        'perfectionist/sort-union-types',
+        'perfectionist/sort-variable-declarations',
+      ].map((rule) => [rule, ['error', { partitionByComment: true, type: 'natural' }]]),
+    ),
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
     //sort-interfaces:  https://perfectionist.dev/rules/sort-interfaces
     //sort-objects:  https://perfectionist.dev/rules/sort-object-types
