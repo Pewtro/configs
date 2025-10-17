@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 4.10.0
+
+### Minor Changes
+
+- b1fef17: Update eslint-plugin-de-morgan to 2.0.0. It is now shipped as ESM-only, this should not be a breaking change considering this package is already ESM-only.
+- 42387ad: Update eslint-plugin-depend to 1.3.1
+
+### Patch Changes
+
+- dc4c83c: Update eslint-plugin-perfectionist to 4.15.1
+
 ## 4.9.0
 
 ### Minor Changes
