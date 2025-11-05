@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 4.11.0
+
+### Minor Changes
+
+- 6664279: Update eslint-plugin-unicorn to 62.0.0 introducing some new rules.
+
+### Patch Changes
+
+- 8dfc006: Turn off sonarjs/void-use because it conflicted with rules in @typescript-eslint
+
 ## 4.10.0
 
 ### Minor Changes
