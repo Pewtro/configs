@@ -69,6 +69,8 @@ const sonarConfig = config(sonarConfigs.recommended, {
     'sonarjs/prefer-read-only-props': 'off',
     //Turning this rule off as developers should be allowed to tag things as TODO
     'sonarjs/todo-tag': 'off',
+    //Turning this rule off so developers can use void expressions where appropriate like suggest by @typescript-eslint
+    'sonarjs/void-use': 'off',
   },
 });
 
