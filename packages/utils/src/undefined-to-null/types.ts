@@ -1,7 +1,7 @@
 export type UndefinedToNull<T> = T extends undefined ? null : T;
 
 export type UndefinedToNullRecursive<T> = T extends undefined
-  ? Exclude<T, undefined> | null
+  ? null
   : T extends Array<unknown>
     ? SwapUndefinedItemsForNull<T>
     : ConvertInterfaceToDict<T> extends Record<string, unknown>

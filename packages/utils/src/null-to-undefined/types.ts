@@ -10,7 +10,7 @@ export type NullToUndefined<T> = T extends null ? undefined : T;
  * { foo: (number | null)[] | null } => { foo?: (number | undefined)[] }
  */
 export type NullToUndefinedRecursive<T> = T extends null
-  ? Exclude<T, null> | undefined
+  ? undefined
   : T extends Array<unknown>
     ? SwapNullItemsForUndefined<T>
     : ConvertInterfaceToDict<T> extends Record<string, unknown>
