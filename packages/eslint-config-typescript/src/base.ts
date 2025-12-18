@@ -3,7 +3,7 @@ import eslint from '@eslint/js';
 import { configs as deMorganConfigs } from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
 import { configs as importConfigs } from 'eslint-plugin-import-x';
-import perfectionist from 'eslint-plugin-perfectionist';
+import { configs as perfectionistConfigs } from 'eslint-plugin-perfectionist';
 import { configs as sonarConfigs } from 'eslint-plugin-sonarjs';
 import { config, configs as tsEslintConfigs } from 'typescript-eslint';
 
@@ -75,7 +75,7 @@ const sonarConfig = config(sonarConfigs.recommended, {
 });
 
 //General sorting and import rules
-const perfectionistConfig = config(perfectionist.configs['recommended-natural'], {
+const perfectionistConfig = config(perfectionistConfigs['recommended-natural'], {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
@@ -84,7 +84,7 @@ const perfectionistConfig = config(perfectionist.configs['recommended-natural'],
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'unknown'],
         ignoreCase: true,
-        newlinesBetween: 'never',
+        newlinesBetween: 0,
         order: 'asc',
         type: 'natural',
       },
