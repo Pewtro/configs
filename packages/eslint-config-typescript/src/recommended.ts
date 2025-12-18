@@ -1,8 +1,7 @@
-/* eslint-disable sonarjs/deprecation */
 import unicorn from 'eslint-plugin-unicorn';
-import { config } from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import { base } from './base';
 
-const unicornConfig = config(unicorn.configs.recommended);
+const unicornConfig = defineConfig(unicorn.configs.recommended);
 
-export const recommended = config(base, unicornConfig);
+export const recommended = defineConfig(base, unicornConfig);

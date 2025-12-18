@@ -1,14 +1,15 @@
-/* eslint-disable sonarjs/deprecation */
 import eslint from '@eslint/js';
+import type { Linter } from 'eslint';
 import { configs as deMorganConfigs } from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
 import { configs as importConfigs } from 'eslint-plugin-import-x';
 import { configs as perfectionistConfigs } from 'eslint-plugin-perfectionist';
 import { configs as sonarConfigs } from 'eslint-plugin-sonarjs';
-import { config, configs as tsEslintConfigs } from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
+import { configs as tsEslintConfigs } from 'typescript-eslint';
 
 //General eslint recommended rules
-const eslintConfig = config(eslint.configs.recommended, {
+const eslintConfig = defineConfig(eslint.configs.recommended, {
   rules: {
     /** Code quality rules */
     //Enforce default clauses in switch statements to be last
@@ -21,47 +22,54 @@ const eslintConfig = config(eslint.configs.recommended, {
 });
 
 //General typescript-eslint rules that have type knowledge
-const typescriptEslintConfig = config(tsEslintConfigs.recommendedTypeChecked, tsEslintConfigs.stylisticTypeChecked, {
-  rules: {
-    /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
-    //Enforce default parameters to be last
-    '@typescript-eslint/default-param-last': 'warn',
-    'default-param-last': 'off',
-    //Disallow variable declarations from shadowing variables declared in the outer scope
-    '@typescript-eslint/no-shadow': 'warn',
-    'no-shadow': 'off',
-    //Disallow variable redeclaration
-    '@typescript-eslint/no-redeclare': 'warn',
-    'no-redeclare': 'off',
+const typescriptEslintConfig = defineConfig(
+  tsEslintConfigs.recommendedTypeChecked,
+  tsEslintConfigs.stylisticTypeChecked,
+  {
+    rules: {
+      /** Rules that need to be turned off in default eslint to be turned on in Typescript ESLint */
+      //Enforce default parameters to be last
+      '@typescript-eslint/default-param-last': 'warn',
+      'default-param-last': 'off',
+      //Disallow variable declarations from shadowing variables declared in the outer scope
+      '@typescript-eslint/no-shadow': 'warn',
+      'no-shadow': 'off',
+      //Disallow variable redeclaration
+      '@typescript-eslint/no-redeclare': 'warn',
+      'no-redeclare': 'off',
 
-    //Emulate the TypeScript style of exempting names starting with _
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        args: 'all',
-        argsIgnorePattern: '^_',
-        caughtErrors: 'all',
-        caughtErrorsIgnorePattern: '^_',
-        destructuredArrayIgnorePattern: '^_',
-        ignoreRestSiblings: true,
-        varsIgnorePattern: '^_',
-      },
-    ],
+      //Emulate the TypeScript style of exempting names starting with _
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_',
+        },
+      ],
 
-    /** Stylistic rules */
-    //Prefer using Array<T> over T[]
-    '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
-    //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
-    '@typescript-eslint/consistent-type-imports': ['warn', { fixStyle: 'inline-type-imports', prefer: 'type-imports' }],
-    //We want to encourage marking type exports explicitly
-    '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
-    //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
-    '@typescript-eslint/no-import-type-side-effects': 'warn',
+      /** Stylistic rules */
+      //Prefer using Array<T> over T[]
+      '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
+      //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
+      '@typescript-eslint/consistent-type-imports': [
+        'warn',
+        { fixStyle: 'inline-type-imports', prefer: 'type-imports' },
+      ],
+      //We want to encourage marking type exports explicitly
+      '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
+      //Enforce the use of top-level import type qualifer when an import only has specifiers with inline type qualifiers
+      '@typescript-eslint/no-import-type-side-effects': 'warn',
+    },
   },
-});
+);
 
 //General code quality rules
-const sonarConfig = config(sonarConfigs.recommended, {
+const sonarConfig = defineConfig(sonarConfigs.recommended, {
   rules: {
     //Turning this rule off as it is handled by @typescript-eslint/no-unused-vars
     'sonarjs/no-unused-vars': 'off',
@@ -75,7 +83,7 @@ const sonarConfig = config(sonarConfigs.recommended, {
 });
 
 //General sorting and import rules
-const perfectionistConfig = config(perfectionistConfigs['recommended-natural'], {
+const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natural'], {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
@@ -119,24 +127,28 @@ const perfectionistConfig = config(perfectionistConfigs['recommended-natural'], 
 });
 
 //Additional import rules to enforce beyond the sorting rules provided by perfectionist
-const importConfig = config(importConfigs['flat/recommended'], importConfigs['flat/typescript'], {
-  rules: {
-    'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+const importConfig = defineConfig(
+  importConfigs['flat/recommended'] as Linter.Config,
+  importConfigs['flat/typescript'] as Linter.Config,
+  {
+    rules: {
+      'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+    },
   },
-});
+);
 
 //De Morgan's law rules for simplifying boolean expressions
-const demorganConfig = config(deMorganConfigs.recommended);
+const demorganConfig = defineConfig(deMorganConfigs.recommended);
 
 //Dependency guidance to migrate off other dependencies
-const dependConfig = config(eslintDependConfig['flat/recommended']);
+const dependConfig = defineConfig(eslintDependConfig['flat/recommended']);
 
-const disableTypeCheckedOnJS = config({
+const disableTypeCheckedOnJS = defineConfig({
   extends: [tsEslintConfigs.disableTypeChecked],
   files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
 });
 
-export const base = config(
+export const base = defineConfig(
   eslintConfig,
   typescriptEslintConfig,
   sonarConfig,
