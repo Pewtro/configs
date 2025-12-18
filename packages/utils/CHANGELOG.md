@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.2
+
+### Patch Changes
+
+- 21b7359: Slight simplification to NullToUndefinedRecursive and UndefinedToNullRecursive were null/undefined types were overriding the Exclude
+
 ## 0.4.1
 
 ### Patch Changes

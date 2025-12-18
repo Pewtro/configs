@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 4.12.0
+
+### Minor Changes
+
+- 0472bd1: Update eslint-plugin-perfectionist to 5.0.0, which includes some breaking changes but this configuration should handle most of them for you. If you run into issues check out the [release page for v5](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v5.0.0)
+
+### Patch Changes
+
+- b8c5b68: Swap to using defineConfig from eslint/config instead of config from typescript-eslint as recommended by typescript-eslint
+
 ## 4.11.0
 
 ### Minor Changes
