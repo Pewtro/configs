@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.13.0
+
+### Minor Changes
+
+- b108010: Update eslint-plugin-perfectionist to 5.1.0
+
 ## 4.12.0
 
 ### Minor Changes
