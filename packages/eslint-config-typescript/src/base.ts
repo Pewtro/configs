@@ -83,7 +83,7 @@ const sonarConfig = defineConfig(sonarConfigs.recommended, {
 });
 
 //General sorting and import rules
-const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natural'], {
+const perfectionistConfig = defineConfig(perfectionistConfigs?.['recommended-natural'] as Linter.Config, {
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
