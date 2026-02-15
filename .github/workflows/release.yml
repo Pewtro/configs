@@ -14,7 +14,7 @@ on:
 
 env:
   # The node version to release with, generally the latest LTS
-  release_node: 22.x
+  release_node: 24.x
 
 jobs:
   release:
