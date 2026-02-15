@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 4.15.0
+
+### Minor Changes
+
+- 0d7ca3b: Update eslint-plugin-perfectionist to 5.5.0
+- bc90c07: Update eslint-plugin-unicorn to 63.0.0
+
+### Patch Changes
+
+- ffca28b: Update eslint-plugin-sonarjs to 3.0.7
+
 ## 4.14.0
 
 ### Minor Changes
