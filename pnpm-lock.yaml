@@ -81,8 +81,8 @@ importers:
         specifier: 4.16.1
         version: 4.16.1(@typescript-eslint/utils@8.56.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)
       eslint-plugin-perfectionist:
-        specifier: 5.5.0
-        version: 5.5.0(eslint@9.39.2)(typescript@5.9.3)
+        specifier: 5.6.0
+        version: 5.6.0(eslint@9.39.2)(typescript@5.9.3)
       eslint-plugin-sonarjs:
         specifier: 3.0.7
         version: 3.0.7(eslint@9.39.2)
@@ -1331,11 +1331,11 @@ packages:
       eslint-import-resolver-node:
         optional: true
 
-  eslint-plugin-perfectionist@5.5.0:
-    resolution: {integrity: sha512-lZX2KUpwOQf7J27gAg/6vt8ugdPULOLmelM8oDJPMbaN7P2zNNeyS9yxGSmJcKX0SF9qR/962l9RWM2Z5jpPzg==}
+  eslint-plugin-perfectionist@5.6.0:
+    resolution: {integrity: sha512-pxrLrfRp5wl1Vol1fAEa/G5yTXxefTPJjz07qC7a8iWFXcOZNuWBItMQ2OtTzfQIvMq6bMyYcrzc3Wz++na55Q==}
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
-      eslint: '>=8.45.0'
+      eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
 
   eslint-plugin-sonarjs@3.0.7:
     resolution: {integrity: sha512-62jB20krIPvcwBLAyG3VVKa2ce2j2lL1yCb8Y0ylMRR/dLvCCTiQx8gQbXb+G81k1alPZ2/I3muZinqWQdBbzw==}
@@ -3104,6 +3104,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/utils@8.56.1(eslint@9.39.2)(typescript@5.9.3)':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.2)
+      '@typescript-eslint/scope-manager': 8.56.1
+      '@typescript-eslint/types': 8.56.1
+      '@typescript-eslint/typescript-estree': 8.56.1(typescript@5.9.3)
+      eslint: 9.39.2
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/visitor-keys@8.56.0':
     dependencies:
       '@typescript-eslint/types': 8.56.0
@@ -3519,9 +3530,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-perfectionist@5.5.0(eslint@9.39.2)(typescript@5.9.3):
+  eslint-plugin-perfectionist@5.6.0(eslint@9.39.2)(typescript@5.9.3):
     dependencies:
-      '@typescript-eslint/utils': 8.56.0(eslint@9.39.2)(typescript@5.9.3)
+      '@typescript-eslint/utils': 8.56.1(eslint@9.39.2)(typescript@5.9.3)
       eslint: 9.39.2
       natural-orderby: 5.0.0
     transitivePeerDependencies:
