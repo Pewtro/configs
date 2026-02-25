@@ -27,7 +27,6 @@
     "npm-run-all2": "8.0.4",
     "prettier": "3.8.1",
     "tsdown": "0.20.3",
-    "turbo": "2.8.10",
     "typescript": "5.9.3",
     "typescript-eslint": "8.56.1",
     "vitest": "4.0.18"
@@ -39,7 +38,7 @@
     ]
   },
   "scripts": {
-    "build": "turbo build",
+    "build": "pnpm -r build",
     "lint": "eslint --format stylish --max-warnings 0 --cache",
     "lint:fix": "pnpm lint --fix",
     "prepare": "husky",

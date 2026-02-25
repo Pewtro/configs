@@ -29,14 +29,6 @@ jobs:
         with:
           version: 10.30.2
 
-      - name: Cache turbo build setup
-        uses: actions/cache@v4
-        with:
-          path: .turbo
-          key: ${{ runner.os }}-turbo-${{ env.release_node }}-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-turbo-${{ env.release_node }}-
-
       - name: Setup Node.js ${{ env.release_node }}
         uses: actions/setup-node@v4
         with:
