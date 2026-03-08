@@ -72,8 +72,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(eslint@10.0.3)
       eslint-plugin-depend:
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.5.0
+        version: 1.5.0(eslint@10.0.3)
       eslint-plugin-import-x:
         specifier: 4.16.1
         version: 4.16.1(@typescript-eslint/utils@8.56.1(eslint@10.0.3)(typescript@5.9.3))(eslint@10.0.3)
@@ -1198,8 +1198,10 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-depend@1.4.0:
-    resolution: {integrity: sha512-MQs+m4nHSfgAO9bJDsBzqw0ofK/AOA0vfeY/6ahofqcUMLeM6/D1sTYs21fOhc17kNU/gn58YCtj20XaAssh2A==}
+  eslint-plugin-depend@1.5.0:
+    resolution: {integrity: sha512-i3UeLYmclf1Icp35+6W7CR4Bp2PIpDgBuf/mpmXK5UeLkZlvYJ21VuQKKHHAIBKRTPivPGX/gZl5JGno1o9Y0A==}
+    peerDependencies:
+      eslint: '>=8.40.0'
 
   eslint-plugin-import-x@4.16.1:
     resolution: {integrity: sha512-vPZZsiOKaBAIATpFE2uMI4w5IRwdv/FpQ+qZZMR4E+PeOcM4OeoEbqxRMnywdxP19TyB/3h6QBB0EWon7letSQ==}
@@ -3116,9 +3118,10 @@ snapshots:
     dependencies:
       eslint: 10.0.3
 
-  eslint-plugin-depend@1.4.0:
+  eslint-plugin-depend@1.5.0(eslint@10.0.3):
     dependencies:
       empathic: 2.0.0
+      eslint: 10.0.3
       module-replacements: 2.11.0
       semver: 7.7.4
 
