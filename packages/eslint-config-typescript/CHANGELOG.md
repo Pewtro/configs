@@ -1,5 +1,22 @@
 # ESLint config for typescript changelog
 
+## 4.16.0
+
+### Minor Changes
+
+- 3a24db1: Update eslint-plugin-sonarjs to 4.0.0, which adds support for ESLint 10.
+- cbd1925: Add perfectionist/sort-modules to the general sort-\* rules and apply the same rules to them as applied to the others
+- 6793c7c: Allow comments to partition imports as defined in perfectionist/sort-imports
+- 1bebd64: Update eslint-plugin-de-morgan to 2.1.1 which adds support for ESLint 10
+- 0378338: Update eslint-plugin-perfectionist to 5.6.0 which adds support for ESLint 10.
+- 00e9954: Update eslint-plugin-depend to 1.5.0 which adds support for ESLint 10
+- 459b5f5: Increase peer dependency range of `eslint` and `@eslint/js` to include v10
+- 6793c7c: Add perfectionist/sort-decorators, perfectionist/sort-heritage-clauses and perfectionist/sort-switch-case to the general sort-\* rules and apply the same rules to them as applied to the others
+
+### Patch Changes
+
+- 8076100: Update eslint-plugin-sonarjs to 4.0.1 which bumps minimatch to a vulnerability free version
+
 ## 4.15.0
 
 ### Minor Changes
