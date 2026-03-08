@@ -82,6 +82,31 @@ const sonarConfig = defineConfig(sonarConfigs.recommended, {
   },
 });
 
+const genericPerfectionistSortRules = [
+  'perfectionist/sort-array-includes',
+  'perfectionist/sort-classes',
+  'perfectionist/sort-decorators',
+  'perfectionist/sort-enums',
+  'perfectionist/sort-exports',
+  'perfectionist/sort-heritage-clauses',
+  'perfectionist/sort-interfaces',
+  'perfectionist/sort-intersection-types',
+  'perfectionist/sort-maps',
+  'perfectionist/sort-modules',
+  'perfectionist/sort-named-exports',
+  'perfectionist/sort-named-imports',
+  'perfectionist/sort-object-types',
+  'perfectionist/sort-objects',
+  'perfectionist/sort-sets',
+  'perfectionist/sort-switch-case',
+  'perfectionist/sort-union-types',
+  'perfectionist/sort-variable-declarations',
+] as const;
+
+const genericSortRulesWithoutPartition = new Set<(typeof genericPerfectionistSortRules)[number]>([
+  'perfectionist/sort-switch-case',
+]);
+
 //General sorting and import rules
 const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natural'], {
   rules: {
@@ -100,26 +125,17 @@ const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natur
     ],
     //Extend the default recommended rules to include comment partioning to allow for comments being used for explanatory purposes.
     ...Object.fromEntries(
-      [
-        'perfectionist/sort-array-includes',
-        'perfectionist/sort-classes',
-        'perfectionist/sort-decorators',
-        'perfectionist/sort-enums',
-        'perfectionist/sort-exports',
-        'perfectionist/sort-heritage-clauses',
-        'perfectionist/sort-interfaces',
-        'perfectionist/sort-intersection-types',
-        'perfectionist/sort-maps',
-        'perfectionist/sort-modules',
-        'perfectionist/sort-named-exports',
-        'perfectionist/sort-named-imports',
-        'perfectionist/sort-object-types',
-        'perfectionist/sort-objects',
-        'perfectionist/sort-sets',
-        'perfectionist/sort-switch-case',
-        'perfectionist/sort-union-types',
-        'perfectionist/sort-variable-declarations',
-      ].map((rule) => [rule, ['error', { partitionByComment: true, type: 'natural' }]]),
+      genericPerfectionistSortRules.map((rule) => [
+        rule,
+        [
+          'error',
+          genericSortRulesWithoutPartition.has(rule)
+            ? {
+                type: 'natural',
+              }
+            : { partitionByComment: true, type: 'natural' },
+        ],
+      ]),
     ),
     //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
     //sort-interfaces:  https://perfectionist.dev/rules/sort-interfaces
