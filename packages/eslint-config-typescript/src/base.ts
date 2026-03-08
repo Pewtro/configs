@@ -107,6 +107,7 @@ const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natur
         'perfectionist/sort-interfaces',
         'perfectionist/sort-intersection-types',
         'perfectionist/sort-maps',
+        'perfectionist/sort-modules',
         'perfectionist/sort-named-exports',
         'perfectionist/sort-named-imports',
         'perfectionist/sort-object-types',
