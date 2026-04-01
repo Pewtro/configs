@@ -1,5 +1,13 @@
 # ESLint config for typescript changelog
 
+## 4.17.0
+
+### Minor Changes
+
+- 94ec4ed: Update eslint-plugin-perfectionist to 5.7.0
+- 1812fd6: Upgrade eslint-plugin-unicorn to 64.0.0
+- 0e70172: Increase typescript peer dependency to allow for typescript v6
+
 ## 4.16.0
 
 ### Minor Changes
