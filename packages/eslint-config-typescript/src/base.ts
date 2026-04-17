@@ -87,10 +87,13 @@ const genericPerfectionistSortRules = [
   'perfectionist/sort-classes',
   'perfectionist/sort-decorators',
   'perfectionist/sort-enums',
+  'perfectionist/sort-export-attributes',
   'perfectionist/sort-exports',
   'perfectionist/sort-heritage-clauses',
+  'perfectionist/sort-import-attributes',
   'perfectionist/sort-interfaces',
   'perfectionist/sort-intersection-types',
+  'perfectionist/sort-jsx-props',
   'perfectionist/sort-maps',
   'perfectionist/sort-modules',
   'perfectionist/sort-named-exports',
@@ -104,6 +107,7 @@ const genericPerfectionistSortRules = [
 ] as const;
 
 const genericSortRulesWithoutPartition = new Set<(typeof genericPerfectionistSortRules)[number]>([
+  'perfectionist/sort-jsx-props',
   'perfectionist/sort-switch-case',
 ]);
 
