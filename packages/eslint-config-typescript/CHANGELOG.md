@@ -1,5 +1,17 @@
 # ESLint config for typescript changelog
 
+## 4.18.0
+
+### Minor Changes
+
+- 5560e5a: Update eslint-plugin-perfectionist to 5.8.0
+- 95cc5b7: Update eslint-plugin-perfectionist to 5.9.0
+- fb93655: Add sort-export-attributes, sort-import-attributes and sort-jsx-props to the general sorting rules
+
+### Patch Changes
+
+- 9a1ca52: Update eslint-plugin-sonarjs to 4.0.3
+
 ## 4.17.0
 
 ### Minor Changes
