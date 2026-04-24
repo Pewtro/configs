@@ -1,5 +1,4 @@
 import eslint from '@eslint/js';
-import type { Linter } from 'eslint';
 import { configs as deMorganConfigs } from 'eslint-plugin-de-morgan';
 import { configs as eslintDependConfig } from 'eslint-plugin-depend';
 import { configs as importConfigs } from 'eslint-plugin-import-x';
@@ -152,15 +151,11 @@ const perfectionistConfig = defineConfig(perfectionistConfigs['recommended-natur
 });
 
 //Additional import rules to enforce beyond the sorting rules provided by perfectionist
-const importConfig = defineConfig(
-  importConfigs['flat/recommended'] as Linter.Config,
-  importConfigs['flat/typescript'] as Linter.Config,
-  {
-    rules: {
-      'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
-    },
+const importConfig = defineConfig(importConfigs['flat/recommended'], importConfigs['flat/typescript'], {
+  rules: {
+    'import-x/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
   },
-);
+});
 
 //De Morgan's law rules for simplifying boolean expressions
 const demorganConfig = defineConfig(deMorganConfigs.recommended);
