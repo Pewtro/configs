@@ -23,8 +23,7 @@
     "@vitest/coverage-v8": "4.1.5",
     "@vitest/ui": "4.1.5",
     "eslint": "10.2.1",
-    "husky": "9.1.7",
-    "lint-staged": "16.4.0",
+    "lefthook": "2.1.6",
     "npm-run-all2": "8.0.4",
     "prettier": "3.8.3",
     "publint": "0.3.18",
@@ -36,6 +35,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
+      "lefthook",
       "unrs-resolver"
     ]
   },
@@ -43,7 +43,7 @@
     "build": "pnpm -r build",
     "lint": "eslint --format stylish --max-warnings 0 --cache",
     "lint:fix": "pnpm lint --fix",
-    "prepare": "husky",
+    "prepare": "lefthook install",
     "release": "changeset publish",
     "stylecheck": "prettier --check .",
     "test": "vitest run",
@@ -52,13 +52,5 @@
     "test:ui": "vitest --ui --coverage",
     "test:watch": "vitest watch",
     "typecheck": "tsc"
-  },
-  "lint-staged": {
-    "*": [
-      "prettier --write"
-    ],
-    "*.{ts,tsx,js,jsx}": [
-      "pnpm --silent lint:fix"
-    ]
   }
 }
