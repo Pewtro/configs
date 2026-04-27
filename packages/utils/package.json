@@ -4,7 +4,11 @@
   "license": "MIT",
   "author": "Putro",
   "description": "Various utility functions I find myself recreating over and over again.",
-  "repository": "https://github.com/Pewtro/configs/tree/main/packages/utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pewtro/configs.git",
+    "directory": "packages/utils"
+  },
   "type": "module",
   "engines": {
     "node": "^18.18 || ^20.9 || >=22"

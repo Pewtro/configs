@@ -4,7 +4,11 @@
   "license": "MIT",
   "author": "Putro",
   "description": "ESLint config for TypeScript",
-  "repository": "https://github.com/Pewtro/configs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pewtro/configs.git",
+    "directory": "packages/eslint-config-typescript"
+  },
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
