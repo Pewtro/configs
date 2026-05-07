@@ -3,7 +3,7 @@
 /* eslint-disable unicorn/no-useless-undefined */
 import { assertType, describe, expect, it } from 'vitest';
 import type { UndefinedToNull, UndefinedToNullRecursive } from './types.js';
-import { recursiveUndefinedToNull, undefinedToNull } from './undefined-to-null.js';
+import { recursiveUndefinedToNull, undefinedToNull } from './index.js';
 
 describe('undefinedAsNull', () => {
   it('returns `null` when passed `undefined`', () => {

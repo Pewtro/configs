@@ -1,5 +1,5 @@
 import { describe, it } from 'vitest';
-import { generatePath } from './http-utilities.js';
+import { generatePath } from './index.js';
 
 const testingUrl = 'https://github.com';
 
