@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.3
+
+### Patch Changes
+
+- efc1490: Improve treeshaking by allowing subpath imports (e.g. `@putstack/utils/http`)
+
 ## 0.4.2
 
 ### Patch Changes
