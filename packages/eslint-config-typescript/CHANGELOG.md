@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 4.18.1
+
+### Patch Changes
+
+- 262b216: Update eslint-plugin-de-morgan to 2.1.2
+
 ## 4.18.0
 
 ### Minor Changes
