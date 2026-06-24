@@ -1,6 +1,5 @@
 /* eslint-disable sonarjs/no-undefined-argument */
 /* eslint-disable unicorn/no-null */
-/* eslint-disable unicorn/no-useless-undefined */
 import { assertType, describe, expect, it } from 'vitest';
 import type { UndefinedToNull, UndefinedToNullRecursive } from './types.js';
 import { recursiveUndefinedToNull, undefinedToNull } from './index.js';
