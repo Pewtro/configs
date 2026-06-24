@@ -55,7 +55,7 @@ importers:
         version: 8.61.0(eslint@10.4.1)(typescript@6.0.3)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2))
+        version: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0))
 
   packages/eslint-config-typescript:
     dependencies:
@@ -84,8 +84,8 @@ importers:
         specifier: 5.9.1
         version: 5.9.1(eslint@10.4.1)(typescript@6.0.3)
       eslint-plugin-sonarjs:
-        specifier: 4.0.3
-        version: 4.0.3(eslint@10.4.1)
+        specifier: 4.1.0
+        version: 4.1.0(eslint@10.4.1)
       eslint-plugin-unicorn:
         specifier: 64.0.0
         version: 64.0.0(eslint@10.4.1)
@@ -1230,8 +1230,8 @@ packages:
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-sonarjs@4.0.3:
-    resolution: {integrity: sha512-5drkJKLC9qQddIiaATV0e8+ygbUc7b0Ti6VB7M2d3jmKNh3X0RaiIJYTs3dr9xnlhlrxo+/s1FoO3Jgv6O/c7g==}
+  eslint-plugin-sonarjs@4.1.0:
+    resolution: {integrity: sha512-rh+FlVz0yfd2RNIb6WqSkuGh0addX/Qi5scwQ5FphXDFrM6fZKcxP1+attJ78yUKcyYfiu6MTaISPpAFPzqRJw==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -1386,6 +1386,10 @@ packages:
 
   globals@17.4.0:
     resolution: {integrity: sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==}
+    engines: {node: '>=18'}
+
+  globals@17.6.0:
+    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -2257,6 +2261,11 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
+  yaml@2.9.0:
+    resolution: {integrity: sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -2880,7 +2889,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.59.2
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.8.2
+      semver: 7.8.4
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
@@ -3075,7 +3084,7 @@ snapshots:
       obug: 2.1.2
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2))
+      vitest: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0))
 
   '@vitest/expect@4.1.8':
     dependencies:
@@ -3086,13 +3095,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.8(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2))':
+  '@vitest/mocker@4.1.8(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)
+      vite: 8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0)
 
   '@vitest/pretty-format@4.1.8':
     dependencies:
@@ -3121,7 +3130,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2))
+      vitest: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0))
 
   '@vitest/utils@4.1.8':
     dependencies:
@@ -3340,21 +3349,22 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-sonarjs@4.0.3(eslint@10.4.1):
+  eslint-plugin-sonarjs@4.1.0(eslint@10.4.1):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       builtin-modules: 3.3.0
       bytes: 3.1.2
       eslint: 10.4.1
       functional-red-black-tree: 1.0.1
-      globals: 17.4.0
+      globals: 17.6.0
       jsx-ast-utils-x: 0.1.0
       lodash.merge: 4.6.2
       minimatch: 10.2.5
       scslre: 0.3.0
-      semver: 7.7.4
+      semver: 7.8.4
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
+      yaml: 2.9.0
 
   eslint-plugin-unicorn@64.0.0(eslint@10.4.1):
     dependencies:
@@ -3535,6 +3545,8 @@ snapshots:
       is-glob: 4.0.3
 
   globals@17.4.0: {}
+
+  globals@17.6.0: {}
 
   globby@11.1.0:
     dependencies:
@@ -3762,7 +3774,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.8.2
+      semver: 7.8.4
 
   memorystream@0.3.1: {}
 
@@ -4222,7 +4234,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2):
+  vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -4232,14 +4244,15 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.13.2
       fsevents: 2.3.3
+      yaml: 2.9.0
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  vitest@4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)):
+  vitest@4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(@vitest/ui@4.1.8)(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2))
+      '@vitest/mocker': 4.1.8(vite@8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -4256,7 +4269,7 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)
+      vite: 8.0.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@24.13.2)(yaml@2.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.13.2
@@ -4279,5 +4292,7 @@ snapshots:
       stackback: 0.0.2
 
   word-wrap@1.2.5: {}
+
+  yaml@2.9.0: {}
 
   yocto-queue@0.1.0: {}
