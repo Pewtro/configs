@@ -1,0 +1,46 @@
+{
+  "name": "@putstack/oxlint-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Putro",
+  "description": "Oxlint config for TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pewtro/configs.git",
+    "directory": "packages/oxlint-config"
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "engines": {
+    "node": "^22 || ^24 || >=26"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "oxlint",
+    "config",
+    "oxlintconfig",
+    "putro",
+    "putstack"
+  ],
+  "dependencies": {
+    "eslint-plugin-de-morgan": "2.1.2",
+    "eslint-plugin-depend": "1.5.0",
+    "eslint-plugin-perfectionist": "5.9.1",
+    "eslint-plugin-sonarjs": "4.1.0"
+  },
+  "peerDependencies": {
+    "oxlint": "^1.71.0",
+    "typescript": "^6"
+  },
+  "scripts": {
+    "build": "tsdown"
+  }
+}

@@ -1,3 +1,4 @@
+// oxlint-disable unicorn/no-useless-undefined
 /* eslint-disable unicorn/no-null */
 import { assertType, describe, expect, it } from 'vitest';
 import type { NullToUndefined, NullToUndefinedRecursive } from './types';

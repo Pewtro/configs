@@ -6,6 +6,7 @@ import { recursiveUndefinedToNull, undefinedToNull } from './index.js';
 
 describe('undefinedAsNull', () => {
   it('returns `null` when passed `undefined`', () => {
+    // oxlint-disable-next-line unicorn/no-useless-undefined
     const result = undefinedToNull(undefined);
     assertType<UndefinedToNull<undefined>>(result);
     expect(result).toBeNull();
