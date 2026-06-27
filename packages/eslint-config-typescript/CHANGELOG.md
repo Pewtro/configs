@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 5.0.1
+
+### Patch Changes
+
+- 7330b6c: Don't use natural sorting for perfectionist/sort-classes
+
 ## 5.0.0
 
 ### Major Changes
