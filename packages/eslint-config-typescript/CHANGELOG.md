@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 5.0.2
+
+### Patch Changes
+
+- 9015240: Disable unicorn/consistent-class-member-order as it interferes with perfectionist
+
 ## 5.0.1
 
 ### Patch Changes
