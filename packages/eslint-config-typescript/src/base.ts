@@ -83,7 +83,6 @@ const sonarConfig = defineConfig(sonarConfigs.recommended, {
 
 const genericPerfectionistSortRules = [
   'perfectionist/sort-array-includes',
-  'perfectionist/sort-classes',
   'perfectionist/sort-decorators',
   'perfectionist/sort-enums',
   'perfectionist/sort-export-attributes',
