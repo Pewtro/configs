@@ -1,6 +1,6 @@
 {
   "name": "@putstack/oxlint-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Putro",
   "description": "Oxlint config for TypeScript",
