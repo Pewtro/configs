@@ -1,5 +1,24 @@
 # ESLint config for typescript changelog
 
+## 5.0.0
+
+### Major Changes
+
+- 661deed: Drop support for all EOL node versions (v20, v21, v23, v25)
+- b22e016: Update eslint-plugin-unicorn to 68.0.0
+
+  This means requiring Node >=v22, and eslint >=10.4
+
+### Minor Changes
+
+- b0e19f7: Update eslint-plugin-import-x to 4.17.0
+- f9845ea: Update eslint-plugin-unicorn to 69.0.0 adding more rules
+- 92f6b00: Update eslint-plugin-sonarjs to 4.1.0
+
+### Patch Changes
+
+- 6cd13a0: Update eslint-plugin-perfectionist to 5.9.1
+
 ## 4.18.1
 
 ### Patch Changes
