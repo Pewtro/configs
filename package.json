@@ -20,7 +20,7 @@
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/oxlint-config": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
-    "@types/node": "26.0.0",
+    "@types/node": "26.0.1",
     "@vitest/coverage-v8": "4.1.9",
     "@vitest/ui": "4.1.9",
     "eslint": "10.5.0",
