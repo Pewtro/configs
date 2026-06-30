@@ -1,9 +1,10 @@
-import type { defineConfig } from 'oxlint';
+import type { OxlintConfig } from 'oxlint';
 import { base } from './base';
 import { recommended } from './recommended';
+
 type ConfigTypes = 'base' | 'recommended';
 
-const configs: Record<ConfigTypes, ReturnType<typeof defineConfig>> = {
+const configs: Record<ConfigTypes, OxlintConfig> = {
   base,
   recommended,
 };
