@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/parameterized-tests */
 import { describe, it } from 'vitest';
 import { generatePath } from './index.js';
 
