@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 5.2.0
+
+### Minor Changes
+
+- 907acab: Update eslint-plugin-unicorn to 72.0.0
+- 9fc17f7: Update eslint-plugin-sonarjs to 4.2.0
+
+### Patch Changes
+
+- 5209378: Update eslint-plugin-de-morgan to 2.1.3
+
 ## 5.1.0
 
 ### Minor Changes
