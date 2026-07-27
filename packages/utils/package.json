@@ -28,6 +28,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "keywords": [
     "putro",
     "putstack",
