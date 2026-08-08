@@ -66,8 +66,8 @@ This is a list of the plugins and configurations that are extended from.
 
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan) - An ESLint plugin that enforces logical consistency by transforming negated boolean expressions according to De Morgan’s laws.
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) - An ESLint plugin for suggesting optimisations in choice of dependency, native equivalents, etc.
+- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) - An ESLint plugin that aims to support ES6+ import/export syntax, and prevent issues with misspelling of file paths and import name
 - [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist) - ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.
-- [eslint-plugin-progress](https://github.com/taskworld/eslint-plugin-progress) - Report progress when running ESLint. Useful for large projects with thousands of files, so it's obvious that something is running!
 - [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) - Code smell, bug detection, cognitive complexity and more.
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin) - A large amount of TypeScript related ESLint rules, using the [recommended](https://typescript-eslint.io/linting/configs#projects-with-type-checking) type checking rules.
 
@@ -79,6 +79,9 @@ This is a list of the plugins and configurations that are extended from.
   - [recommended](https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/index.ts) - Using the recommended setup to improve logical consistency.
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend/tree/main/src/configs)
   - [recommended](https://github.com/es-tooling/eslint-plugin-depend/blob/main/src/configs/recommended.ts) - Using the recommended setup to catch dependency issues.
+- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
+  - [recommended](https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/recommended.ts) - Using the recommended setup to improve importing/exporting.
+  - [typescript](https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/typescript.ts) - Using the typescript setup to get type-aware rules regarding improving importing/exporting.
 - [eslint-plugin-perfectionist](https://perfectionist.dev/configs/recommended-natural)
   - [recommended-natural](https://perfectionist.dev/configs/recommended-natural) - Using the recommended setup to sort imports and other data naturally. Natural sort compares strings containing a mixture of letters and numbers, just as a human would do when sorting. For example: `item-1`, `item-2`, `item-10`.
 - [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs#usage)
