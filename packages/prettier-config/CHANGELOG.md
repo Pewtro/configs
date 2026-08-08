@@ -1,5 +1,11 @@
 # Prettier config changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- ea3007f: Mark package with sideEffects false for better tree shakeability
+
 ## 2.0.0
 
 ### Major Changes
