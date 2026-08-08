@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 5.3.1
+
+### Patch Changes
+
+- 62005e8: Don't recommend multiline block comments for @type
+
 ## 5.3.0
 
 ### Minor Changes
