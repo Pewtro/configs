@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.4
+
+### Patch Changes
+
+- ea3007f: Mark package with sideEffects false for better tree shakeability
+
 ## 0.4.3
 
 ### Patch Changes

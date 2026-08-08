@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 5.3.0
+
+### Minor Changes
+
+- 16982c9: Update eslint-plugin-unicorn to 73.0.0
+
+### Patch Changes
+
+- ea3007f: Mark package with sideEffects false for better tree shakeability
+- 0df76c8: Update eslint-plugin-perfectionist to 5.10.1
+
 ## 5.2.0
 
 ### Minor Changes
