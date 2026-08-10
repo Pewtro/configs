@@ -1,5 +1,11 @@
 # @putstack/oxlint-config
 
+## 0.1.2
+
+### Patch Changes
+
+- 75f7b39: Update eslint-plugin-perfectionist to 5.10.1
+
 ## 0.1.1
 
 ### Patch Changes
