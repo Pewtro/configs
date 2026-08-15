@@ -26,7 +26,7 @@
     "eslint": "10.8.1",
     "lefthook": "2.1.10",
     "npm-run-all2": "9.0.3",
-    "oxlint": "1.77.0",
+    "oxlint": "1.78.0",
     "prettier": "3.9.6",
     "publint": "0.3.23",
     "tsdown": "0.22.14",
