@@ -16,7 +16,7 @@
   "packageManager": "pnpm@11.22.0",
   "devDependencies": {
     "@arethetypeswrong/core": "0.18.5",
-    "@changesets/cli": "3.0.0",
+    "@changesets/cli": "3.0.1",
     "@putstack/eslint-config-typescript": "workspace:*",
     "@putstack/oxlint-config": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
@@ -28,7 +28,7 @@
     "npm-run-all2": "9.0.3",
     "oxlint": "1.79.0",
     "prettier": "3.9.6",
-    "publint": "0.3.23",
+    "publint": "0.3.24",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
     "typescript-eslint": "8.67.0",
