@@ -80,6 +80,19 @@ describe('recursiveUndefinedToNull', () => {
     expect(result).toEqual([null, ['hello', null], null]);
   });
 
+  it('keeps `null` values as `null` when nested inside objects', () => {
+    const object = { a: null, b: { c: undefined, d: null } };
+    const result = recursiveUndefinedToNull(object);
+    assertType<UndefinedToNullRecursive<typeof object>>(result);
+    expect(result).toEqual({ a: null, b: { c: null, d: null } });
+  });
+
+  it('returns `null` when passed `null`', () => {
+    const result = recursiveUndefinedToNull(null);
+    assertType<UndefinedToNullRecursive<null>>(result);
+    expect(result).toBeNull();
+  });
+
   it('replaces `undefined` values with `null` inside an array of objects, leaving other values unchanged', () => {
     const array = [{ a: undefined, b: 'hello', c: undefined }, { d: undefined }];
     const result = recursiveUndefinedToNull(array);

@@ -4,9 +4,14 @@ import type { UndefinedToNull, UndefinedToNullRecursive } from './types';
 export const undefinedToNull = <T>(value?: T): UndefinedToNull<T> => (value ?? null) as UndefinedToNull<T>;
 
 export const recursiveUndefinedToNull = <T>(nullable: T): UndefinedToNullRecursive<T> => {
+  if (nullable == null) {
+    return undefinedToNull(nullable) as UndefinedToNullRecursive<T>;
+  }
+
   if (Array.isArray(nullable)) {
     return nullable.map((element: unknown) => recursiveUndefinedToNull(element)) as UndefinedToNullRecursive<T>;
   }
+
   if (typeof nullable === 'object') {
     const result: Record<string, unknown> = {};
 
