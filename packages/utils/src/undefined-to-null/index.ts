@@ -1,4 +1,5 @@
-/* eslint-disable unicorn/no-null */
+/* eslint-disable unicorn/no-null, @typescript-eslint/no-unnecessary-type-assertion */
+import { isPlainObject } from '../internal/is-plain-object.js';
 import type { UndefinedToNull, UndefinedToNullRecursive } from './types';
 
 export const undefinedToNull = <T>(value?: T): UndefinedToNull<T> => (value ?? null) as UndefinedToNull<T>;
@@ -12,7 +13,7 @@ export const recursiveUndefinedToNull = <T>(nullable: T): UndefinedToNullRecursi
     return nullable.map((element: unknown) => recursiveUndefinedToNull(element)) as UndefinedToNullRecursive<T>;
   }
 
-  if (typeof nullable === 'object') {
+  if (isPlainObject(nullable)) {
     const result: Record<string, unknown> = {};
 
     for (const key in nullable) {

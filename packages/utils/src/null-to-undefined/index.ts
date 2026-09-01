@@ -1,4 +1,5 @@
 /* eslint-disable unicorn/no-null */
+import { isPlainObject } from '../internal/is-plain-object.js';
 import type { NullToUndefined, NullToUndefinedRecursive } from './types';
 
 export const nullToUndefined = <T>(value?: T): NullToUndefined<T> => (value ?? undefined) as NullToUndefined<T>;
@@ -7,7 +8,7 @@ export const recursiveNullToUndefined = <T>(nullable: T): NullToUndefinedRecursi
   if (Array.isArray(nullable)) {
     return nullable.map((element: unknown) => recursiveNullToUndefined(element)) as NullToUndefinedRecursive<T>;
   }
-  if (typeof nullable === 'object' && nullable != null) {
+  if (isPlainObject(nullable)) {
     const result: Record<string, unknown> = {};
 
     for (const key in nullable) {

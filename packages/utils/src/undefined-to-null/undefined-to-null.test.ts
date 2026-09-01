@@ -93,6 +93,14 @@ describe('recursiveUndefinedToNull', () => {
     expect(result).toBeNull();
   });
 
+  it('preserves non-plain object instances such as `Date`', () => {
+    const createdAt = new Date('2024-01-01T00:00:00.000Z');
+    const object = { createdAt, other: undefined };
+    const result = recursiveUndefinedToNull(object);
+    assertType<UndefinedToNullRecursive<typeof object>>(result);
+    expect(result).toEqual({ createdAt, other: null });
+  });
+
   it('replaces `undefined` values with `null` inside an array of objects, leaving other values unchanged', () => {
     const array = [{ a: undefined, b: 'hello', c: undefined }, { d: undefined }];
     const result = recursiveUndefinedToNull(array);
