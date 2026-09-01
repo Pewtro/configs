@@ -1,17 +1,40 @@
-//Recursive helper for finding path parameters in the absence of wildcards
+// Recursive helper for finding path parameters in the absence of wildcards.
 // In: '/users/:userId/posts/:postId'
 // Out: { userId: string, postId: string }
-type PathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
-  ? PathParameter<L> | PathParameter<R>
+type OptionalPathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
+  ? OptionalPathParameter<L> | OptionalPathParameter<R>
   : Path extends `:${infer Parameter}`
-    ? Parameter
+    ? Parameter extends `${string}?`
+      ? ParameterName<Parameter>
+      : never
     : Path extends `{${infer Parameter}}`
-      ? Parameter
+      ? Parameter extends `${string}?`
+        ? ParameterName<Parameter>
+        : never
+      : never;
+
+type ParameterName<Parameter extends string> = Parameter extends `${infer Name}?` ? Name : Parameter;
+
+type ParametersForPath<Path extends string> = Partial<Record<OptionalPathParameter<Path>, string>> &
+  Record<RequiredPathParameter<Path>, string>;
+
+type PathParameter<Path extends string> = OptionalPathParameter<Path> | RequiredPathParameter<Path>;
+
+type RequiredPathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
+  ? RequiredPathParameter<L> | RequiredPathParameter<R>
+  : Path extends `:${infer Parameter}`
+    ? Parameter extends `${string}?`
+      ? never
+      : ParameterName<Parameter>
+    : Path extends `{${infer Parameter}}`
+      ? Parameter extends `${string}?`
+        ? never
+        : ParameterName<Parameter>
       : never;
 
 export const generatePath = <Path extends string>(
   path: Path,
-  parameters: Record<PathParameter<Path>, string>,
+  parameters: ParametersForPath<Path>,
   baseUrl?: string,
 ) => {
   //Ensure the "/" prefix is present if the path starts with a "/" and the baseUrl does not end with a "/"
@@ -22,7 +45,10 @@ export const generatePath = <Path extends string>(
   const prefix = shouldPrefix ? '/' : '';
 
   const isPathParameter = (segment?: string): segment is PathParameter<Path> =>
-    path.includes(`:${segment}`) || path.includes(`{${segment}}`);
+    path.includes(`:${segment}`) ||
+    path.includes(`:${segment}?`) ||
+    path.includes(`{${segment}}`) ||
+    path.includes(`{${segment}?}`);
 
   const segments = path
     .split(/\/+/)
@@ -31,7 +57,11 @@ export const generatePath = <Path extends string>(
       if (keyMatch) {
         const [, key] = keyMatch;
         if (isPathParameter(key)) {
-          return parameters[key];
+          const parameterValue = parameters[key];
+          if (parameterValue === undefined) {
+            return '';
+          }
+          return parameterValue;
         }
       }
       // Remove any optional markers from optional static segments

@@ -57,12 +57,34 @@ describe.concurrent('generatePath with hyphenated params', () => {
 
 describe.concurrent('generatePath with dotted params', () => {
   it('supports :user.id parameter names', ({ expect }) => {
-    const result = generatePath('/users/:user.id/posts/:postId', { 'user.id': '1', postId: '2' });
+    const result = generatePath('/users/:user.id/posts/:postId', { postId: '2', 'user.id': '1' });
     expect(result).toBe('/users/1/posts/2');
   });
 
   it('supports {user.id} parameter names', ({ expect }) => {
-    const result = generatePath('/users/{user.id}/posts/{postId}', { 'user.id': '1', postId: '2' });
+    const result = generatePath('/users/{user.id}/posts/{postId}', { postId: '2', 'user.id': '1' });
+    expect(result).toBe('/users/1/posts/2');
+  });
+});
+
+describe.concurrent('generatePath with optional params', () => {
+  it('omits optional :postId? segment when the value is missing', ({ expect }) => {
+    const result = generatePath('/users/:userId/posts/:postId?', { userId: '1' });
+    expect(result).toBe('/users/1/posts');
+  });
+
+  it('includes optional :postId? segment when the value is present', ({ expect }) => {
+    const result = generatePath('/users/:userId/posts/:postId?', { postId: '2', userId: '1' });
+    expect(result).toBe('/users/1/posts/2');
+  });
+
+  it('omits optional {postId?} segment when the value is missing', ({ expect }) => {
+    const result = generatePath('/users/:userId/posts/{postId?}', { userId: '1' });
+    expect(result).toBe('/users/1/posts');
+  });
+
+  it('includes optional {postId?} segment when the value is present', ({ expect }) => {
+    const result = generatePath('/users/:userId/posts/{postId?}', { postId: '2', userId: '1' });
     expect(result).toBe('/users/1/posts/2');
   });
 });
