@@ -43,6 +43,18 @@ describe.concurrent('generatePath with :', () => {
   });
 });
 
+describe.concurrent('generatePath with hyphenated params', () => {
+  it('supports :user-id parameter names', ({ expect }) => {
+    const result = generatePath('/users/:user-id/posts/:postId', { postId: '2', 'user-id': '1' });
+    expect(result).toBe('/users/1/posts/2');
+  });
+
+  it('supports {user-id} parameter names', ({ expect }) => {
+    const result = generatePath('/users/{user-id}/posts/{postId}', { postId: '2', 'user-id': '1' });
+    expect(result).toBe('/users/1/posts/2');
+  });
+});
+
 describe.concurrent('generatePath with {}', () => {
   it('should maintain the prefix / when passed path starts with / and baseUrl does not exist', ({ expect }) => {
     const result = generatePath('/users/{userId}/posts/{postId}', { postId: '2', userId: '1' });
