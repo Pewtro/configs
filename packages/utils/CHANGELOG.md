@@ -1,5 +1,15 @@
 # @putstack/utils
 
+## 0.4.5
+
+### Patch Changes
+
+- 70ac6d9: Fix `generatePath` to support hyphenated route parameter names in both `:param-name` and `{param-name}` syntax.
+- 6146164: Fix `generatePath` to support dotted route parameter names in both `:param.name` and `{param.name}` syntax.
+- 66b9dd7: Fix recursive `undefinedToNull` handling when the input is `null`, so it preserves `null` instead of incorrectly converting it into an empty object.
+- 4e3d630: Fix `generatePath` to correctly omit optional route segments when their value is missing and keep them when present in both `:param?` and `{param?}` syntax.
+- a314c00: Fix recursive conversion helpers to only recurse into plain objects and arrays, preserving non-plain object instances like `Date` while still converting nested `null` and `undefined` values.
+
 ## 0.4.4
 
 ### Patch Changes
