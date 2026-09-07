@@ -1,5 +1,15 @@
 # ESLint config for typescript changelog
 
+## 5.4.0
+
+### Minor Changes
+
+- 1e1df55: Update eslint-plugin-unicorn to 74.0.0
+
+### Patch Changes
+
+- 367e51b: Update eslint-plugin-perfectionist to 5.11.0
+
 ## 5.3.1
 
 ### Patch Changes
