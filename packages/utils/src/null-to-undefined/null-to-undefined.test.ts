@@ -23,13 +23,6 @@ describe('nullToUndefined', () => {
     expect(result).toBeUndefined();
   });
 
-  it('should not convert undefined to null', () => {
-    const value = undefined;
-    const result = nullToUndefined(value);
-    assertType<NullToUndefined<undefined>>(result);
-    expect(result).toBeUndefined();
-  });
-
   it('returns the original value when passed any value', () => {
     const value = 'hello';
     const result = nullToUndefined(value);

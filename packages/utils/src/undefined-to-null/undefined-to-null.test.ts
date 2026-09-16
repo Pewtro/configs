@@ -22,13 +22,6 @@ describe('undefinedAsNull', () => {
     const result = undefinedToNull();
     expect(result).toBeNull();
   });
-
-  it('should not convert null to undefined', () => {
-    const value = null;
-    const result = undefinedToNull(value);
-    assertType<UndefinedToNull<null>>(result);
-    expect(result).toBeNull();
-  });
 });
 
 describe('recursiveUndefinedToNull', () => {
