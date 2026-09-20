@@ -1,10 +1,10 @@
 {
-  "name": "@putstack/prettier-config",
-  "version": "2.0.1",
-  "description": "Prettier config by Putro",
+  "name": "@putstack/oxfmt-config",
+  "version": "0.0.0",
+  "description": "Oxfmt config by Putro",
   "keywords": [
     "config",
-    "prettier",
+    "oxfmt",
     "putro",
     "putstack"
   ],
@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pewtro/configs.git",
-    "directory": "packages/prettier-config"
+    "directory": "packages/oxfmt-config"
   },
   "files": [
     "./dist"
@@ -31,6 +31,6 @@
   "dependencies": {},
   "devDependencies": {},
   "peerDependencies": {
-    "prettier": ">=3.0.3"
+    "oxfmt": ">=0.68.0 <1.0.0"
   }
 }

@@ -6,19 +6,19 @@ This is a simple configuration for Prettier that I use across projects.
 
 To install this package run the following command in the terminal in the root directory of your application.
 
-```
+```sh
 pnpm install -D @putstack/prettier-config
 ```
 
 **OR**
 
-```
+```sh
 npm install --save-dev @putstack/prettier-config
 ```
 
 **OR**
 
-```
+```sh
 yarn add -D @putstack/prettier-config
 ```
 
@@ -30,7 +30,8 @@ Create a **.prettierrc**, **.prettierrc.yaml**, **.prettierrc.yml** or **.pretti
 
 Create a **prettier.config.js** or **.prettierrc.js** file and export an object.
 
-```
+```js
+// .prettierrc.js
 import putstackConfig from '@putstack/prettier-config';
 
 /** @type {import("prettier").Config} */
@@ -41,7 +42,3 @@ const config = {
 
 export default config;
 ```
-
-## Example
-
-This project use the prettier-config on itself, as seen in the root package.json file.
