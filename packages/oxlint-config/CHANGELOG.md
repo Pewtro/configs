@@ -1,5 +1,13 @@
 # @putstack/oxlint-config
 
+## 0.1.3
+
+### Patch Changes
+
+- c827205: Update eslint-plugin-perfectionist to 5.11.0
+- 6050ea6: Update eslint-plugin-sonarjs to 4.2.1
+- 3655679: Update eslint-plugin-perfectionist to 5.11.1
+
 ## 0.1.2
 
 ### Patch Changes
