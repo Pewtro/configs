@@ -4,5 +4,5 @@ pre-commit:
     - run: pnpm --silent lint:fix {staged_files}
       glob: '*.{ts,tsx,js,jsx,mjs}'
 
-    - run: pnpm prettier --write {staged_files}
+    - run: pnpm oxfmt --no-error-on-unmatched-pattern {staged_files}
       glob: '*.{ts,tsx,js,jsx,mjs,md,mdx,yaml,yml,json}'
