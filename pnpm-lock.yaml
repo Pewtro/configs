@@ -284,8 +284,8 @@ importers:
         specifier: 5.11.1
         version: 5.11.1(eslint@10.9.1)(typescript@6.0.3)
       eslint-plugin-sonarjs:
-        specifier: 4.2.0
-        version: 4.2.0(eslint@10.9.1)
+        specifier: 4.2.1
+        version: 4.2.1(eslint@10.9.1)
       oxlint:
         specifier: ^1.71.0
         version: 1.81.0
@@ -1483,11 +1483,6 @@ packages:
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
-
-  eslint-plugin-sonarjs@4.2.0:
-    resolution: {integrity: sha512-bqADfuNtTL7VK6RU29eoiFTtaaBKIpVPuX3bOl+rBpWSBa0zIBVZlqZNZQjfP6s4iXkAJokv5IsD8OsACkwApg==}
-    peerDependencies:
-      eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
   eslint-plugin-sonarjs@4.2.1:
     resolution: {integrity: sha512-WGsnVkUxmHyBOytShcIeE+vhQaS8e+gYgbHNNi4y2e5Zj+DpE2DLTvarqDUhNwjceTZHGLgevSgfBSEVkt4EaA==}
@@ -3342,23 +3337,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  eslint-plugin-sonarjs@4.2.0(eslint@10.9.1):
-    dependencies:
-      '@eslint-community/regexpp': 4.12.2
-      builtin-modules: 3.3.0
-      bytes: 3.1.2
-      eslint: 10.9.1
-      functional-red-black-tree: 1.0.1
-      globals: 17.12.0
-      jsx-ast-utils-x: 0.1.0
-      lodash.merge: 4.6.2
-      minimatch: 10.2.6
-      scslre: 0.3.0
-      semver: 7.8.5
-      ts-api-utils: 2.5.0(typescript@6.0.3)
-      typescript: 6.0.3
-      yaml: 2.9.0
 
   eslint-plugin-sonarjs@4.2.1(eslint@10.9.1):
     dependencies:
