@@ -1,5 +1,11 @@
 # @putstack/utils
 
+## 0.4.6
+
+### Patch Changes
+
+- c91cb21: Rewrite generatePath and associated types
+
 ## 0.4.5
 
 ### Patch Changes

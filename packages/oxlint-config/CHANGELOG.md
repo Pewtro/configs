@@ -1,5 +1,11 @@
 # @putstack/oxlint-config
 
+## 0.1.4
+
+### Patch Changes
+
+- 9ceeb16: Update eslint-plugin-de-morgan to 2.2.0
+
 ## 0.1.3
 
 ### Patch Changes
