@@ -1,4 +1,4 @@
-/* eslint-disable sonarjs/parameterized-tests */
+/* eslint-disable sonarjs/parameterized-tests, unicorn/prefer-https */
 import { describe, it } from 'vitest';
 import { generatePath } from './index.js';
 
@@ -164,5 +164,64 @@ describe.concurrent('generatePath with mixed : and {}', () => {
       const result = generatePath('users/:userId/posts/{postId}', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
+  });
+});
+
+describe.concurrent('generatePath with value types', () => {
+  it('supports boolean and number parameter values', ({ expect }) => {
+    const result = generatePath('/users/:userId/active/:active/count/:count', {
+      active: false,
+      count: 2,
+      userId: 0,
+    });
+
+    expect(result).toBe('/users/0/active/false/count/2');
+  });
+
+  it('encodes parameter values', ({ expect }) => {
+    const result = generatePath('/search/:query', { query: 'two words/with symbols' });
+
+    expect(result).toBe('/search/two%20words%2Fwith%20symbols');
+  });
+});
+
+describe.concurrent('generatePath with missing parameters', () => {
+  it('allows the parameters argument to be omitted when all parameters are optional', ({ expect }) => {
+    expect(generatePath('/users/:userId?/posts/{postId?}')).toBe('/users/posts');
+  });
+
+  it('omits an optional segment when its value is undefined or empty', ({ expect }) => {
+    expect(generatePath('/users/:userId/posts/:postId?', { postId: '', userId: '1' })).toBe('/users/1/posts');
+  });
+
+  it('throws when a required parameter is missing', ({ expect }) => {
+    //@ts-expect-error This is intended to have a type error
+    expect(() => generatePath('/users/:userId/posts/:postId', { userId: '1' })).toThrow(
+      'Missing required path parameter "postId" for path "/users/:userId/posts/:postId"',
+    );
+  });
+});
+
+describe.concurrent('generatePath with baseUrl protocols', () => {
+  it('adds the default https protocol to a bare base URL', ({ expect }) => {
+    expect(generatePath('/users/:userId', { userId: '1' }, 'api.example.com')).toBe('https://api.example.com/users/1');
+  });
+
+  it('uses the requested protocol for a bare base URL', ({ expect }) => {
+    expect(generatePath('/users/:userId', { userId: '1' }, 'api.example.com', 'http')).toBe(
+      'http://api.example.com/users/1',
+    );
+  });
+
+  it('preserves an existing HTTP protocol', ({ expect }) => {
+    expect(generatePath('/users/:userId', { userId: '1' }, 'http://api.example.com')).toBe(
+      'http://api.example.com/users/1',
+    );
+  });
+
+  it('does not duplicate slashes when the base URL ends with one', ({ expect }) => {
+    expect(generatePath('/users/:userId', { userId: '1' }, 'https://api.example.com/')).toBe(
+      'https://api.example.com/users/1',
+    );
   });
 });

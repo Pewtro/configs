@@ -1,42 +1,42 @@
+type ParameterValue = boolean | number | string;
+
 // Recursive helper for finding path parameters in the absence of wildcards.
 // In: '/users/:userId/posts/:postId'
 // Out: { userId: string, postId: string }
-type OptionalPathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
-  ? OptionalPathParameter<L> | OptionalPathParameter<R>
-  : Path extends `:${infer Parameter}`
-    ? Parameter extends `${string}?`
-      ? ParameterName<Parameter>
-      : never
-    : Path extends `{${infer Parameter}}`
-      ? Parameter extends `${string}?`
-        ? ParameterName<Parameter>
-        : never
-      : never;
+type PathParameterToken<Path extends string> =
+  // split paht into individual segements
+  Path extends `${infer L}/${infer R}`
+    ? PathParameterToken<L> | PathParameterToken<R>
+    : // find params after `:`
+      Path extends `:${infer Token}`
+      ? Token
+      : // find params inside `{}` braces
+        Path extends `{${infer Token}}`
+        ? Token // otherwise, there aren't any params present
+        : never;
 
-type ParameterName<Parameter extends string> = Parameter extends `${infer Name}?` ? Name : Parameter;
+// A trailing `?` marks a parameter as optional and is not part of its name
+type OptionalParameterName<Token extends string> = Token extends `${infer Name}?` ? Name : never;
+// A required parameter does not have a trailing `?` in its token
+type RequiredParameterName<Token extends string> = Token extends `${string}?` ? never : Token;
 
-type ParametersForPath<Path extends string> = Partial<Record<OptionalPathParameter<Path>, string>> &
-  Record<RequiredPathParameter<Path>, string>;
+//Extracts the path parameters from a given path and separates them into optional and required parameters.
+type PathParameters<Path extends string> = Partial<
+  Record<OptionalParameterName<PathParameterToken<Path>>, ParameterValue>
+> &
+  Record<RequiredParameterName<PathParameterToken<Path>>, ParameterValue>;
 
-type PathParameter<Path extends string> = OptionalPathParameter<Path> | RequiredPathParameter<Path>;
+type Protocols = 'http' | 'https';
+// The parameters argument is only mandatory if the path contains required parameters. If the path only contains optional parameters, the parameters argument can be omitted.
+type GeneratePathArguments<Path extends string> = [RequiredParameterName<PathParameterToken<Path>>] extends [never]
+  ? [parameters?: PathParameters<Path>, baseUrl?: string, protocol?: Protocols]
+  : [parameters: PathParameters<Path>, baseUrl?: string, protocol?: Protocols];
 
-type RequiredPathParameter<Path extends string> = Path extends `${infer L}/${infer R}`
-  ? RequiredPathParameter<L> | RequiredPathParameter<R>
-  : Path extends `:${infer Parameter}`
-    ? Parameter extends `${string}?`
-      ? never
-      : ParameterName<Parameter>
-    : Path extends `{${infer Parameter}}`
-      ? Parameter extends `${string}?`
-        ? never
-        : ParameterName<Parameter>
-      : never;
+const hasHttpPrefix = (value: string) => /^https?:\/\//i.test(value);
 
-export const generatePath = <Path extends string>(
-  path: Path,
-  parameters: ParametersForPath<Path>,
-  baseUrl?: string,
-) => {
+export const generatePath = <Path extends string>(path: Path, ...rest: GeneratePathArguments<Path>) => {
+  const [parameters, baseUrl, protocol = 'https'] = rest;
+
   //Ensure the "/" prefix is present if the path starts with a "/" and the baseUrl does not end with a "/"
   const shouldPrefixDueToPath = path.startsWith('/') && !baseUrl?.endsWith('/');
   //Ensure the "/" prefix is present if the baseUrl does not end with a "/"
@@ -44,35 +44,35 @@ export const generatePath = <Path extends string>(
   const shouldPrefix = shouldPrefixDueToPath || shouldPrefixDueToBaseUrl;
   const prefix = shouldPrefix ? '/' : '';
 
-  const isPathParameter = (segment?: string): segment is PathParameter<Path> =>
-    path.includes(`:${segment}`) ||
-    path.includes(`:${segment}?`) ||
-    path.includes(`{${segment}}`) ||
-    path.includes(`{${segment}?}`);
+  const values: Record<string, ParameterValue | undefined> = parameters ?? {};
 
   const segments = path
     .split(/\/+/)
     .map((segment) => {
-      const keyMatch = /^:([A-Za-z0-9_.-]+)(\??)$/.exec(segment) ?? /^\{([A-Za-z0-9_.-]+)(\??)\}$/.exec(segment);
+      const keyMatch = /^:([\w.-]+)(\??)$/.exec(segment) ?? /^\{([\w.-]+)(\??)\}$/.exec(segment);
       if (keyMatch) {
-        const [, key] = keyMatch;
-        if (isPathParameter(key)) {
-          const parameterValue = parameters[key];
-          if (parameterValue === undefined) {
-            return '';
-          }
-          return parameterValue;
-        }
-      }
-      // Remove any optional markers from optional static segments
-      return segment.replaceAll(/\?$/g, '');
-    })
-    //Remove empty segments
-    .filter((segment) => !!segment);
+        const [, key = '', optionalMarker] = keyMatch;
+        const value = values[key];
 
-  const joinedSegments = segments.join('/');
+        // No usable value means the segment is dropped when optional, and is a caller error when required
+        if (value === undefined || value === '') {
+          if (optionalMarker === '?') {
+            return;
+          }
+          throw new Error(`Missing required path parameter "${key}" for path "${path}"`);
+        }
+        return encodeURIComponent(String(value));
+      }
+      return segment.replaceAll(/\?$/g, ''); // Remove any optional markers from optional static segments
+    })
+    // Remove empty segments
+    .filter((segment): segment is string => segment !== undefined && segment !== '');
+
   if (baseUrl) {
-    return `${baseUrl}${prefix}${joinedSegments}`;
+    const resolvedBaseUrl = hasHttpPrefix(baseUrl) ? baseUrl : `${protocol}://${baseUrl}`;
+
+    return resolvedBaseUrl + prefix + segments.join('/');
   }
-  return `${prefix}${joinedSegments}`;
+
+  return prefix + segments.join('/');
 };
