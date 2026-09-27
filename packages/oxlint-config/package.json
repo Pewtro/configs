@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "oxlint": "^1.71.0",
-    "oxlint-tsgolint": "7.0.2002",
+    "oxlint-tsgolint": "^7.0.2002",
     "typescript": "^6 || ^7"
   },
   "engines": {

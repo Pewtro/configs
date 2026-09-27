@@ -135,7 +135,7 @@ importers:
         specifier: ^1.71.0
         version: 1.85.0(oxlint-tsgolint@7.0.2002)
       oxlint-tsgolint:
-        specifier: 7.0.2002
+        specifier: ^7.0.2002
         version: 7.0.2002
       typescript:
         specifier: ^6 || ^7
