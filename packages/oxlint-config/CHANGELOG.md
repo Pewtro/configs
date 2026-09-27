@@ -1,5 +1,12 @@
 # @putstack/oxlint-config
 
+## 0.1.4
+
+### Patch Changes
+
+- 0b3413c: Update eslint-plugin-perfectionist to 5.12.1
+- 9ceeb16: Update eslint-plugin-de-morgan to 2.2.0
+
 ## 0.1.3
 
 ### Patch Changes
