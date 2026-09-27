@@ -93,8 +93,8 @@ importers:
         specifier: 4.17.1
         version: 4.17.1(@typescript-eslint/utils@8.70.0(eslint@10.9.1)(typescript@6.0.3))(eslint@10.9.1)
       eslint-plugin-perfectionist:
-        specifier: 5.11.1
-        version: 5.11.1(eslint@10.9.1)(typescript@6.0.3)
+        specifier: 5.12.1
+        version: 5.12.1(eslint@10.9.1)(typescript@6.0.3)
       eslint-plugin-sonarjs:
         specifier: 4.2.1
         version: 4.2.1(eslint@10.9.1)
@@ -1321,6 +1321,15 @@ packages:
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
+
+  eslint-plugin-perfectionist@5.12.1:
+    resolution: {integrity: sha512-krdSE7Dz+TCtcVr2+rfNhlOIFFBJcUdoRvjaN7JQnsaVnxJw+BZh9wMkY3MSLCJat+yW+UPTQLKS82Epc7MGZA==}
+    engines: {node: ^20.0.0 || >=22.0.0}
+    peerDependencies:
+      eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
 
   eslint-plugin-sonarjs@4.2.1:
     resolution: {integrity: sha512-WGsnVkUxmHyBOytShcIeE+vhQaS8e+gYgbHNNi4y2e5Zj+DpE2DLTvarqDUhNwjceTZHGLgevSgfBSEVkt4EaA==}
@@ -3135,6 +3144,17 @@ snapshots:
       '@typescript-eslint/utils': 8.70.0(eslint@10.9.1)(typescript@6.0.3)
       eslint: 10.9.1
       natural-orderby: 5.0.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  eslint-plugin-perfectionist@5.12.1(eslint@10.9.1)(typescript@6.0.3):
+    dependencies:
+      '@typescript-eslint/types': 8.70.0
+      '@typescript-eslint/utils': 8.70.0(eslint@10.9.1)(typescript@6.0.3)
+      natural-orderby: 5.0.0
+    optionalDependencies:
+      eslint: 10.9.1
     transitivePeerDependencies:
       - supports-color
       - typescript
