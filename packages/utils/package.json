@@ -1,6 +1,6 @@
 {
   "name": "@putstack/utils",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Various utility functions I find myself recreating over and over again.",
   "keywords": [
     "putro",
