@@ -1,5 +1,11 @@
 # @putstack/oxlint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- 1bc4207: Add type-aware linting
+
 ## 0.1.4
 
 ### Patch Changes
