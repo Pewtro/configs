@@ -111,6 +111,33 @@ const eslintConfig = defineConfig({
 });
 
 const typescriptConfig = defineConfig({
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+      rules: {
+        'typescript/await-thenable': 'error',
+        'typescript/no-duplicate-type-constituents': 'error',
+        'typescript/no-floating-promises': 'error',
+        'typescript/no-for-in-array': 'error',
+        'typescript/no-implied-eval': 'error',
+        'typescript/no-misused-promises': 'error',
+        'typescript/no-redundant-type-constituents': 'error',
+        'typescript/no-unnecessary-type-assertion': 'error',
+        'typescript/no-unsafe-argument': 'error',
+        'typescript/no-unsafe-assignment': 'error',
+        'typescript/no-unsafe-call': 'error',
+        'typescript/no-unsafe-enum-comparison': 'error',
+        'typescript/no-unsafe-member-access': 'error',
+        'typescript/no-unsafe-return': 'error',
+        'typescript/only-throw-error': 'error',
+        'typescript/require-array-sort-compare': 'error',
+        'typescript/require-await': 'error',
+        'typescript/restrict-plus-operands': 'error',
+        'typescript/restrict-template-expressions': 'error',
+        'typescript/return-await': 'error',
+      },
+    },
+  ],
   plugins: ['typescript'],
   rules: {
     'typescript/array-type': [
@@ -159,7 +186,12 @@ const typescriptConfig = defineConfig({
 });
 
 const sonarConfig = defineConfig({
-  jsPlugins: ['eslint-plugin-sonarjs'],
+  jsPlugins: [
+    {
+      name: 'sonarjs',
+      specifier: import.meta.resolve('eslint-plugin-sonarjs'),
+    },
+  ],
   rules: {
     'sonarjs/anchor-precedence': 'error',
     'sonarjs/argument-type': 'error',
@@ -396,7 +428,12 @@ const genericSortRulesWithoutPartition = new Set<(typeof genericPerfectionistSor
 ]);
 
 const perfectionistConfig = defineConfig({
-  jsPlugins: ['eslint-plugin-perfectionist'],
+  jsPlugins: [
+    {
+      name: 'perfectionist',
+      specifier: import.meta.resolve('eslint-plugin-perfectionist'),
+    },
+  ],
   rules: {
     //Set up a specific import order that we generally want to adhere to.
     //This makes it easier to recognize where an import is coming from.
@@ -445,7 +482,12 @@ const importConfig = defineConfig({
 });
 
 const demorganConfig = defineConfig({
-  jsPlugins: ['eslint-plugin-de-morgan'],
+  jsPlugins: [
+    {
+      name: 'de-morgan',
+      specifier: import.meta.resolve('eslint-plugin-de-morgan'),
+    },
+  ],
   rules: {
     'de-morgan/no-negated-conjunction': 'error',
     'de-morgan/no-negated-disjunction': 'error',
@@ -453,7 +495,12 @@ const demorganConfig = defineConfig({
 });
 
 const dependConfig = defineConfig({
-  jsPlugins: ['eslint-plugin-depend'],
+  jsPlugins: [
+    {
+      name: 'depend',
+      specifier: import.meta.resolve('eslint-plugin-depend'),
+    },
+  ],
   rules: {
     'depend/ban-dependencies': 'error',
   },
@@ -462,12 +509,6 @@ const dependConfig = defineConfig({
 export const base = defineConfig({
   categories: {
     correctness: 'off',
-  },
-  env: {
-    browser: true,
-    builtin: true,
-    es2024: true,
-    node: true,
   },
   extends: [
     eslintConfig,
@@ -478,7 +519,4 @@ export const base = defineConfig({
     demorganConfig,
     dependConfig,
   ],
-  options: {
-    //typeAware: true,
-  },
 });
