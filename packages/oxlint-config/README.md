@@ -7,10 +7,8 @@ This package provides Oxlint presets that complement `@putstack/eslint-config-ty
 Install the package:
 
 ```sh
-pnpm add -D @putstack/oxlint-config
+pnpm add -D @putstack/oxlint-config oxlint oxlint-tsgolint typescript
 ```
-
-Oxlint, `oxlint-tsgolint`, and TypeScript are declared as peer dependencies. Modern pnpm and npm versions install peer dependencies automatically, so you do not need to add them separately. Existing compatible installations are used to satisfy the peers.
 
 ## Usage
 
