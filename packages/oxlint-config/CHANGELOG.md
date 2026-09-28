@@ -1,5 +1,11 @@
 # @putstack/oxlint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- 184f158: Expand oxlint-tsgolint version range
+
 ## 0.2.0
 
 ### Minor Changes
