@@ -33,20 +33,20 @@
     "@putstack/oxlint-config": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
     "@types/node": "26.6.2",
-    "@vitest/coverage-v8": "5.0.1",
-    "@vitest/ui": "5.0.1",
+    "@vitest/coverage-v8": "5.0.2",
+    "@vitest/ui": "5.0.2",
     "eslint": "10.11.0",
     "lefthook": "2.1.14",
     "npm-run-all2": "9.0.3",
     "oxfmt": "0.70.0",
     "oxlint": "1.85.0",
-    "oxlint-tsgolint": "7.0.2002",
+    "oxlint-tsgolint": "7.0.2003",
     "prettier": "3.9.9",
     "publint": "0.3.24",
     "tsdown": "0.23.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.1",
-    "vitest": "5.0.1"
+    "vitest": "5.0.2"
   },
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26"
