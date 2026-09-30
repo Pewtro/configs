@@ -32,7 +32,7 @@
     "@putstack/oxfmt-config": "workspace:*",
     "@putstack/oxlint-config": "workspace:*",
     "@putstack/prettier-config": "workspace:*",
-    "@types/node": "26.6.2",
+    "@types/node": "26.6.3",
     "@vitest/coverage-v8": "5.0.2",
     "@vitest/ui": "5.0.2",
     "eslint": "10.11.0",
