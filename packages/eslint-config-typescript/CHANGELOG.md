@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 5.5.1
+
+### Patch Changes
+
+- 906ac81: Update eslint-plugin-sonarjs to 4.2.2
+
 ## 5.5.0
 
 ### Minor Changes
