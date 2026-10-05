@@ -1,31 +1,39 @@
-# Introduction
+# PutStack Configs
 
-A repository where I can upload various libraries or configurations that I often find myself duplicating across my own projects.
+This repository is a pnpm workspace containing the reusable configuration packages and small utilities I use across my TypeScript projects.
 
-## Configurations
+## Included packages
 
-- `@putstack/eslint-config-typescript` - A strict configuration for ESLint to be used in TypeScript projects.
-  - It comes with a `recommended` and `base` configuration that can be used. The `base` configuration is less strict than the `recommended`, so it might be easier to integrate into existing projects.
-- `@putstack/prettier-config` - A prettier configuration that has sensible defaults, that should never require adjustment.
+- `@putstack/eslint-config-typescript` — strict ESLint flat config for TypeScript projects with recommended and base presets.
+- `@putstack/oxlint-config` — Oxlint presets for TypeScript-focused linting.
+- `@putstack/oxfmt-config` — formatter configuration for Oxfmt.
+- `@putstack/prettier-config` — shared Prettier defaults.
+- `@putstack/utils` — a small utility library used across projects.
 
-## Libraries
+## Getting started
 
-- `@putstack/utils` - A collection of utility functions that I often find myself needing in various projects.
+Install dependencies:
 
-# Getting Started
-
-Clone the repository, and run `pnpm i` to install the dependencies - then you're good to go!
-The project will lint and prettier itself as a pre-commit hook, so you will automatically adhere to all our style conventions!
-
-# Contribute
-
-Feel free to contribute to this repository if you think there's a bug, a rule is missing or misconfigured, or anything else!
-If you're unsure how to fix it, feel free to open an issue.
-
-Remember to add a changeset, you can do that by running `pnpm changeset` and following the instructions. An example of a changeset could be:
-
-```
-- Turn on `@typescript-eslint/default-param-last` to better match expectations from certain SonarQube setups. Rule documentation can be found [here](https://typescript-eslint.io/rules/default-param-last). This also turns off the standard `default-param-last` as described in the documentation.
+```sh
+pnpm install
 ```
 
-# Roadmap
+Common workspace commands:
+
+```sh
+pnpm build
+pnpm test
+pnpm lint
+pnpm typecheck
+pnpm stylecheck
+```
+
+## Contributing
+
+Contributions are welcome. If you find a rule that should be adjusted, a config that is missing, or a bug in one of the packages, feel free to open an issue or submit a pull request.
+
+When making a release-worthy change, add a changeset:
+
+```sh
+pnpm changeset
+```
