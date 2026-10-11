@@ -1,5 +1,11 @@
 # @putstack/oxlint-config
 
+## 0.2.2
+
+### Patch Changes
+
+- 906ac81: Update eslint-plugin-sonarjs to 4.2.2
+
 ## 0.2.1
 
 ### Patch Changes
