@@ -30,7 +30,7 @@ jobs:
           version: 12.11.2
 
       - name: Setup Node.js ${{ env.release_node }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.release_node }}
           cache: 'pnpm'
