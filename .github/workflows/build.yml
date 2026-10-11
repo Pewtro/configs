@@ -1,25 +1,32 @@
-name: Release
+name: CI
 permissions:
   contents: write
-  pull-requests: write
   id-token: write
+  pull-requests: write
 
 on:
-  workflow_run:
-    workflows: ['Test']
-    types: [completed]
+  schedule:
+    - cron: '0 12 * * 6'
+  pull_request:
+  push:
     branches:
-      - 'main'
-      - 'next'
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 env:
   # The node version to release with, generally the latest LTS
   release_node: 24.x
 
 jobs:
-  release:
-    name: Release
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        # Test against multiple node versions
+        # Any currently maintained version, e.g. whether they are current, active or maintenance should be included
+        node: [22.x, 24.x, 26.x]
+    name: Build, Test & Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -32,7 +39,7 @@ jobs:
       - name: Setup Node.js ${{ env.release_node }}
         uses: actions/setup-node@v7
         with:
-          node-version: ${{ env.release_node }}
+          node-version: ${{ matrix.node }}
           cache: 'pnpm'
 
       - name: Install Dependencies
@@ -41,11 +48,15 @@ jobs:
       - name: Build packages
         run: pnpm build
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Lint, Prettier, and Typecheck
+        run: pnpm test:ci
+
+      # Only release with the version set in release_node and on a push to main
+      - if: ${{ matrix.node == env.release_node && github.ref == 'refs/heads/main' && github.repository == 'pewtro/configs' }}
+        name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.0 Commit hash taken from https://github.com/changesets/action/tree/v2
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish-script
           publish-script: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
