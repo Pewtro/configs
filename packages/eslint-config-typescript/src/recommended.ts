@@ -5,6 +5,16 @@ import { base } from './base';
 const unicornConfig = defineConfig(unicorn.configs.recommended, {
   rules: {
     'unicorn/consistent-class-member-order': 'off',
+    'unicorn/no-top-level-side-effects': [
+      'error',
+      {
+        allow: {
+          oxfmt: ['defineConfig'],
+          oxlint: ['defineConfig'],
+          tsdown: ['defineConfig'],
+        },
+      },
+    ],
     'unicorn/single-line-block-comment-style': [
       'error',
       'multiline',

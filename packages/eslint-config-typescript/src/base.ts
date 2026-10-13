@@ -11,8 +11,8 @@ import { configs as tsEslintConfigs } from 'typescript-eslint';
 const eslintConfig = defineConfig(eslint.configs.recommended, {
   rules: {
     /**
-     * Code quality rules
-     */
+    Code quality rules
+    */
     //Enforce default clauses in switch statements to be last
     'default-case-last': 'warn',
     //Disallow nested ternary expressions
@@ -29,8 +29,8 @@ const typescriptEslintConfig = defineConfig(
   {
     rules: {
       /**
-       *  Rules that need to be turned off in default eslint to be turned on in Typescript ESLint
-       */
+      Rules that need to be turned off in default eslint to be turned on in Typescript ESLint
+      */
       //Enforce default parameters to be last
       '@typescript-eslint/default-param-last': 'warn',
       'default-param-last': 'off',
@@ -56,8 +56,8 @@ const typescriptEslintConfig = defineConfig(
       ],
 
       /**
-       * Stylistic rules
-       */
+      Stylistic rules
+      */
       //Prefer using Array<T> over T[]
       '@typescript-eslint/array-type': ['warn', { default: 'generic', readonly: 'generic' }],
       //We want to encourage marking type imports explicitly which is also enforced by TypeScripts --verbatimModuleSyntax
