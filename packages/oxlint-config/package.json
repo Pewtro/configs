@@ -10,6 +10,7 @@
     "putstack",
     "typescript"
   ],
+  "homepage": "https://github.com/Pewtro/configs/tree/main/packages/oxlint-config",
   "license": "MIT",
   "author": "Putro",
   "repository": {

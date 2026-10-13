@@ -8,6 +8,7 @@
     "putro",
     "putstack"
   ],
+  "homepage": "https://github.com/Pewtro/configs/tree/main/packages/prettier-config",
   "license": "MIT",
   "author": "Putro",
   "repository": {

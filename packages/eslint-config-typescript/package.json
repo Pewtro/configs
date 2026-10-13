@@ -10,6 +10,7 @@
     "putstack",
     "typescript"
   ],
+  "homepage": "https://github.com/Pewtro/configs/tree/main/packages/eslint-config-typescript",
   "license": "MIT",
   "author": "Putro",
   "repository": {
