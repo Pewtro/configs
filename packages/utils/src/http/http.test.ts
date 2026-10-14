@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/parameterized-tests, unicorn/prefer-https */
-import { describe, it } from 'vitest';
+import { assertType, describe, it } from 'vitest';
 import { generatePath } from './index.js';
 
 const testingUrl = 'https://github.com';
@@ -222,6 +222,88 @@ describe.concurrent('generatePath with baseUrl protocols', () => {
   it('does not duplicate slashes when the base URL ends with one', ({ expect }) => {
     expect(generatePath('/users/:userId', { userId: '1' }, 'https://api.example.com/')).toBe(
       'https://api.example.com/users/1',
+    );
+  });
+});
+
+describe.concurrent('generatePath with query strings', () => {
+  it('passes a static query string through untouched', ({ expect }) => {
+    expect(generatePath('/search?foo=bar')).toBe('/search?foo=bar');
+  });
+
+  it('substitutes a parameter that precedes a query string', ({ expect }) => {
+    expect(generatePath('/users/:userId?foo=bar', { userId: '1' })).toBe('/users/1?foo=bar');
+  });
+
+  it('substitutes and encodes a parameter used as a query value', ({ expect }) => {
+    const result = generatePath('/search?query=:term', { term: 'two words' });
+
+    assertType<string>(result);
+    expect(result).toBe('/search?query=two%20words');
+  });
+
+  it('substitutes parameters used as a query key and value', ({ expect }) => {
+    expect(generatePath('/search?{query}=:term', { query: 'q', term: 'x' })).toBe('/search?q=x');
+  });
+
+  it('substitutes parameters across multiple query pairs', ({ expect }) => {
+    expect(generatePath('/search?q=:query&page=:page', { page: 2, query: 'a b' })).toBe('/search?q=a%20b&page=2');
+  });
+
+  it('leaves colons that are not parameters untouched', ({ expect }) => {
+    expect(generatePath('/time?at=12:30')).toBe('/time?at=12:30');
+  });
+
+  it('drops the whole pair when an optional query parameter has no value', ({ expect }) => {
+    expect(generatePath('/search?term=:term?&page=1')).toBe('/search?page=1');
+  });
+
+  it('removes the query string when every pair is dropped', ({ expect }) => {
+    expect(generatePath('/search?term=:term?')).toBe('/search');
+  });
+
+  it('removes empty pairs and a bare trailing question mark', ({ expect }) => {
+    expect(generatePath('/search?a=1&&b=2')).toBe('/search?a=1&b=2');
+    expect(generatePath('/search?')).toBe('/search');
+  });
+
+  it('treats the question mark of an optional parameter as a marker, not a query string', ({ expect }) => {
+    expect(generatePath('/users/:userId?/posts?active=true', { userId: '1' })).toBe('/users/1/posts?active=true');
+  });
+
+  it('appends the query string after the base URL', ({ expect }) => {
+    expect(generatePath('/users/:userId?foo=bar', { userId: '1' }, testingUrl)).toBe(`${testingUrl}/users/1?foo=bar`);
+  });
+
+  it('throws when a required query parameter is missing', ({ expect }) => {
+    //@ts-expect-error This is intended to have a type error
+    expect(() => generatePath('/search?query=:term')).toThrow(
+      'Missing required path parameter "term" for path "/search?query=:term"',
+    );
+  });
+});
+
+describe.concurrent('generatePath with unresolvable templates', () => {
+  // The runtime guard is the backstop for templates the types do not already reject, such as
+  // JavaScript callers and paths that have widened to `string`.
+  it('throws when a segment cannot be parsed as a single parameter', ({ expect }) => {
+    //@ts-expect-error This is intended to have a type error
+    expect(() => generatePath('/users/:user:id', { id: '2', user: '1' })).toThrow(
+      'Unresolved parameter ":user:id" in path "/users/:user:id"',
+    );
+  });
+
+  it('throws when a braced parameter is not the whole segment', ({ expect }) => {
+    // The types see no parameter here, so this only reaches the runtime guard.
+    expect(() => generatePath('/users/{user}id', { user: '1' })).toThrow(
+      'Unresolved parameter "{user}id" in path "/users/{user}id"',
+    );
+  });
+
+  it('throws even when the remaining segments are valid', ({ expect }) => {
+    //@ts-expect-error This is intended to have a type error
+    expect(() => generatePath('/users/:user:id/posts/:postId', { id: '2', postId: '3', user: '1' })).toThrow(
+      'Unresolved parameter ":user:id" in path "/users/:user:id/posts/:postId"',
     );
   });
 });
