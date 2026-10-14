@@ -4,11 +4,11 @@ import { recursiveNullToUndefined } from './null-to-undefined/index.js';
 import { recursiveUndefinedToNull } from './undefined-to-null/index.js';
 
 /**
- * `recursiveUndefinedToNull` keeps every property so that it survives `JSON.stringify`, whereas
- * `recursiveNullToUndefined` drops the properties that were `null` or `undefined`. The two are
- * therefore deliberately not inverses of each other. These tests pin that difference so it cannot
- * be changed by accident.
- */
+`recursiveUndefinedToNull` keeps every property so that it survives `JSON.stringify`, whereas
+`recursiveNullToUndefined` drops the properties that were `null` or `undefined`. The two are
+therefore deliberately not inverses of each other. These tests pin that difference so it cannot
+be changed by accident.
+*/
 describe('recursiveNullToUndefined and recursiveUndefinedToNull', () => {
   it('keeps properties that were `undefined` when converting to `null`', ({ expect }) => {
     expect(recursiveUndefinedToNull({ a: undefined, b: 'hello' })).toStrictEqual({ a: null, b: 'hello' });

@@ -18,6 +18,10 @@ Install dependencies:
 pnpm install
 ```
 
+The root config files import the workspace packages from their build output, so run `pnpm build` once
+after installing. Until you do, `lint`, `lint:eslint`, `typecheck`, and `stylecheck` all fail to
+resolve those packages.
+
 Common workspace commands:
 
 ```sh

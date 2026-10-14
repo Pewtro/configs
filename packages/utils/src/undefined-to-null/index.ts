@@ -6,12 +6,12 @@ import type { UndefinedToNull, UndefinedToNullRecursive } from './types';
 export const undefinedToNull = <T>(value?: T): UndefinedToNull<T> => (value ?? null) as UndefinedToNull<T>;
 
 /**
- * Recursively replaces `undefined` with `null`, keeping every property.
- *
- * Properties are kept rather than dropped, so they survive `JSON.stringify`, which would
- * otherwise omit them. Note that this is not the exact inverse of `recursiveNullToUndefined`,
- * which drops its nullish properties: a property removed there will not be brought back here.
- */
+Recursively replaces `undefined` with `null`, keeping every property.
+
+Properties are kept rather than dropped, so they survive `JSON.stringify`, which would
+otherwise omit them. Note that this is not the exact inverse of `recursiveNullToUndefined`,
+which drops its nullish properties: a property removed there will not be brought back here.
+*/
 export const recursiveUndefinedToNull = <T>(nullable: T): UndefinedToNullRecursive<T> => {
   if (nullable == null) {
     return undefinedToNull(nullable) as UndefinedToNullRecursive<T>;

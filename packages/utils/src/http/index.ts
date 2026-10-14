@@ -81,9 +81,9 @@ const inlineParameter = /(?<![^\s=?&/])(?:[:{])([\w.-]+)(\?)?\}?/g;
 const unresolvedParameter = /(?:^|[/?&=])[:{][\w.-]+/;
 
 /**
- * Resolves a single parameter to its encoded value, returning `undefined` when an optional
- * parameter has no value so the caller can drop it.
- */
+Resolves a single parameter to its encoded value, returning `undefined` when an optional
+parameter has no value so the caller can drop it.
+*/
 const resolveParameter = (
   key: string,
   optionalMarker: string | undefined,
@@ -103,9 +103,9 @@ const resolveParameter = (
 };
 
 /**
- * Finds the `?` that starts a query string, skipping the `?` used to mark optional parameters.
- * Returns -1 when the path carries no query string.
- */
+Finds the `?` that starts a query string, skipping the `?` used to mark optional parameters.
+Returns -1 when the path carries no query string.
+*/
 const findQueryStart = (path: string) => {
   for (let index = path.indexOf('?'); index !== -1; index = path.indexOf('?', index + 1)) {
     const next = path[index + 1];
@@ -117,9 +117,9 @@ const findQueryStart = (path: string) => {
 };
 
 /**
- * Substitutes every parameter in the path portion, dropping segments whose optional parameter has
- * no value.
- */
+Substitutes every parameter in the path portion, dropping segments whose optional parameter has
+no value.
+*/
 const substitutePathSegments = (template: string, values: Record<string, ParameterValue | undefined>, path: string) =>
   template
     .split(/\/+/)
@@ -135,9 +135,9 @@ const substitutePathSegments = (template: string, values: Record<string, Paramet
     .filter((segment): segment is string => segment !== undefined && segment !== '');
 
 /**
- * Substitutes every parameter in the query string and returns the surviving pairs. A pair is
- * dropped when one of its parameters is optional and has no value.
- */
+Substitutes every parameter in the query string and returns the surviving pairs. A pair is
+dropped when one of its parameters is optional and has no value.
+*/
 const substituteQueryPairs = (template: string, values: Record<string, ParameterValue | undefined>, path: string) => {
   const pairs: Array<string> = [];
 
@@ -167,9 +167,9 @@ const substituteQueryPairs = (template: string, values: Record<string, Parameter
 };
 
 /**
- * Guards against a template that could not be fully resolved, such as `:user:id`, which would
- * otherwise leak the raw placeholder into the generated path.
- */
+Guards against a template that could not be fully resolved, such as `:user:id`, which would
+otherwise leak the raw placeholder into the generated path.
+*/
 const assertNoUnresolvedParameters = (parts: Array<string>, path: string) => {
   const unresolved = parts.find((part) => unresolvedParameter.test(part));
   if (unresolved !== undefined) {
@@ -178,16 +178,16 @@ const assertNoUnresolvedParameters = (parts: Array<string>, path: string) => {
 };
 
 /**
- * Builds a URL path from a template, substituting `:name`, `{name}` and their optional `?`
- * variants. Parameters are encoded, optional parameters without a value are removed, and a query
- * string on the template is preserved and may itself contain parameters.
- *
- * @param path The path template, such as `/users/:userId/posts/:postId?query=:term`
- * @param parameters An object containing the values for the parameters in the template
- * @param baseUrl An optional base URL to prepend to the generated path, such as `api.example.com`
- * @param protocol The protocol to use when prepending a base URL, either `http` or `https`. Defaults to `https`.
- * @returns The generated path with all parameters substituted and encoded
- */
+Builds a URL path from a template, substituting `:name`, `{name}` and their optional `?`
+variants. Parameters are encoded, optional parameters without a value are removed, and a query
+string on the template is preserved and may itself contain parameters.
+
+@param path The path template, such as `/users/:userId/posts/:postId?query=:term`
+@param parameters An object containing the values for the parameters in the template
+@param baseUrl An optional base URL to prepend to the generated path, such as `api.example.com`
+@param protocol The protocol to use when prepending a base URL, either `http` or `https`. Defaults to `https`.
+@returns The generated path with all parameters substituted and encoded
+*/
 export const generatePath = <Path extends string>(path: Path, ...rest: GeneratePathArguments<Path>) => {
   const [parameters, baseUrl, protocol = 'https'] = rest;
 
