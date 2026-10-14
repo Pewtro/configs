@@ -462,10 +462,6 @@ const perfectionistConfig = defineConfig({
         ],
       ]),
     ),
-    //Turning this rule off as recommended in the perfectionist documention as it is handled by perfectionist in the following rules:
-    //sort-interfaces:  https://perfectionist.dev/rules/sort-interfaces
-    //sort-objects:  https://perfectionist.dev/rules/sort-object-types
-    '@typescript-eslint/adjacent-overload-signatures': 'off',
   },
 });
 
