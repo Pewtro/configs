@@ -40,10 +40,7 @@
     "test:coverage": "pnpm test -- --coverage",
     "test:watch": "vitest watch"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {},
   "engines": {
-    "node": "^18.18 || ^20.9 || >=22"
+    "node": "^22 || ^24 || >=26"
   }
 }
