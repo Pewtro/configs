@@ -1,6 +1,6 @@
 // oxlint-disable unicorn/no-useless-undefined
 /* eslint-disable unicorn/no-null */
-import { assertType, describe, expect, it } from 'vitest';
+import { assertType, describe, expect, expectTypeOf, it } from 'vitest';
 import type { NullToUndefined, NullToUndefinedRecursive } from './types';
 import { nullToUndefined, recursiveNullToUndefined } from '.';
 
@@ -32,7 +32,7 @@ describe('nullToUndefined', () => {
 });
 
 describe('recursiveNullToUndefined', () => {
-  it('replaces `null` values `undefined` inside an object, leaving other values unchanged', () => {
+  it('removes properties that are `null` or `undefined` inside an object, leaving other values unchanged', () => {
     const object = {
       a: null,
       b: 'hello',
@@ -41,14 +41,10 @@ describe('recursiveNullToUndefined', () => {
     };
     const result = recursiveNullToUndefined(object);
     assertType<NullToUndefinedRecursive<typeof object>>(result);
-    expect(result).toEqual({
-      a: undefined,
-      b: 'hello',
-      c: undefined,
-      d: undefined,
-    });
+    expect(result).toStrictEqual({ b: 'hello' });
+    expect(Object.keys(result)).toStrictEqual(['b']);
   });
-  it('replaces `null` values with `undefined` inside nested objects, leaving other values unchanged', () => {
+  it('removes nested properties that are `null` or `undefined`, leaving other values unchanged', () => {
     const object = {
       a: {
         b: null,
@@ -59,26 +55,19 @@ describe('recursiveNullToUndefined', () => {
     };
     const result = recursiveNullToUndefined(object);
     assertType<NullToUndefinedRecursive<typeof object>>(result);
-    expect(result).toEqual({
-      a: {
-        b: undefined,
-        c: 'hello',
-        d: undefined,
-        e: undefined,
-      },
-    });
+    expect(result).toStrictEqual({ a: { c: 'hello' } });
   });
   it('replaces `null` values with `undefined` inside an array, leaving other values unchanged', () => {
     const array = [null, 'hello', null, undefined];
     const result = recursiveNullToUndefined(array);
     assertType<NullToUndefinedRecursive<typeof array>>(result);
-    expect(result).toEqual([undefined, 'hello', undefined, undefined]);
+    expect(result).toStrictEqual([undefined, 'hello', undefined, undefined]);
   });
   it('replaces `null` values with `undefined` inside nested arrays, leaving other values unchanged', () => {
     const array = [[null, 'hello', null, undefined]];
     const result = recursiveNullToUndefined(array);
     assertType<NullToUndefinedRecursive<typeof array>>(result);
-    expect(result).toEqual([[undefined, 'hello', undefined, undefined]]);
+    expect(result).toStrictEqual([[undefined, 'hello', undefined, undefined]]);
   });
 
   it('preserves non-plain object instances such as `Date`', () => {
@@ -86,13 +75,27 @@ describe('recursiveNullToUndefined', () => {
     const object = { createdAt, other: null };
     const result = recursiveNullToUndefined(object);
     assertType<NullToUndefinedRecursive<typeof object>>(result);
-    expect(result).toEqual({ createdAt, other: undefined });
+    expect(result).toStrictEqual({ createdAt });
   });
 
-  it('replaces `null` values with `undefined` inside an array of objects, leaving other values unchanged', () => {
+  it('removes properties that are `null` or `undefined` inside an array of objects', () => {
     const array = [{ a: null, b: 'hello', c: null, d: undefined }];
     const result = recursiveNullToUndefined(array);
     assertType<NullToUndefinedRecursive<typeof array>>(result);
-    expect(result).toEqual([{ a: undefined, b: 'hello', c: undefined, d: undefined }]);
+    expect(result).toStrictEqual([{ b: 'hello' }]);
+  });
+
+  it('makes properties that convert to `undefined` optional and keeps the rest required', () => {
+    const object = { a: null, b: 'hello' };
+    const result = recursiveNullToUndefined(object);
+    // A property that may be absent does not satisfy the same property when required.
+    type IsOptional<Property extends keyof typeof result> =
+      Pick<typeof result, Property> extends Required<Pick<typeof result, Property>> ? false : true;
+
+    // `a` is dropped entirely so it has to be optional, while `b` is always present.
+    expectTypeOf<IsOptional<'a'>>().toEqualTypeOf<true>();
+    expectTypeOf<IsOptional<'b'>>().toEqualTypeOf<false>();
+    expect(result.a).toBeUndefined();
+    expect(result.b).toBe('hello');
   });
 });
