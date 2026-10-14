@@ -98,4 +98,34 @@ describe('recursiveNullToUndefined', () => {
     expect(result.a).toBeUndefined();
     expect(result.b).toBe('hello');
   });
+
+  it('preserves symbol keyed properties', () => {
+    const key = Symbol('id');
+    const object = { b: 'hello', [key]: 'abc' };
+    const result = recursiveNullToUndefined(object);
+    assertType<NullToUndefinedRecursive<typeof object>>(result);
+    expect(Object.getOwnPropertySymbols(result)).toStrictEqual([key]);
+    expect(result[key]).toBe('abc');
+  });
+
+  it('omits symbol keyed properties that are `null` or `undefined`', () => {
+    const key = Symbol('id');
+    const object = { b: 'hello', [key]: null };
+    const result = recursiveNullToUndefined(object);
+    expect(Object.getOwnPropertySymbols(result)).toStrictEqual([]);
+  });
+
+  it('ignores non-enumerable properties', () => {
+    const object: Record<string, unknown> = { visible: 'yes' };
+    Object.defineProperty(object, 'hidden', { enumerable: false, value: 'no' });
+    const result = recursiveNullToUndefined(object);
+    expect(Object.getOwnPropertyNames(result)).toStrictEqual(['visible']);
+  });
+
+  it('leaves objects that are not plain untouched', () => {
+    const object = Object.assign(Object.create({ inherited: 'no' }) as Record<string, unknown>, { own: null });
+    const result = recursiveNullToUndefined(object);
+    // A custom prototype makes this a class-like instance, so it is returned as-is.
+    expect(result).toBe(object);
+  });
 });

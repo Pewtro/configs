@@ -100,4 +100,29 @@ describe('recursiveUndefinedToNull', () => {
     assertType<UndefinedToNullRecursive<typeof array>>(result);
     expect(result).toEqual([{ a: null, b: 'hello', c: null }, { d: null }]);
   });
+
+  it('preserves symbol keyed properties', () => {
+    const key = Symbol('id');
+    const object = { b: 'hello', [key]: undefined };
+    const result = recursiveUndefinedToNull(object);
+    assertType<UndefinedToNullRecursive<typeof object>>(result);
+    expect(Object.getOwnPropertySymbols(result)).toStrictEqual([key]);
+    expect(result[key]).toBeNull();
+  });
+
+  it('ignores non-enumerable properties', () => {
+    const object: Record<string, unknown> = { visible: undefined };
+    Object.defineProperty(object, 'hidden', { enumerable: false, value: undefined });
+    const result = recursiveUndefinedToNull(object);
+    expect(Object.getOwnPropertyNames(result)).toStrictEqual(['visible']);
+  });
+
+  it('leaves objects that are not plain untouched', () => {
+    const object = Object.assign(Object.create({ inherited: undefined }) as Record<string, unknown>, {
+      own: undefined,
+    });
+    const result = recursiveUndefinedToNull(object);
+    // A custom prototype makes this a class-like instance, so it is returned as-is.
+    expect(result).toBe(object);
+  });
 });
