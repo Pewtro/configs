@@ -28,6 +28,7 @@ jobs:
         node: [22.x, 24.x, 26.x]
     name: Build, Test & Release
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v7
@@ -36,7 +37,7 @@ jobs:
         with:
           version: 12.11.2
 
-      - name: Setup Node.js ${{ env.release_node }}
+      - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}

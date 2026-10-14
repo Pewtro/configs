@@ -1,8 +1,8 @@
 // oxlint-disable unicorn/no-useless-undefined
 /* eslint-disable unicorn/no-null */
 import { assertType, describe, expect, expectTypeOf, it } from 'vitest';
-import type { NullToUndefined, NullToUndefinedRecursive } from './types';
-import { nullToUndefined, recursiveNullToUndefined } from '.';
+import type { NullToUndefined, NullToUndefinedRecursive } from './types.js';
+import { nullToUndefined, recursiveNullToUndefined } from './index.js';
 
 describe('nullToUndefined', () => {
   it('returns `undefined` when passed `null`', () => {

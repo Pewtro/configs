@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/no-null */
 import { isPlainObject } from '../internal/is-plain-object.js';
 import { ownEnumerableKeys } from '../internal/own-enumerable-keys.js';
-import type { NullToUndefined, NullToUndefinedRecursive } from './types';
+import type { NullToUndefined, NullToUndefinedRecursive } from './types.js';
 
 export const nullToUndefined = <T>(value?: T): NullToUndefined<T> => (value ?? undefined) as NullToUndefined<T>;
 

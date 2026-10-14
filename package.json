@@ -6,9 +6,6 @@
   "license": "MIT",
   "author": "Putro",
   "repository": "https://github.com/Pewtro/configs",
-  "workspaces": [
-    "packages/*"
-  ],
   "type": "module",
   "scripts": {
     "build": "pnpm -r build",

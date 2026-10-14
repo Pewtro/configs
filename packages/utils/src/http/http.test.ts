@@ -36,7 +36,7 @@ describe.concurrent('generatePath with :', () => {
       const result = generatePath('/users/:userId/posts/:postId/', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
-    it("doesn't add / at start when passed path doesn't start with / and baseUrl doesn't end with /", ({ expect }) => {
+    it('adds only the base URL separator slash when the path has no leading slash', ({ expect }) => {
       const result = generatePath('users/:userId/posts/:postId', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
@@ -121,7 +121,7 @@ describe.concurrent('generatePath with {}', () => {
       const result = generatePath('/users/{userId}/posts/{postId}/', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
-    it("doesn't add / at start when passed path doesn't start with / and baseUrl doesn't end with /", ({ expect }) => {
+    it('adds only the base URL separator slash when the path has no leading slash', ({ expect }) => {
       const result = generatePath('users/{userId}/posts/{postId}', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
@@ -160,7 +160,7 @@ describe.concurrent('generatePath with mixed : and {}', () => {
       const result = generatePath('/users/:userId/posts/{postId}/', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
-    it("doesn't add / at start when passed path doesn't start with / and baseUrl doesn't end with /", ({ expect }) => {
+    it('adds only the base URL separator slash when the path has no leading slash', ({ expect }) => {
       const result = generatePath('users/:userId/posts/{postId}', { postId: '2', userId: '1' }, testingUrl);
       expect(result).toBe(`${testingUrl}/users/1/posts/2`);
     });
