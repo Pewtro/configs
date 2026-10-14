@@ -191,12 +191,7 @@ const assertNoUnresolvedParameters = (parts: Array<string>, path: string) => {
 export const generatePath = <Path extends string>(path: Path, ...rest: GeneratePathArguments<Path>) => {
   const [parameters, baseUrl, protocol = 'https'] = rest;
 
-  //Ensure the "/" prefix is present if the path starts with a "/" and the baseUrl does not end with a "/"
-  const shouldPrefixDueToPath = path.startsWith('/') && !baseUrl?.endsWith('/');
-  //Ensure the "/" prefix is present if the baseUrl does not end with a "/"
-  const shouldPrefixDueToBaseUrl = !!baseUrl && !baseUrl.endsWith('/');
-  const shouldPrefix = shouldPrefixDueToPath || shouldPrefixDueToBaseUrl;
-  const prefix = shouldPrefix ? '/' : '';
+  const hasBaseUrl = !!baseUrl;
 
   const values: Record<string, ParameterValue | undefined> = parameters ?? {};
 
@@ -210,10 +205,15 @@ export const generatePath = <Path extends string>(path: Path, ...rest: GenerateP
   assertNoUnresolvedParameters([...segments, ...queryPairs], path);
 
   const query = queryPairs.length > 0 ? `?${queryPairs.join('&')}` : '';
-  const resolved = prefix + segments.join('/') + query;
 
-  if (baseUrl) {
-    const resolvedBaseUrl = hasHttpPrefix(baseUrl) ? baseUrl : `${protocol}://${baseUrl}`;
+  // The slash is what separates the base URL from the path, so it is only emitted when there is
+  // something to separate. Otherwise a root path would produce a trailing slash.
+  const shouldPrefix = segments.length > 0 && (hasBaseUrl || path.startsWith('/'));
+  const resolved = (shouldPrefix ? '/' : '') + segments.join('/') + query;
+
+  if (hasBaseUrl) {
+    // A trailing slash on the base URL only ever exists to separate it from the path.
+    const resolvedBaseUrl = (hasHttpPrefix(baseUrl) ? baseUrl : `${protocol}://${baseUrl}`).replace(/\/$/, '');
 
     return resolvedBaseUrl + resolved;
   }

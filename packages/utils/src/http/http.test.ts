@@ -283,6 +283,30 @@ describe.concurrent('generatePath with query strings', () => {
   });
 });
 
+describe.concurrent('generatePath with a root path', () => {
+  it('does not emit a trailing slash when joined to a base URL', ({ expect }) => {
+    expect(generatePath('/', {}, 'https://api.example.com')).toBe('https://api.example.com');
+    expect(generatePath('/', {}, 'https://api.example.com/')).toBe('https://api.example.com');
+  });
+
+  it('does not emit a trailing slash for a base URL that has its own path', ({ expect }) => {
+    expect(generatePath('/', {}, 'https://api.example.com/v1/')).toBe('https://api.example.com/v1');
+  });
+
+  it('resolves a root path without a base URL to an empty path', ({ expect }) => {
+    expect(generatePath('/')).toBe('');
+  });
+
+  it('keeps the query string when the path portion resolves to nothing', ({ expect }) => {
+    expect(generatePath('/?foo=bar', {}, 'https://api.example.com')).toBe('https://api.example.com?foo=bar');
+    expect(generatePath('/?foo=:term', { term: 'x' }, 'https://api.example.com')).toBe('https://api.example.com?foo=x');
+  });
+
+  it('joins normally once the path has at least one segment', ({ expect }) => {
+    expect(generatePath('/users', {}, 'https://api.example.com/')).toBe('https://api.example.com/users');
+  });
+});
+
 describe.concurrent('generatePath with unresolvable templates', () => {
   // The runtime guard is the backstop for templates the types do not already reject, such as
   // JavaScript callers and paths that have widened to `string`.
