@@ -1,5 +1,18 @@
 # @putstack/utils
 
+## 0.5.0
+
+### Minor Changes
+
+- 5d710cb: Update Node versions to ^22 || ^24 || >=26
+- fcd2250: Support query strings in generatePath and reject templates that cannot be resolved
+
+### Patch Changes
+
+- 42e558f: Mark properties that convert to undefined as optional in NullToUndefinedRecursive
+- 420a484: Stop generatePath from emitting a trailing slash for a root path
+- 58e4b28: Preserve symbol keyed properties in the recursive converters
+
 ## 0.4.6
 
 ### Patch Changes
