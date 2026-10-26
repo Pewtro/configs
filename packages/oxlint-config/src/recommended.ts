@@ -5,6 +5,16 @@ export const recommended = defineConfig({
   extends: [base],
   plugins: ['unicorn'],
   rules: {
+    /* Disabled rules */
+    //This conflicts with perfectionist sorting rules, so we turn it off in favor of perfectionist
+    //'unicorn/consistent-class-member-order': 'off',
+    //These cause too much noise and not enough value
+    //'unicorn/name-replacements': 'off',
+    //'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
+    //'unicorn/no-top-level-side-effects': 'off',
+    'unicorn/prefer-default-parameters': 'off',
+    //'unicorn/single-line-block-comment-style': 'off',
+    /* Enabled rules */
     'unicorn/catch-error-name': 'error',
     'unicorn/consistent-assert': 'error',
     'unicorn/consistent-date-clone': 'error',
@@ -83,7 +93,6 @@ export const recommended = defineConfig({
     'unicorn/prefer-classlist-toggle': 'error',
     'unicorn/prefer-code-point': 'error',
     'unicorn/prefer-date-now': 'error',
-    'unicorn/prefer-default-parameters': 'error',
     'unicorn/prefer-dom-node-append': 'error',
     'unicorn/prefer-dom-node-remove': 'error',
     'unicorn/prefer-dom-node-text-content': 'error',
