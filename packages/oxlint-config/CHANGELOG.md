@@ -1,5 +1,18 @@
 # @putstack/oxlint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- 9ec775e: Turn off some noisy unicorn rules
+
+### Patch Changes
+
+- 5b17405: Update eslint-plugin-de-morgan to 2.2.1
+- 38ec21a: Remove '@typescript-eslint/adjacent-overload-signatures' as oxlint does not support it.
+- 7d2bcdd: Update eslint-plugin-perfectionist to 5.13.0
+- 08cf411: Update eslint-plugin-de-morgan to 2.3.0
+
 ## 0.2.2
 
 ### Patch Changes

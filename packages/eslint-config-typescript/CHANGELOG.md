@@ -1,5 +1,19 @@
 # ESLint config for typescript changelog
 
+## 5.6.0
+
+### Minor Changes
+
+- cd93085: Update eslint-plugin-unicorn to 78.0.0
+- 9ec775e: Turn off some noisy unicorn rules
+- 748b15a: Update eslint-plugin-unicorn to 79.0.0
+
+### Patch Changes
+
+- 5b17405: Update eslint-plugin-de-morgan to 2.2.1
+- 7d2bcdd: Update eslint-plugin-perfectionist to 5.13.0
+- 08cf411: Update eslint-plugin-de-morgan to 2.3.0
+
 ## 5.5.1
 
 ### Patch Changes
