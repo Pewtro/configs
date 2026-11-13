@@ -1,5 +1,11 @@
 # ESLint config for typescript changelog
 
+## 5.7.0
+
+### Minor Changes
+
+- fab1bd3: Update eslint-plugin-import-x to 4.18.1
+
 ## 5.6.0
 
 ### Minor Changes
