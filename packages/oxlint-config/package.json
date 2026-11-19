@@ -35,7 +35,7 @@
   "dependencies": {
     "eslint-plugin-de-morgan": "2.3.0",
     "eslint-plugin-depend": "1.5.0",
-    "eslint-plugin-perfectionist": "5.13.0",
+    "eslint-plugin-perfectionist": "5.14.0",
     "eslint-plugin-sonarjs": "4.2.2"
   },
   "peerDependencies": {
