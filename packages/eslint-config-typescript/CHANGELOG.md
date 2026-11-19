@@ -1,5 +1,16 @@
 # ESLint config for typescript changelog
 
+## 5.7.0
+
+### Minor Changes
+
+- fab1bd3: Update eslint-plugin-import-x to 4.18.1
+- 1729cc2: Update eslint-plugin-unicorn to 80.0.0 - this also means bumping node requirement from ^22 to ^22.13.
+
+### Patch Changes
+
+- d5a289d: Update eslint-plugin-perfectionist to 5.14.0
+
 ## 5.6.0
 
 ### Minor Changes
