@@ -1,6 +1,6 @@
 {
   "name": "@putstack/eslint-config-typescript",
-  "version": "5.7.0",
+  "version": "5.7.1",
   "description": "ESLint config for TypeScript",
   "keywords": [
     "config",
