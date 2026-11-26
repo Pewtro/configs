@@ -287,7 +287,6 @@ const sonarConfig = defineConfig({
     'sonarjs/no-empty-character-class': 'error',
     'sonarjs/no-empty-collection': 'error',
     'sonarjs/no-empty-group': 'error',
-    'sonarjs/no-empty-test-file': 'error',
     'sonarjs/no-empty-test-title': 'error',
     'sonarjs/no-equals-in-for-termination': 'error',
     'sonarjs/no-exclusive-tests': 'error',

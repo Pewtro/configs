@@ -25,3 +25,5 @@ saveTypes: true
 # https://github.com/dependabot/dependabot-core/issues/15904
 # https://github.com/pnpm/pnpm/issues/13805
 pmOnFail: ignore
+minimumReleaseAgeExclude:
+  - eslint-plugin-sonarjs@4.2.3
